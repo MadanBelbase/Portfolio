@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madan Belbase</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide-react@0.63.1/dist/lucide-react.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+  <style>
+    .hero-bg {
+      background-image: linear-gradient(to right, #4c51bf, #6b46c1);
+    }
+    .card-shadow {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .timeline-dot {
+      width: 12px;
+      height: 12px;
+      background-color: #4c51bf;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <header class="py-4 sticky top-0 left-0 w-full bg-white bg-opacity-70 shadow-md z-50">
+      <nav class="flex items-center justify-between px-8">
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-bold text-gray-800">Madan Belbase</a>
+    
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="#about" class="text-gray-600 hover:text-red-800">About</a>
+          <a href="#skills" class="text-gray-600 hover:text-red-800">Skills</a>
+          <a href="#projects" class="text-gray-600 hover:text-red-800">Projects</a>
+          <a href="#blog" class="text-gray-600 hover:text-red-800">Blog</a>
+          <a href="#contact" class="text-gray-600 hover:text-red-800">Contact</a>
+        </div>
+    
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-gray-600 hover:text-red-800 focus:outline-none" id="menuButton">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </nav>
+    
+      <!-- Mobile Menu -->
+      <div class="md:hidden hidden" id="mobileMenu">
+        <div class="flex flex-col items-center py-4 bg-white shadow-md space-y-4">
+          <a href="#about" class="text-gray-600 hover:text-red-800">About</a>
+          <a href="#skills" class="text-gray-600 hover:text-red-800">Skills</a>
+          <a href="#projects" class="text-gray-600 hover:text-red-800">Projects</a>
+          <a href="#blog" class="text-gray-600 hover:text-red-800">Blog</a>
+          <a href="#contact" class="text-gray-600 hover:text-red-800">Contact</a>
+        </div>
+      </div>
+    </header>
+    
+    
+    
+
+    <main>
+      <section id="hero" class="hero-bg rounded-lg py-20 mb-12 px-8 ">
+        <div class="flex items-center justify-around flex-row-reverse ">
+          <!-- Image Section -->
+           <div class="flex justify-center items-center">
+          <img src="image/proflie.jpeg" alt="Profile Picture" class="rounded-full w-48 h-48 object-cover">
+        </div>
+          <!-- Text Section -->
+          <div class="text-white flex flex-col justify-center p-6">
+            <h3 class="text-xl font-bold mb-4 text-red-500">Hi I'm</h3>
+            <h1 class="text-4xl font-bold mb-4">Madan Belbase</h1>
+            <h4 id="animated-title" class="text-2xl font-bold mb-4 h-5 text-green-600"></h4>
+            <div class="mt-9 space-x-4 flex flex-wrap justify-center">
+              <!-- Download CV Button -->
+              <a href="MadanBelbase.pdf" download="Madan_Belbase_CV" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-600 mb-4 sm:mb-0 sm:mr-4 text-center w-full sm:w-auto">
+                Download CV
+              </a>
+              
+              <!-- Hire Me Button -->
+              <a href="#contact" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-600 sm:mb-0 w-full sm:w-auto">
+                Hire Me
+              </a>
+            </div>
+            
+            
+          </div>
+        </div>
+      </section>
+      
+      
+
+      <section id="about" class="mb-12">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <p>I am a passionate Computer Engineering student with a diverse set of interests and achievements. My educational background, technical expertise, and aspirations are the driving force behind my pursuit of continuous learning and innovation.</p>
+      </section>
+
+      <section id="skills" class="mb-12">
+        <h2 class="text-3xl font-bold mb-4">Skills</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div class="card-shadow bg-white p-6 rounded-lg">
+            <h3 class="text-xl font-medium mb-4">Programming Languages</h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span>Python</span>
+                  <span class="font-medium">90%</span>
+                </div>
+                <div class="bg-gray-300 h-4 rounded-full">
+                  <div class="bg-blue-500 h-4 rounded-full" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span>JavaScript</span>
+                  <span class="font-medium">85%</span>
+                </div>
+                <div class="bg-gray-300 h-4 rounded-full">
+                  <div class="bg-blue-500 h-4 rounded-full" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span>C/C++</span>
+                  <span class="font-medium">80%</span>
+                </div>
+                <div class="bg-gray-300 h-4 rounded-full">
+                  <div class="bg-blue-500 h-4 rounded-full" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span>HTML/CSS</span>
+                  <span class="font-medium">75%</span>
+                </div>
+                <div class="bg-gray-300 h-4 rounded-full">
+                  <div class="bg-blue-500 h-4 rounded-full" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span>Tailwind</span>
+                  <span class="font-medium">60%</span>
+                </div>
+                <div class="bg-gray-300 h-4 rounded-full">
+                  <div class="bg-blue-500 h-4 rounded-full" style="width: 80%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-shadow bg-white p-6 rounded-lg">
+            <h3 class="text-xl font-medium mb-4">Tools & Frameworks</h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span>React</span>
+                  <span class="font-medium">90%</span>
+                </div>
+                <div class="bg-gray-300 h-4 rounded-full">
+                  <div class="bg-blue-500 h-4 rounded-full" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span>Git</span>
+                  <span class="font-medium">85%</span>
+                </div>
+                <div class="bg-gray-300 h-4 rounded-full">
+                  <div class="bg-blue-500 h-4 rounded-full" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="mb-12">
+        <h2 class="text-3xl font-bold mb-4">Projects</h2>
+        <div class="flex space-x-8">
+  <!-- project-1 -->
+          <div class="card-shadow bg-white p-6 rounded-lg w-1/2 group relative overflow-hidden">
+            <!-- Image 1 (initial state) -->
+            <img src="image/news.png" alt="A News Website" class="w-full h-48 object-cover transition duration-300 group-hover:opacity-50">
+            <h2 class="text-2xl font-medium mt-5 ">A News API Website</h2>
+      
+            <!-- Details in the center of the image -->
+            <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="text-center text-white">
+                <h2 class="text-2xl font-medium mb-4 ">A News Website</h2>
+                <h3 class="text-1.2xl font-medium mb-4">Built With JavaScript And API Integration, Delivering Real-Time News From Various Sources.</h3>
+                <h3 class="text-xl font-medium mb-4">Used Technical Skills</h3>
+                <h3 class="text-0.8xl font-medium mb-4">HTML, CSS, JavaScript</h3>
+           
+                <!-- Links for GitHub and Live Demo -->
+                <div class="flex justify-center space-x-4">
+                  <a href="https://github.com/johndoe/smart-home" target="_blank" class="text-black hover:text-blue-500">GitHub</a>
+                  <a href="https://demo-link.com" target="_blank" class="text-black hover:text-blue-500">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+  <!-- project-1 -->
+          <div class="card-shadow bg-white p-6 rounded-lg w-1/2 group relative overflow-hidden">
+            <!-- Image 1 (initial state) -->
+            <img src="image/eduhub.png" alt="EduHub" class="w-full h-48 object-cover transition duration-300 group-hover:opacity-50">
+            <h2 class="text-2xl font-medium mt-5 ">EduHub</h2>
+      
+            <!-- Details in the center of the image -->
+            <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="text-center text-white">
+                <h2 class="text-2xl font-medium mb-4 ">EduHub</h2>
+                <h3 class="text-1.2xl font-medium mb-4">An Educational Platform Designed With HTML, CSS, And JavaScript For Seamless Learning.</h3>
+                <h3 class="text-xl font-medium mb-4">Used Technical Skills</h3>
+                <h3 class="text-0.8xl font-medium mb-4">HTML, CSS, JavaScript</h3>
+           
+                <!-- Links for GitHub and Live Demo -->
+                <div class="flex justify-center space-x-4">
+                  <a href="https://github.com/johndoe/smart-home" target="_blank" class="text-black hover:text-blue-500">GitHub</a>
+                  <a href="https://demo-link.com" target="_blank" class="text-black hover:text-blue-500">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+         
+          
+        </div>
+      </section>
+      
+
+      
+      <section id="blog" class="mb-12">
+        <h2 class="text-3xl font-bold mb-4">Blog</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Blog 1 -->
+            <div class="group relative overflow-hidden card-shadow bg-white p-6 rounded-lg">
+                <img src="image/css-display.png" alt="CSS Display Properties Simplified: Tips, Examples, and Best Practices" class="w-full h-48 object-cover transition duration-300 transform group-hover:scale-105">
+                <div class="absolute bottom-0 left-0 right-0 p-1 bg-black bg-opacity-50 opacity-100 transition-all duration-300 group-hover:opacity-0">
+                    <h3 class="text-xl font-medium text-white mb-2 ml-3">CSS Display Properties Simplified: Tips, Examples, and Best Practices</h3>
+                    <div class="flex items-center justify-between mt-4 ml-3">
+                        <span class="text-black-300 mr-3">Nov 19
+                        "; , 2024</span>
+                    </div>
+                </div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <h3 class="text-xl font-medium text-white mb-2 text-black-500">CSS Display Properties Simplified: Tips, Examples, and Best Practices</h3>
+                    <div class="flex items-center justify-between mt-4">
+                        <a href="https://medium.com/@madanbelbase927/css-display-properties-simplified-tips-examples-and-best-practices-d319f5a4d330" class="text-white text-blue-700 mr-6">Read More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Blog 2 -->
+            <div class="group relative overflow-hidden card-shadow bg-white p-6 rounded-lg">
+                <img src="image/box_model.png" alt="CSS Box Model: The Key to Precise Web Layouts" class="w-full h-48 object-cover transition duration-300 transform group-hover:scale-105">
+                <div class="absolute bottom-0 left-0 right-0 p-1 bg-black bg-opacity-50 opacity-100 transition-all duration-300 group-hover:opacity-0">
+                    <h3 class="text-xl font-medium text-white mb-2 ml-3">CSS Box Model: The Key to Precise Web Layouts</h3>
+                    <div class="flex items-center justify-between mt-4 ml-3">
+                        <span class="text-black-300 mr-3">
+                          Nov 13, 2024</span>
+                    </div>
+                </div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <h3 class="text-xl font-medium text-white mb-2 text-black-500">CSS Box Model: The Key to Precise Web Layouts</h3>
+                    <div class="flex items-center justify-between mt-4">
+                        <a href="https://medium.com/@madanbelbase927/css-box-model-the-key-to-precise-web-layouts-490294ebc639" class="text-white text-blue-700 mr-6">Read More</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Blog 3 -->
+            <div class="group relative overflow-hidden card-shadow bg-white p-6 rounded-lg">
+                <img src="image/async.png" alt="Getting Started with Asynchronous JavaScript: Callbacks, Promises, and Async/Await" class="w-full h-48 object-cover transition duration-300 transform group-hover:scale-105">
+                <div class="absolute bottom-0 left-0 right-0 p-1 bg-black bg-opacity-50 opacity-100 transition-all duration-300 group-hover:opacity-0">
+                    <h3 class="text-xl font-medium text-white mb-2 ml-3">Getting Started with Asynchronous JavaScript: Callbacks, Promises, and Async/Await</h3>
+                    <div class="flex items-center justify-between mt-4 ml-3">
+                        <span class="text-black-300 mr-3">Nov 5, 2024</span>
+                    </div>
+                </div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <h3 class="text-xl font-medium text-white mb-2 text-black-500">Getting Started with Asynchronous JavaScript</h3>
+                    <div class="flex items-center justify-between mt-4">
+                        <a href="https://medium.com/@madanbelbase927/getting-started-with-asynchronous-javascript-callbacks-promises-and-async-await-fe7deda7156a" class="text-white text-blue-700 mr-6">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- blog-4 -->
+            <div class="group relative overflow-hidden card-shadow bg-white p-6 rounded-lg">
+                <img src="image/js.png" alt="Understanding “this” in JavaScript" class="w-full h-48 object-cover transition duration-300 transform group-hover:scale-105">
+                <div class="absolute bottom-0 left-0 right-0 p-1 bg-black bg-opacity-50 opacity-100 transition-all duration-300 group-hover:opacity-0">
+                    <h3 class="text-xl font-medium text-white mb-2 ml-3">Understanding “this” in JavaScript</h3>
+                    <div class="flex items-center justify-between mt-4 ml-3">
+                        <span class="text-black-300 mr-3">Oct 29, 2024</span>
+                    </div>
+                </div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <h3 class="text-xl font-medium text-white mb-2 text-black-500">Understanding “this” in JavaScript</h3>
+                    <div class="flex items-center justify-between mt-4">
+                        <a href="https://medium.com/@madanbelbase927/understanding-this-in-javascript-0157244f4d57" class="text-white text-blue-700 mr-6">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- blog-5 -->
+            <div class="group relative overflow-hidden card-shadow bg-white p-6 rounded-lg">
+                <img src="image/virtual.png" alt="Virtual" class="w-full h-48 object-cover transition duration-300 transform group-hover:scale-105">
+                <div class="absolute bottom-0 left-0 right-0 p-1 bg-black bg-opacity-50 opacity-100 transition-all duration-300 group-hover:opacity-0">
+                    <h3 class="text-xl font-medium text-white mb-2 ml-3">Virtual Environment in Python</h3>
+                    <div class="flex items-center justify-between mt-4 ml-3">
+                        <span class="text-black-300 mr-3">Aug 29, 2024</span>
+                    </div>
+                </div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <h3 class="text-xl font-medium text-white mb-2 text-black-500">Virtual Environment in Python</h3>
+                    <div class="flex items-center justify-between mt-4">
+                        <a href="https://medium.com/@madanbelbase927/virtual-environment-in-python-4d893b73d7cd" class="text-white text-blue-700 mr-6">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- blog-6 -->
+            <div class="group relative overflow-hidden card-shadow bg-white p-6 rounded-lg">
+                <img src="image/python.png" alt="Python" class="w-full h-48 object-cover transition duration-300 transform group-hover:scale-105">
+                <div class="absolute bottom-0 left-0 right-0 p-1 bg-black bg-opacity-50 opacity-100 transition-all duration-300 group-hover:opacity-0">
+                    <h3 class="text-xl font-medium text-white mb-2 ml-3">A Beginner’s Guide to Python Programming</h3>
+                    <div class="flex items-center justify-between mt-4 ml-3">
+                        <span class="text-black-300 mr-3">
+                          Aug 21, 2024</span>
+                    </div>
+                </div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <h3 class="text-xl font-medium text-white mb-2 text-black-500">A Beginner’s Guide to Python Programming</h3>
+                    <div class="flex items-center justify-between mt-4">
+                        <a href="https://medium.com/@madanbelbase927/a-beginners-guide-to-python-programming-dac49b457f3c" class="text-white text-blue-700 mr-6">Read More</a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+      
+      
+      
+      
+
+      <!-- <section id="events" class="mb-12"> -->
+        <!-- <h2 class="text-3xl font-bold mb-4">Events & Achievements</h2> -->
+        <!-- <div class="grid grid-cols-1 sm:grid-cols-2 gap-8"> -->
+          <!-- <div class="card-shadow bg-white p-6 rounded-lg">
+            <h3 class="text-xl font-medium mb-4">Hackathons</h3>
+            <div class="space-y-4 relative pl-6">
+              <div class="flex items-center space-x-4">
+                <div class="timeline-dot"></div>
+                <div>
+                  <h4 class="font-medium">Hackathon Winner</h4>
+                  <p class="text-gray-500">Smart City Hackathon 2022</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div class="timeline-dot"></div>
+                <div>
+                  <h4 class="font-medium">Participant</h4>
+                  <p class="text-gray-500">HackTheNorth 2021</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div class="timeline-dot"></div>
+                <div>
+                  <h4 class="font-medium">Participant</h4>
+                  <p class="text-gray-500">HackUMass 2020</p>
+                </div>
+              </div>
+            </div>
+        </div -->
+          <!-- <div class="card-shadow bg-white p-6 rounded-lg">
+            <h3 class="text-xl font-medium mb-4">Certifications</h3>
+            <div class="space-y-4 relative pl-6">
+              <div class="flex items-center space-x-4">
+                <div class="timeline-dot"></div>
+                <div>
+                  <h4 class="font-medium">AWS Certified Solutions Architect - Associate</h4>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div class="timeline-dot"></div>
+                <div>
+                  <h4 class="font-medium">Google Cloud Certified Professional Data Engineer</h4>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div class="timeline-dot"></div>
+                <div>
+                  <h4 class="font-medium">Microsoft Certified: Azure Fundamentals</h4>
+                </div>
+              </div>
+            </div> 
+          </div> -->
+        <!-- </div>
+      </section> -->
+
+      <section id="contact" class="mb-12">
+        <h2 class="text-3xl font-bold mb-4 font-roboto">Contact Me</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Contact Form -->
+          <div class="card-shadow bg-white p-6 rounded-lg">
+            <h3 class="text-xl font-medium mb-4 font-roboto">Get in Touch</h3>
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4" id="contactForm">
+              <!-- Hidden Access Key Field for Web3Forms -->
+              <input type="hidden" name="access_key" value="46d2b706-cb7b-411b-b4fa-a5674ad33811">
+            
+              <!-- Name Field -->
+              <div>
+                <label for="name" class="block font-medium mb-1">Name</label>
+                <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+              </div>
+              
+              <!-- Email Field -->
+              <div>
+                <label for="email" class="block font-medium mb-1">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+              </div>
+              
+              <!-- Message Field -->
+              <div>
+                <label for="message" class="block font-medium mb-1">Message</label>
+                <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md" required></textarea>
+              </div>
+              
+              <!-- Submit Button -->
+              <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Submit</button>
+            </form>
+            
+            <!-- Optional Success Message (will be shown after successful submission) -->
+            <div id="successMessage" class="hidden text-green-500 mt-4">
+              <p>Thank you for reaching out! Your message has been sent successfully.</p>
+            </div>
+          
+          </div>
+      
+          <!-- Social Links -->
+          <div class="card-shadow bg-white p-6 rounded-lg">
+            <h3 class="text-xl font-medium mb-4 font-roboto">Find Me Online</h3>
+            <p class="text-gray-600 mb-4 font-roboto">
+              You can connect with me through these platforms for collaborations, inquiries, or just to say hi! Click any icon below to visit my profile.
+            </p>
+            <!-- Address and Email -->
+            <div class="mb-4">
+              <p class="text-gray-700 font-roboto"><strong>Address:</strong> Kathmandu, Nepal</p>
+              <p class="text-gray-700 font-roboto"><strong>Email:</strong> <a href="mailto:john.doe@email.com" class="text-blue-500 hover:text-blue-700">madanbelbase927@email.com</a></p>
+            </div>
+            <!-- Social Icons -->
+            <div class="flex justify-start space-x-6">
+              <!-- GitHub -->
+              <a href="https://github.com/MadanBelbase" target="_blank" class="text-gray-700 hover:text-blue-500">
+                <i class="fab fa-github text-3xl"></i>
+              </a>
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank" class="text-blue-600 hover:text-blue-800">
+                <i class="fab fa-linkedin text-3xl"></i>
+              </a>
+              <!-- Twitter -->
+              <a href="https://x.com/belbase_madan_" target="_blank" class="text-blue-400 hover:text-blue-600">
+                <i class="fab fa-twitter text-3xl"></i>
+              </a>
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/profile.php?id=61554181993528" target="_blank" class="text-blue-600 hover:text-blue-800">
+                <i class="fab fa-facebook text-3xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      
+    </main>
+
+    <footer class="py-6 text-center text-gray-500">
+      <p>&copy; 2024 Madan Belbase. All rights reserved.</p>
+    </footer>
+    <script src="one.js"></script>
+  </div>
+</body>
+</html>
