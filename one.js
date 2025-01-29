@@ -96,14 +96,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-document.addEventListener("DOMContentLoaded", function () {
-    // Wait for user to click the 'Enter' button to show main content
-    document.getElementById("enterButton").addEventListener("click", function () {
-      document.getElementById("splashScreen").classList.add("animate-fade-out");
-      setTimeout(() => {
-        document.getElementById("splashScreen").style.display = "none";
-        document.getElementById("mainContent").classList.remove("hidden");
-        document.getElementById("mainContent").classList.add("opacity-100");
-      }, 1000); // Matches the fade-out animation duration
-    });
-  });
