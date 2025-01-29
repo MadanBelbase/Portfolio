@@ -1,0 +1,95 @@
+/* Splash Screen Styles */
+.hero-bg {
+    background-image: linear-gradient(to right, #6b46c1, #4a3d85);
+  }
+
+  .card-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .animate-fade-out {
+    animation: fadeOut 1s ease-in-out forwards;
+  }
+
+  /* Styling for the Splash Screen */
+  #splashScreen {
+    background: linear-gradient(to right, #6b46c1, #4a3d85);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    flex-direction: column;
+  }
+
+  #splashScreen img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  #splashScreen h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  #splashScreen p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    animation: fadeIn 2.5s ease-in-out;
+  }
+
+  .btn-enter {
+    background-color: #6b46c1;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-enter:hover {
+    background-color: #4a3d85;
+  }
+
+  /* Main Content */
+  .main-content {
+    transition: opacity 1s ease-in-out;
+  }

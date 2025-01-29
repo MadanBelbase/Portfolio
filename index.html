@@ -8,60 +8,55 @@
   <script src="https://cdn.jsdelivr.net/npm/lucide-react@0.63.1/dist/lucide-react.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-</head>
-  <style>
-    .hero-bg {
-      background-image: linear-gradient(to right, #242541, #6b46c1);
-    }
-    .card-shadow {
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    }
-    .timeline-dot {
-      width: 12px;
-      height: 12px;
-      background-color: #a8aacb;
-      border-radius: 50%;
-    }
-  </style>
-</head>
-<body class="bg-gray-100 text-gray-800 font-sans">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <link rel="stylesheet" href="style.css">
 
-    <header class="py-4 sticky top-0 left-0 w-full bg-white bg-opacity-70 shadow-md z-50">
-      <nav class="flex items-center justify-between px-8">
-        <!-- Logo -->
-        <a href="#" class="text-2xl font-bold text-gray-800">Madan Belbase</a>
-    
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-4">
-          <a href="#about" class="text-gray-600 hover:text-red-800">About</a>
-          <a href="#skills" class="text-gray-600 hover:text-red-800">Skills</a>
-          <a href="#projects" class="text-gray-600 hover:text-red-800">Projects</a>
-          <a href="#Participation" class="text-gray-600 hover:text-red-800">Participation</a>
-          <a href="#blog" class="text-gray-600 hover:text-red-800">Blog</a>
-          <a href="#contact" class="text-gray-600 hover:text-red-800">Contact</a>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+   <div id="splashScreen" class="flex flex-col items-center justify-center animate-fade-in">
+    <img src="image/proflie.jpeg" alt="Madan Belbase" class="w-40 h-40 rounded-full mb-6">
+    <h1 class="animate-fade-in">Welcome to Madan's Website</h1>
+        <p class="animate-fade-in">A world of learning and innovation awaits you!</p>
+    <p class="animate-fade-in">Want to see more?</p>
+    <button class="btn-enter animate-fade-in" id="enterButton">Enter</button>
+  </div> 
+
+  <!-- Main Content -->
+  <div id="mainContent" class="hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header class="py-4 sticky top-0 left-0 w-full bg-white shadow-md z-50 transition-all duration-300 ease-in-out">
+        <nav class="flex items-center justify-between px-8">
+          <!-- Logo -->
+          <a href="#" class="text-2xl font-bold text-gray-800">Madan Belbase</a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-4">
+            <a href="#about" class="text-gray-600 hover:text-red-800">About</a>
+            <a href="#skills" class="text-gray-600 hover:text-red-800">Skills</a>
+            <a href="#projects" class="text-gray-600 hover:text-red-800">Projects</a>
+            <a href="#blog" class="text-gray-600 hover:text-red-800">Blog</a>
+            <a href="#Participation" class="text-gray-600 hover:text-red-800">Participation</a>
+            <a href="#contact" class="text-gray-600 hover:text-red-800">Contact</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden text-gray-600 hover:text-red-800 focus:outline-none" id="menuButton">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobileMenu">
+          <div class="flex flex-col items-center py-4 bg-white shadow-md space-y-4">
+            <a href="#about" class="text-gray-600 hover:text-red-800">About</a>
+            <a href="#skills" class="text-gray-600 hover:text-red-800">Skills</a>
+            <a href="#projects" class="text-gray-600 hover:text-red-800">Projects</a>
+            <a href="#blog" class="text-gray-600 hover:text-red-800">Blog</a>
+            <a href="#contact" class="text-gray-600 hover:text-red-800">Contact</a>
+          </div>
         </div>
-    
-        <!-- Mobile Menu Button -->
-        <button class="md:hidden text-gray-600 hover:text-red-800 focus:outline-none" id="menuButton">
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
-      </nav>
-    
-      <!-- Mobile Menu -->
-      <div class="md:hidden hidden" id="mobileMenu">
-        <div class="flex flex-col items-center py-4 bg-white shadow-md space-y-4">
-          <a href="#about" class="text-gray-600 hover:text-red-800">About</a>
-          <a href="#skills" class="text-gray-600 hover:text-red-800">Skills</a>
-          <a href="#projects" class="text-gray-600 hover:text-red-800">Projects</a>
-          <a href="#blog" class="text-gray-600 hover:text-red-800">Blog</a>
-          <a href="#contact" class="text-gray-600 hover:text-red-800">Contact</a>
-        </div>
-      </div>
-    </header>
-    
-    
-    
+      </header>
+
 
     <main>
       <section id="hero" class="hero-bg rounded-lg py-20 mb-12 px-8 ">
@@ -82,7 +77,7 @@
               </a>
               
               <!-- Hire Me Button -->
-              <a href="#contact" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-600 sm:mb-0 w-full sm:w-auto">
+              <a  id="about" href="#contact" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-600 sm:mb-0 w-full sm:w-auto">
                 Hire Me
               </a>
             </div>
@@ -93,14 +88,14 @@
       </section>
       
       
-
-      <section id="about" class="mb-12">
-        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <div  id="skills"></div>
+      <section  class="mb-12">
+        <h2 class="text-3xl font-bold mb-4 text-center">About Me</h2>
         <p>I am a passionate Computer Engineering student with a diverse set of interests and achievements. My educational background, technical expertise, and aspirations are the driving force behind my pursuit of continuous learning and innovation.</p>
       </section>
 
-      <section id="skills" class="mb-12">
-        <h2 class="text-3xl font-bold mb-4">Skills</h2>
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold mb-4 text-center">Skills</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
           <div class="card-shadow bg-white p-6 rounded-lg">
             <h3 class="text-xl font-medium mb-4">Programming Languages</h3>
@@ -138,7 +133,7 @@
                   <span class="font-medium">45%</span>
                 </div>
                 <div class="bg-gray-300 h-4 rounded-full">
-                  <div class="bg-blue-500 h-4 rounded-full" style="width: 45%;"></div>
+                  <div   id="projects" class="bg-blue-500 h-4 rounded-full" style="width: 45%;"></div>
                 </div>
               </div>
               <div>
@@ -173,8 +168,9 @@
         </div>
       </section>
 
-      <section id="projects" class="mb-12">
-        <h2 class="text-3xl font-bold mb-4">Projects</h2>
+      <section
+       class="mb-12">
+        <h2 class="text-3xl font-bold mb-4 text-center">Projects</h2>
         <div class="flex space-x-8">
   <!-- project-1 -->
           <div class="card-shadow bg-white p-6 rounded-lg w-1/2 group relative overflow-hidden">
@@ -196,7 +192,7 @@
             <img src="image/eduhub.png" alt="EduHub" class="w-full h-48 object-cover transition duration-300 group-hover:opacity-50">
       
             <!-- Details in the center of the image -->
-            <div>
+            <div >
               <div class="text-center text-black-300">
                 <h2 class="text-2xl font-medium mb-4 ">EduHub static website</h2>
                 <h3 class="text-1.2xl font-medium mb-4">An Educational Platform Designed With HTML, CSS, And JavaScript For Seamless Learning.</h3>
@@ -204,17 +200,19 @@
            
               </div>
             </div>
+            
           </div>
           
         </div>
+       
       </section>
       
     
       
-
+      <div id="blog"></div>
       
-      <section id="blog" class="mb-12">
-        <h2 class="text-3xl font-bold mb-4">Blog</h2>
+      <section  class="mb-12">
+        <h2 class="text-3xl font-bold mb-4 text-center">Blog</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Blog 1 -->
 
@@ -333,7 +331,7 @@
       
 
       <section id="events" class="mb-12"> 
-        <h2 class="text-3xl font-bold mb-4">Education</h2>
+        <h2 class="text-3xl font-bold mb-4 text-center">Education</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
           <div class="card-shadow bg-white p-6 rounded-lg">
             <h3 class="text-xl font-medium mb-4">Education</h3>
@@ -366,6 +364,7 @@
                 </div>
               </div>
             </div>
+            <div  id="Participation" ></div>
           </div>
            <!-- <div class="card-shadow bg-white p-6 rounded-lg">
             <h3 class="text-xl font-medium mb-4">Certifications</h3>
@@ -390,11 +389,13 @@
               </div> -->
             <!-- </div>  -->
           <!-- </div>  -->
+       
         </div>
       </section>
 
+     
 
-      <section id="Participation" class="mb-12">
+      <section class="mb-12">
         <h2 class="text-3xl font-bold mb-6 text-center">Participation in Event and Workshop</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Card 1 -->
@@ -429,12 +430,13 @@
                 <h3 class="text-xl font-medium mb-1">Organized By: Nepal Open Source Klub (NOSK)</h3>
                 <h4 class="text-sm font-medium text-gray-600">Venue: NCIT</h4>
             </div>
+           
         </div>
     </section>
     
 
-
-      <section id="contact" class="mb-12">
+    <div id="contact"></div>
+      <section class="mb-12 text-center">
         <h2 class="text-3xl font-bold mb-4 font-roboto">Contact Me</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Contact Form -->
@@ -479,13 +481,9 @@
             <p class="text-gray-600 mb-4 font-roboto">
               You can connect with me through these platforms for collaborations, inquiries, or just to say hi! Click any icon below to visit my profile.
             </p>
-            <!-- Address and Email -->
-            <div class="mb-4">
-              <p class="text-gray-700 font-roboto"><strong>Address:</strong> Kathmandu, Nepal</p>
-              <p class="text-gray-700 font-roboto"><strong>Email:</strong> <a href="mailto:madanbelbase927@email.com" class="text-blue-500 hover:text-blue-700">madanbelbase927@email.com</a></p>
-            </div>
+            
             <!-- Social Icons -->
-            <div class="flex justify-start space-x-6">
+            <div class="flex justify-center space-x-6  mr-3">
               <!-- GitHub -->
               <a href="https://github.com/MadanBelbase" target="_blank" class="text-gray-700 hover:text-blue-500">
                 <i class="fab fa-github text-3xl"></i>
@@ -502,6 +500,11 @@
               <a href="https://www.facebook.com/profile.php?id=61554181993528" target="_blank" class="text-blue-600 hover:text-blue-800">
                 <i class="fab fa-facebook text-3xl"></i>
               </a>
+            </div>
+            <!-- Address and Email -->
+            <div class="mb-4">
+              <p class="text-gray-700 font-roboto"><strong>Address:</strong> Kathmandu, Nepal</p>
+              <p class="text-gray-700 font-roboto"><strong>Email:</strong> <a href="mailto:madanbelbase927@email.com" class="text-blue-500 hover:text-blue-700">madanbelbase927@email.com</a></p>
             </div>
           </div>
         </div>

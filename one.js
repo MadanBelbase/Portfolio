@@ -80,3 +80,30 @@ document.addEventListener("DOMContentLoaded", () => {
       alert('Oops! Something went wrong.');
     });
   });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+  
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80, // Adjust offset if needed
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+  
+document.addEventListener("DOMContentLoaded", function () {
+    // Wait for user to click the 'Enter' button to show main content
+    document.getElementById("enterButton").addEventListener("click", function () {
+      document.getElementById("splashScreen").classList.add("animate-fade-out");
+      setTimeout(() => {
+        document.getElementById("splashScreen").style.display = "none";
+        document.getElementById("mainContent").classList.remove("hidden");
+        document.getElementById("mainContent").classList.add("opacity-100");
+      }, 1000); // Matches the fade-out animation duration
+    });
+  });
