@@ -96,3 +96,81 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+
+    
+
+
+  function openCertificate(imagePath) {
+    // Trigger splash effect
+    const clickedElement = document.querySelector('.splash-effect');
+    clickedElement.classList.add('clicked');
+    
+    // Remove the class after animation is complete (to reset the effect)
+    setTimeout(() => {
+        clickedElement.classList.remove('clicked');
+    }, 600);  // Duration should match the transition time (0.4s + 0.2s)
+
+    // Create an image element
+    const img = document.createElement('img');
+    img.src = imagePath; // Use the image path passed to the function
+    img.alt = 'Certificate Image';
+    img.style.width = '80%';  // Adjust the width as needed
+    img.style.height = 'auto';
+    img.style.margin = '0 auto';
+    
+    // Style the modal container
+    const modalContainer = document.createElement('div');
+    modalContainer.style.position = 'fixed';
+    modalContainer.style.top = '0';
+    modalContainer.style.left = '0';
+    modalContainer.style.width = '100%';
+    modalContainer.style.height = '100%';
+    modalContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    modalContainer.style.display = 'flex';
+    modalContainer.style.alignItems = 'center';
+    modalContainer.style.justifyContent = 'center';
+    modalContainer.style.zIndex = '9999';
+
+    // Add the image to the modal container
+    modalContainer.appendChild(img);
+
+    // Append the modal to the body
+    document.body.appendChild(modalContainer);
+
+    // Close the modal when clicked
+    modalContainer.onclick = function() {
+        document.body.removeChild(modalContainer);
+    };
+}
+
+function openCertificate(imagePath) {
+  // Trigger splash effect
+  const clickedElement = document.querySelector('.splash-effect');
+  clickedElement.classList.add('clicked');
+  
+  // Remove the class after animation is complete (to reset the effect)
+  setTimeout(() => {
+      clickedElement.classList.remove('clicked');
+  }, 600);  // Duration should match the transition time (0.4s + 0.2s)
+
+  // Create an image element
+  const img = document.createElement('img');
+  img.src = imagePath; // Use the image path passed to the function
+  img.alt = 'Certificate Image';
+
+  // Create a modal container with half screen size
+  const modalContainer = document.createElement('div');
+  modalContainer.classList.add('modal-container');
+
+  // Add the image to the modal container
+  modalContainer.appendChild(img);
+
+  // Append the modal to the body
+  document.body.appendChild(modalContainer);
+
+  // Close the modal when clicked
+  modalContainer.onclick = function() {
+      document.body.removeChild(modalContainer);
+  };
+}
+

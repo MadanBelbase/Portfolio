@@ -7,33 +7,75 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
-  /* Animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+  
+  a {
+    position: relative;
+    z-index: 10;
   }
+  
+/* Update modal container to cover half screen */
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;  /* 50% of the viewport width */
+  height: 50vh; /* 50% of the viewport height */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
 
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-      visibility: hidden;
-    }
+/* Image inside modal set to fit within the modal size */
+.modal-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensure the image fits within the container */
+}
+
+
+.gallery-item {
+  opacity: 0; /* Start images as invisible */
+  transform: translateX(-50px); /* Start images from left */
+  animation: slideIn 2s forwards;
+}
+
+/* Delay each item to create a staggered slide effect */
+.gallery-item:nth-child(1) {
+  animation-delay: 0s;
+}
+.gallery-item:nth-child(2) {
+  animation-delay: 2s;
+}
+.gallery-item:nth-child(3) {
+  animation-delay: 4s;
+}
+.gallery-item:nth-child(4) {
+  animation-delay: 6s;
+}
+.gallery-item:nth-child(5) {
+  animation-delay: 8s;
+}
+.gallery-item:nth-child(6) {
+  animation-delay: 10s;
+}
+.gallery-item:nth-child(7) {
+  animation-delay: 12s;
+}
+.gallery-item:nth-child(8) {
+  animation-delay: 14s;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); /* Initial position */
   }
-
-  .animate-fade-in {
-    animation: fadeIn 1s ease-in-out;
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End position */
   }
-
-  .animate-fade-out {
-    animation: fadeOut 1s ease-in-out forwards;
-  }
-
+}

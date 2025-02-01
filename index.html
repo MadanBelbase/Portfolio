@@ -53,388 +53,567 @@
 
 
     <main>
-      <section id="hero" class="hero-bg rounded-lg py-20 mb-12 px-8 ">
+      <section id="hero" class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl shadow-lg rounded-lg py-20 mb-12 px-8 ">
         <div class="flex items-center justify-around flex-row-reverse ">
           <!-- Image Section -->
-           <div class="flex justify-center items-center">
-          <img src="image/DSCN3396.JPG" alt="Profile Picture" class="rounded-full w-48 h-48 object-cover">
-        </div>
+          
+          <div class="flex justify-center items-center">
+            <img src="image/DSCN3396.JPG" alt="Profile Picture" class="rounded-full w-64 h-64 object-cover">
+          </div>
+          
           <!-- Text Section -->
           <div class="text-white flex flex-col justify-center p-6">
             <h3 class="text-xl font-bold mb-4 text-red-500">Hi I'm</h3>
             <h1 class="text-4xl font-bold mb-4">Madan Belbase</h1>
-            <h4 id="animated-title" class="text-2xl font-bold mb-4 h-5 text-green-600"></h4>
+            <h4 id="animated-title" class="text-2xl font-bold mb-4 h-5 text-black"></h4>
+            
             <div class="mt-9 space-x-4 flex flex-wrap justify-center">
               <!-- Download CV Button -->
-              <a href="MadanBelbase.pdf" download="Madan_Belbase_CV" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-600 mb-4 sm:mb-0 sm:mr-4 text-center w-full sm:w-auto">
+              <a href="MadanBelbase.pdf" download="Madan_Belbase_CV" class="text-xl font-semibold text-gray-800 border-2 border-gray-800 py-2 px-6 rounded-full hover:text-white hover:bg-gray-800 transition duration-200">
                 Download CV
               </a>
               
               <!-- Hire Me Button -->
-              <a  id="about" href="#contact" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-600 sm:mb-0 w-full sm:w-auto">
+              <a id="about" href="#contact" class="text-xl font-semibold text-gray-800 border-2 border-gray-800 py-2 px-6 rounded-full hover:text-white hover:bg-gray-800 transition duration-200">
                 Hire Me
               </a>
-            </div>
+              
+            </div
             
             
-          </div>
-        </div>
-      </section>
-      
-      
-      <div  id="skills"></div>
-      <section  class="mb-12">
-        <h2 class="text-3xl font-bold mb-4 text-center">About Me</h2>
-        <p>I am a passionate Computer Engineering student with a diverse set of interests and achievements. My educational background, technical expertise, and aspirations are the driving force behind my pursuit of continuous learning and innovation.</p>
-      </section>
-
-      <section class="mb-12">
-        <h2 class="text-3xl font-bold mb-4 text-center">Skills</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div class="card-shadow bg-white p-6 rounded-lg">
-            <h3 class="text-xl font-medium mb-4">Programming Languages</h3>
-            <div class="space-y-4">
-              <div>
-                <div class="flex items-center justify-between mb-2">
-                  <span>HTML/CSS</span>
-                  <span class="font-medium">80%</span>
-                </div>
-                <div class="bg-gray-300 h-4 rounded-full">
-                  <div class="bg-blue-500 h-4 rounded-full" style="width: 80%;"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex items-center justify-between mb-2">
-                  <span>JavaScript</span>
-                  <span class="font-medium">65%</span>
-                </div>
-                <div class="bg-gray-300 h-4 rounded-full">
-                  <div class="bg-blue-500 h-4 rounded-full" style="width: 65%;"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex items-center justify-between mb-2">
-                  <span>C/C++</span>
-                  <span class="font-medium">60%</span>
-                </div>
-                <div class="bg-gray-300 h-4 rounded-full">
-                  <div class="bg-blue-500 h-4 rounded-full" style="width: 60%;"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex items-center justify-between mb-2">
-                  <span>Python</span>
-                  <span class="font-medium">45%</span>
-                </div>
-                <div class="bg-gray-300 h-4 rounded-full">
-                  <div   id="projects" class="bg-blue-500 h-4 rounded-full" style="width: 45%;"></div>
-                </div>
-              </div>
-              <div>
-              </div>
-            </div>
-          </div>
-          <div class="card-shadow bg-white p-6 rounded-lg">
-            <h3 class="text-xl font-medium mb-4">Tools & Frameworks</h3>
-            <div class="space-y-4">
-              <div>
-                <div class="flex items-center justify-between mb-2">
-                  <span>React</span>
-                  <span class="font-medium">50%</span>
-                </div>
-                <div class="bg-gray-300 h-4 rounded-full">
-                  <div class="bg-blue-500 h-4 rounded-full" style="width: 50%;"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex items-center justify-between mb-2">
-                  <span>Git</span>
-                  <span class="font-medium">45%</span>
-                </div>
-                <div class="bg-gray-300 h-4 rounded-full">
-                  <div class="bg-blue-500 h-4 rounded-full" style="width: 45%;"></div>
-                </div>
-              </div>
-              <div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      <section
-       class="mb-12">
-        <h2 class="text-3xl font-bold mb-4 text-center">Projects</h2>
-        <div class="flex space-x-8">
-  <!-- project-1 -->
-          <div class="card-shadow bg-white p-6 rounded-lg w-1/2 group relative overflow-hidden">
-            <!-- Image 1 (initial state) -->
-            <img src="image/currency.png" alt="A News Website" class="w-full h-48 object-cover transition duration-300 group-hover:opacity-50">
-      
-            <!-- Details in the center of the image -->
-            <div >
-              <div class="text-center text-black">
-                <h2 class="text-2xl font-medium mb-4 ">Currency Converter</h2>
-                <h3 class="text-1.2xl font-medium mb-4">Built With JavaScript And API Integration, Delivering Real-Time Currency Converter from API.</h3>
-                <h3 class="text-0.8xl font-medium mb-4">React</h3>
-              </div>
-            </div>
-          </div>
-  <!-- project-1 -->
-          <div class="card-shadow bg-white p-6 rounded-lg w-1/2 group relative overflow-hidden">
-            <!-- Image 1 (initial state) -->
-            <img src="image/eduhub.png" alt="EduHub" class="w-full h-48 object-cover transition duration-300 group-hover:opacity-50">
-      
-            <!-- Details in the center of the image -->
-            <div >
-              <div class="text-center text-black-300">
-                <h2 class="text-2xl font-medium mb-4 ">EduHub static website</h2>
-                <h3 class="text-1.2xl font-medium mb-4">An Educational Platform Designed With HTML, CSS, And JavaScript For Seamless Learning.</h3>
-                <h3 class="text-0.8xl font-medium mb-4">HTML, CSS, JavaScript</h3>
-           
-              </div>
-            </div>
-            
-          </div>
-          
+
+      <section class="mb-12 flex p-6  ml-5">
+        <!-- Left Sidebar for Social Media Icons -->
+        <aside class="w-20 flex flex-col items-center justify-start space-y-6 mt-8 p-6">
+            <a href="https://github.com/MadanBelbase" target="_blank" class="text-gray-700 hover:text-gray-900 transition-all duration-300">
+                <i class="fab fa-github text-3xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank" class="text-blue-600 hover:text-blue-700 transition-all duration-300">
+                <i class="fab fa-linkedin text-3xl"></i>
+            </a>
+            <a href="https://x.com/belbase_madan_" target="_blank" class="text-blue-400 hover:text-blue-500 transition-all duration-300">
+                <i class="fab fa-twitter text-3xl"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61554181993528" target="_blank" class="text-blue-600 hover:text-blue-700 transition-all duration-300">
+                <i class="fab fa-facebook text-3xl"></i>
+            </a>
+        </aside>
+    
+        <!-- Main Content Section -->
+        <div class="ml-2 max-w-3xl mx-auto text-lg leading-relaxed">
+            <h2 class="text-4xl font-bold text-center mb-6 text-gray-800 transition-all duration-300 hover:scale-105">
+                About Me
+            </h2>
+            <p class="mb-4">
+                I am a passionate Computer Engineering student with a diverse set of interests and achievements. My educational background, technical expertise, and aspirations are the driving force behind my pursuit of continuous learning and innovation.
+            </p>
+            <p>
+                Outside of my academic and technical journey, I am deeply involved in various extracurricular activities that enhance my leadership, communication, and teamwork skills. I thrive in collaborative environments and aim to contribute meaningfully to my community.
+            </p>
         </div>
-       
-      </section>
+    </section>
+    
+    
       
     
       
-      <div id="blog"></div>
       
-      <section  class="mb-12">
-        <h2 class="text-3xl font-bold mb-4 text-center">Blog</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Blog 1 -->
-
-          <div class="group relative overflow-hidden card-shadow bg-white p-6 rounded-lg">
-            <img src="image/vite.png" alt="CSS Display Properties Simplified: Tips, Examples, and Best Practices" class="w-full h-48 object-cover transition duration-300 transform group-hover:opacity-0">
-            <!-- Hidden image on hover -->
-            <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex justify-center items-center">
-                <div class="text-center text-white p-6">
-                    <h3 class="text-xl font-medium mb-2 text-black-500">How to Integrate Tailwind CSS into React: Vite vs. Other Approaches</h3>
-                    <span class="text-black-300 mr-3">Dec 16, 2024</span>
-                    <div class="mt-4">
-                        <a href="https://medium.com/@madanbelbase927/how-to-integrate-tailwind-css-into-react-vite-vs-other-approaches-080b398eb413" class="text-white text-blue-700">Read More</a>
+      <section id="skills" class="mb-12">
+        <h2 class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text transition-all duration-300 hover:scale-105">
+            Skills
+        </h2>
+    
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-7xl mx-auto px-4">
+            
+            <!-- Programming Languages Section -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:rotate-2">
+                <h3 class="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-teal-500">Programming Languages</h3>
+                <div class="space-y-6">
+    
+                    <!-- HTML/CSS -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-gray-800">HTML/CSS</span>
+                            <span class="font-medium text-teal-600">80%</span>
+                        </div>
+                        <div class="bg-gray-200 h-4 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-blue-400 to-green-500 h-4 rounded-full animate-bar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+    
+                    <!-- JavaScript -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-gray-800">JavaScript</span>
+                            <span class="font-medium text-teal-600">65%</span>
+                        </div>
+                        <div class="bg-gray-200 h-4 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-yellow-400 to-orange-500 h-4 rounded-full animate-bar" style="width: 65%;"></div>
+                        </div>
+                    </div>
+    
+                    <!-- C/C++ -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-gray-800">C/C++</span>
+                            <span class="font-medium text-teal-600">60%</span>
+                        </div>
+                        <div class="bg-gray-200 h-4 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-red-400 to-yellow-500 h-4 rounded-full animate-bar" style="width: 60%;"></div>
+                        </div>
+                    </div>
+    
+                    <!-- Python -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-gray-800">Python</span>
+                            <span class="font-medium text-teal-600">45%</span>
+                        </div>
+                        <div class="bg-gray-200 h-4 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-4 rounded-full animate-bar" style="width: 45%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-          </div>
-
-          <!-- blog 1.1 -->
-<div class="group relative overflow-hidden card-shadow bg-white p-6 rounded-lg">
-  <img src="image/css-display.png" alt="CSS Display Properties Simplified: Tips, Examples, and Best Practices" class="w-full h-48 object-cover transition duration-300 transform group-hover:opacity-0">
-  <!-- Hidden image on hover -->
-  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex justify-center items-center">
-      <div class="text-center text-white p-6">
-          <h3 class="text-xl font-medium mb-2 text-black-500">CSS Display Properties Simplified: Tips, Examples, and Best Practices</h3>
-          <span class="text-black-300 mr-3">Nov 19, 2024</span>
-          <div class="mt-4">
-              <a href="https://medium.com/@madanbelbase927/css-display-properties-simplified-tips-examples-and-best-practices-d319f5a4d330" class="text-white text-blue-700">Read More</a>
-          </div>
-      </div>
-  </div>
-</div>
-
-<!-- Blog 2 -->
-<div class="group relative overflow-hidden card-shadow bg-white p-6 rounded-lg">
-  <img src="image/box_model.png" alt="CSS Box Model: The Key to Precise Web Layouts" class="w-full h-48 object-cover transition duration-300 transform group-hover:opacity-0">
-  <!-- Hidden image on hover -->
-  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex justify-center items-center">
-      <div class="text-center text-white p-6">
-          <h3 class="text-xl font-medium mb-2 text-black-500">CSS Box Model: The Key to Precise Web Layouts</h3>
-          <span class="text-black-300 mr-3">Nov 13, 2024</span>
-          <div class="mt-4">
-              <a href="https://medium.com/@madanbelbase927/css-box-model-the-key-to-precise-web-layouts-490294ebc639" class="text-white text-blue-700">Read More</a>
-          </div>
-      </div>
-  </div>
-</div>
-
-<!-- Blog 3 -->
-<div class="group relative overflow-hidden card-shadow bg-white p-6 rounded-lg">
-  <img src="image/async.png" alt="Getting Started with Asynchronous JavaScript: Callbacks, Promises, and Async/Await" class="w-full h-48 object-cover transition duration-300 transform group-hover:opacity-0">
-  <!-- Hidden image on hover -->
-  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex justify-center items-center">
-      <div class="text-center text-white p-6">
-          <h3 class="text-xl font-medium mb-2 text-black-500">Getting Started with Asynchronous JavaScript: Callbacks, Promises, and Async/Await</h3>
-          <span class="text-black-300 mr-3">Nov 5, 2024</span>
-          <div class="mt-4">
-              <a href="https://medium.com/@madanbelbase927/getting-started-with-asynchronous-javascript-callbacks-promises-and-async-await-fe7deda7156a" class="text-white text-blue-700">Read More</a>
-          </div>
-      </div>
-  </div>
-</div>
-
-<!-- Blog 4 -->
-<div class="group relative overflow-hidden card-shadow bg-white p-6 rounded-lg">
-  <img src="image/js.png" alt="Understanding “this” in JavaScript" class="w-full h-48 object-cover transition duration-300 transform group-hover:opacity-0">
-  <!-- Hidden image on hover -->
-  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex justify-center items-center">
-      <div class="text-center text-white p-6">
-          <h3 class="text-xl font-medium mb-2 text-black-500">Understanding “this” in JavaScript</h3>
-          <span class="text-black-300 mr-3">Oct 29, 2024</span>
-          <div class="mt-4">
-              <a href="https://medium.com/@madanbelbase927/understanding-this-in-javascript-0157244f4d57" class="text-white text-blue-700">Read More</a>
-          </div>
-      </div>
-  </div>
-</div>
-
-<!-- Blog 5 -->
-<div class="group relative overflow-hidden card-shadow bg-white p-6 rounded-lg">
-  <img src="image/virtual.png" alt="Virtual Environment in Python" class="w-full h-48 object-cover transition duration-300 transform group-hover:opacity-0">
-  <!-- Hidden image on hover -->
-  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex justify-center items-center">
-      <div class="text-center text-white p-6">
-          <h3 class="text-xl font-medium mb-2 text-black-500">Virtual Environment in Python</h3>
-          <span class="text-black-300 mr-3">Aug 29, 2024</span>
-          <div class="mt-4">
-              <a href="https://medium.com/@madanbelbase927/virtual-environment-in-python-4d893b73d7cd" class="text-white text-blue-700">Read More</a>
-          </div>
-      </div>
-  </div>
-</div>
-
-<!-- Blog 6 -->
-<div class="group relative overflow-hidden card-shadow bg-white p-6 rounded-lg">
-  <img src="image/python.png" alt="A Beginner’s Guide to Python Programming" class="w-full h-48 object-cover transition duration-300 transform group-hover:opacity-0">
-  <!-- Hidden image on hover -->
-  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex justify-center items-center">
-      <div class="text-center text-white p-6">
-          <h3 class="text-xl font-medium mb-2 text-black-500">A Beginner’s Guide to Python Programming</h3>
-          <span class="text-black-300 mr-3">Aug 21, 2024</span>
-          <div class="mt-4">
-              <a href="https://medium.com/@madanbelbase927/a-beginners-guide-to-python-programming-dac49b457f3c" class="text-white text-blue-700">Read More</a>
-          </div>
-      </div>
-  </div>
-</div>
-
-          
-            
+    
+            <!-- Tools & Frameworks Section -->
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:rotate-2">
+                <h3 class="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">Tools & Frameworks</h3>
+                <div class="space-y-6">
+    
+                    <!-- React -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-gray-800">React</span>
+                            <span class="font-medium text-teal-600">50%</span>
+                        </div>
+                        <div class="bg-gray-200 h-4 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-cyan-400 to-teal-500 h-4 rounded-full animate-bar" style="width: 50%;"></div>
+                        </div>
+                    </div>
+    
+                    <!-- Git -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-gray-800">Git</span>
+                            <span class="font-medium text-teal-600">45%</span>
+                        </div>
+                        <div class="bg-gray-200 h-4 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-green-300 to-blue-500 h-4 rounded-full animate-bar" style="width: 45%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
-      
-      
-      
-      
+  
+    
 
-      <section id="events" class="mb-12"> 
-        <h2 class="text-3xl font-bold mb-4 text-center">Education</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div class="card-shadow bg-white p-6 rounded-lg">
-            <h3 class="text-xl font-medium mb-4">Education</h3>
-            <div class="space-y-4 relative pl-6">
-              <div class="flex items-center space-x-4">
-                <div class="timeline-dot"></div>
-                <div>
-                  <h3 class=" text-xl font-medium">Bachelor of Computer Engineering</h3>
-                  <h3 class="text-lg text-gray-500">Nepal college of Information Technology</h3>
-                  <p class="text-lg text-gray-500">2024-Present</p>
 
-                </div>
-              </div>
-              <div class="flex items-center space-x-4">
-                <div class="timeline-dot"></div>
-                <div>
-                  <h3 class=" text-xl font-medium">+2 Science(Bio)</h3>
-                  <h3 class="text-lg text-gray-500">Morgan international College</h3>
-                  <p class="text-lg text-gray-500">2021-2023</p>
 
-                </div>
-              </div>
-              <div class="flex items-center space-x-4">
-                <div class="timeline-dot"></div>
-                <div>
-                  <h3 class=" text-xl font-medium">schooling </h3>
-                  <h3 class="text-lg text-gray-500">Shree Devi Prabhav Secondary School</h3>
-                  <p class="text-lg text-gray-500">2010-2020</p>
-
-                </div>
-              </div>
+      <section id="projects" class="mb-12">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <!-- Heading -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text transition-all duration-300 hover:scale-105">
+                    My Projects
+                </h2>
+                <p class="text-lg text-center mb-8 text-gray-600">
+                    Explore my portfolio of projects, ranging from web development to Python-based solutions.
+                </p>
             </div>
-            <div  id="Participation" ></div>
-          </div>
-           <!-- <div class="card-shadow bg-white p-6 rounded-lg">
-            <h3 class="text-xl font-medium mb-4">Certifications</h3>
-            <div class="space-y-4 relative pl-6">
-              <div class="flex items-center space-x-4">
-                <div class="timeline-dot"></div>
-                <div>
-                  <h4 class="font-medium">AWS Certified Solutions Architect - Associate</h4>
+    
+            <!-- Projects (Grid Layout) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group bg-white text-gray-900 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="image/currency.png" alt="Project 1" class="w-full h-40 object-cover transition-all duration-300 group-hover:opacity-60">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 group-hover:opacity-0 transition-opacity duration-300">
+                            <div class="text-center">
+                                <h3 class="text-2xl font-semibold text-white">Currency Converter</h3>
+                                <p class="text-sm text-white mt-2">Built With JavaScript And API Integration, Delivering Real-Time Currency Converter from API.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                      <p class="text-sm text-gray-600 mb-4">
+                        This project is a real-time currency converter built using React. It allows users to convert between different currencies with up-to-date exchange rates.
+                      </p>
+                      <p class="text-sm text-gray-600 mb-4">
+                        Technologies Used: React, API (Exchange Rates), JavaScript
+                      </p>
+                      <a href="https://github.com/MadanBelbase/Currency-converter-" class="text-blue-500 hover:text-blue-700">View Project →</a>
+                      
+                    </div>
                 </div>
-              </div>
-              <div class="flex items-center space-x-4">
-                <div class="timeline-dot"></div>
-                <div>
-                  <h4 class="font-medium">Google Cloud Certified Professional Data Engineer</h4>
+    
+                <!-- Project 2 -->
+                <div class="group bg-white text-gray-900 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="image/eduhub.png" alt="Project 2" class="w-full h-40 object-cover transition-all duration-300 group-hover:opacity-60">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 group-hover:opacity-0 transition-opacity duration-300">
+                            <div class="text-center">
+                                <h3 class="text-2xl font-semibold text-white">EduHub Platform</h3>
+                                <p class="text-sm text-white mt-2">An educational platform for online learning and resources.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-600 mb-4">EduHub is a platform that provides access to courses, tutorials, and educational resources for learners (UI ONLY). It offers interactive features like quizzes and discussions.</p>
+                        <p class="text-sm text-gray-600 mb-4">Technologies Used: Html ,CSS, JavaScript</p>
+                        <!-- <a href="#" class="text-blue-500 hover:text-blue-700">View Project →</a> -->
+                    </div>
                 </div>
-              </div>
-              <div class="flex items-center space-x-4">
-                <div class="timeline-dot"></div>
-                <div>
-                  <h4 class="font-medium">Microsoft Certified: Azure Fundamentals</h4>
+    
+                <!-- Project 3 -->
+                <div class="group bg-white text-gray-900 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    <div class="relative">
+                        <img src="image//news.png" alt="Project 3" class="w-full h-40 object-cover transition-all duration-300 group-hover:opacity-60">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 group-hover:opacity-0 transition-opacity duration-300">
+                            <div class="text-center">
+                                <h3 class="text-2xl font-semibold text-white">News API App</h3>
+                                <p class="text-sm text-white mt-2">A web application that fetches the latest news using a public API.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-gray-600 mb-4">This project uses the News API to fetch the latest news articles. Users can filter news by category and country.</p>
+                        <p class="text-sm text-gray-600 mb-4">Technologies Used: JavaScript, HTML, CSS, News API</p>
+                        <a href="https://github.com/MadanBelbase/Learning-Utsav-challenge/tree/main/Advanced%20javascript/News%20search%20App" class="text-blue-500 hover:text-blue-700">View Project →</a>
+                    </div>
                 </div>
-              </div> -->
-            <!-- </div>  -->
-          <!-- </div>  -->
-       
+            </div>
         </div>
-      </section>
+    </section>
+    
+    <div id="blog"></div>
+  
+    <section class="mb-12">
+      <h2 class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text transition-all duration-300 hover:scale-105">Blog</h2>
+      <p class="text-lg text-center mb-8 text-gray-600">Explore my latest blog posts and get insights into my journey, thoughts, and experiences on various topics.</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        
+        <!-- Blog 1 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="image/vite.png" alt="How to Integrate Tailwind CSS into React: Vite vs. Other Approaches" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-gray-800 mb-2">How to Integrate Tailwind CSS into React: Vite vs. Other Approaches</h3>
+            <span class="text-sm text-gray-500">Dec 16, 2024</span>
+            <div class="mt-4">
+              <a href="https://medium.com/@madanbelbase927/how-to-integrate-tailwind-css-into-react-vite-vs-other-approaches-080b398eb413" class="text-blue-600 hover:underline">Read More</a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Blog 1.1 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="image/css-display.png" alt="CSS Display Properties Simplified: Tips, Examples, and Best Practices" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-gray-800 mb-2">CSS Display Properties Simplified: Tips, Examples, and Best Practices</h3>
+            <span class="text-sm text-gray-500">Nov 19, 2024</span>
+            <div class="mt-4">
+              <a href="https://medium.com/@madanbelbase927/css-display-properties-simplified-tips-examples-and-best-practices-d319f5a4d330" class="text-blue-600 hover:underline">Read More</a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Blog 2 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="image/box_model.png" alt="CSS Box Model: The Key to Precise Web Layouts" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-gray-800 mb-2">CSS Box Model: The Key to Precise Web Layouts</h3>
+            <span class="text-sm text-gray-500">Nov 13, 2024</span>
+            <div class="mt-4">
+              <a href="https://medium.com/@madanbelbase927/css-box-model-the-key-to-precise-web-layouts-490294ebc639" class="text-blue-600 hover:underline">Read More</a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Blog 3 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="image/async.png" alt="Getting Started with Asynchronous JavaScript: Callbacks, Promises, and Async/Await" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-gray-800 mb-2">Getting Started with Asynchronous JavaScript: Callbacks, Promises, and Async/Await</h3>
+            <span class="text-sm text-gray-500">Nov 5, 2024</span>
+            <div class="mt-4">
+              <a href="https://medium.com/@madanbelbase927/getting-started-with-asynchronous-javascript-callbacks-promises-and-async-await-fe7deda7156a" class="text-blue-600 hover:underline">Read More</a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Blog 4 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="image/js.png" alt="Understanding “this” in JavaScript" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-gray-800 mb-2">Understanding “this” in JavaScript</h3>
+            <span class="text-sm text-gray-500">Oct 29, 2024</span>
+            <div class="mt-4">
+              <a href="https://medium.com/@madanbelbase927/understanding-this-in-javascript-0157244f4d57" class="text-blue-600 hover:underline">Read More</a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Blog 5 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="image/virtual.png" alt="Virtual Environment in Python" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-gray-800 mb-2">Virtual Environment in Python</h3>
+            <span class="text-sm text-gray-500">Aug 29, 2024</span>
+            <div class="mt-4">
+              <a href="https://medium.com/@madanbelbase927/virtual-environment-in-python-4d893b73d7cd" class="text-blue-600 hover:underline">Read More</a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Blog 6 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+          <img src="image/python.png" alt="A Beginner’s Guide to Python Programming" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-gray-800 mb-2">A Beginner’s Guide to Python Programming</h3>
+            <span class="text-sm text-gray-500">Aug 21, 2024</span>
+            <div class="mt-4">
+              <a href="https://medium.com/@madanbelbase927/a-beginners-guide-to-python-programming-dac49b457f3c" class="text-blue-600 hover:underline">Read More</a>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    
+
+
+    <section id="events" class="mb-12">
+      <h2 class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text transition-all duration-300 hover:scale-105">
+          Education
+      </h2>
+      <p class="text-lg text-center mb-8 text-gray-600">
+          Explore my educational background and the institutions that have helped shape my learning journey.
+      </p>
+  
+      <!-- Education Timeline -->
+      <div class="relative flex flex-col md:flex-row items-center md:justify-center gap-8">
+          
+          <!-- Line connecting the items -->
+          <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-green-400 to-blue-400 w-full"></div>
+  
+          <!-- Card 1 -->
+          <div class="relative group w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg border-2 border-transparent hover:border-blue-500 transition-all duration-300 hover:scale-105">
+              <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-green-500 rounded-full shadow-lg border-4 border-white"></div>
+              <h3 class="text-xl font-bold text-green-600">Bachelor of Computer Engineering</h3>
+              <h4 class="text-lg text-gray-500">Nepal College of Information Technology</h4>
+              <p class="text-md text-gray-600">2024 - Present</p>
+          </div>
+  
+          <!-- Card 2 -->
+          <div class="relative group w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg border-2 border-transparent hover:border-blue-500 transition-all duration-300 hover:scale-105">
+              <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blue-500 rounded-full shadow-lg border-4 border-white"></div>
+              <h3 class="text-xl font-bold text-blue-600">+2 Science (Bio)</h3>
+              <h4 class="text-lg text-gray-500">Morgan International College</h4>
+              <p class="text-md text-gray-600">2021 - 2023</p>
+          </div>
+  
+          <!-- Card 3 -->
+          <div class="relative group w-full md:w-1/3 bg-white p-6 rounded-lg shadow-lg border-2 border-transparent hover:border-blue-500 transition-all duration-300 hover:scale-105">
+              <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-red-500 rounded-full shadow-lg border-4 border-white"></div>
+              <h3 class="text-xl font-bold text-red-600">Schooling</h3>
+              <h4 class="text-lg text-gray-500">Shree Devi Prabhav Secondary School</h4>
+              <p class="text-md text-gray-600">2010 - 2020</p>
+          </div>
+      </div>
+  </section>
+  
 
      
 
-      <section class="mb-12">
-        <h2 class="text-3xl font-bold mb-6 text-center">Participation in Event and Workshop</h2>
+      <section class="mb-12 px-4">
+        <h2 class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text transition-all duration-300 hover:scale-105">
+            Participation in Events & Workshops
+        </h2>
+        
+        <p class="text-lg text-center mb-8 text-gray-700">
+            Here are some of the events and workshops I have participated in to enhance my skills and knowledge.
+        </p>
+    
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
             <!-- Card 1 -->
-            <div class="card-shadow bg-white p-6 rounded-lg group relative overflow-hidden">
-                <img src="image/Nosk.png" alt="Hardware Fellowship" class="w-full h-48 object-cover transition duration-300 group-hover:opacity-50 mb-4">
-                <h2 class="text-2xl font-medium mb-2">Noskathon Lite </h2>
-                <h3 class="text-xl font-medium mb-1">Organized By:NOSK : Nepal Open Source Klub</h3>
-                <h4 class="text-sm font-medium text-gray-600">Venue: NCIT </h4>
+            <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 group relative overflow-hidden hover:shadow-2xl transition duration-300">
+                <img src="image/Nosk.png" alt="Noskathon Lite" class="w-full h-48 object-cover rounded-md transition-transform duration-300 group-hover:scale-105">
+                <div class="mt-4">
+                    <h2 class="text-2xl font-semibold mb-1 text-gray-900 group-hover:text-green-600">Noskathon Lite</h2>
+                    <h3 class="text-lg font-medium text-gray-700">Organized By: NOSK - Nepal Open Source Klub</h3>
+                    <h4 class="text-sm font-medium text-gray-500">Venue: NCIT</h4>
+                </div>
             </div>
     
             <!-- Card 2 -->
-            <div class="card-shadow bg-white p-6 rounded-lg group relative overflow-hidden">
-                <img src="image/orbit.png" alt="Hardware Fellowship" class="w-full h-48 object-cover transition duration-300 group-hover:opacity-50 mb-4">
-                <h2 class="text-2xl font-medium mb-2">Orbit Engineering Hacks 2024</h2>
-                <h3 class="text-xl font-medium mb-1">Organized By: Engineers Vlogs</h3>
-                <h4 class="text-sm font-medium text-gray-600">Venue:Sagarmatha Engineering College</h4>
+            <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 group relative overflow-hidden hover:shadow-2xl transition duration-300">
+                <img src="image/orbit.png" alt="Orbit Engineering Hacks 2024" class="w-full h-48 object-cover rounded-md transition-transform duration-300 group-hover:scale-105">
+                <div class="mt-4">
+                    <h2 class="text-2xl font-semibold mb-1 text-gray-900 group-hover:text-blue-600">Orbit Engineering Hacks 2024</h2>
+                    <h3 class="text-lg font-medium text-gray-700">Organized By: Engineers Vlogs</h3>
+                    <h4 class="text-sm font-medium text-gray-500">Venue: Sagarmatha Engineering College</h4>
+                </div>
             </div>
     
-    
             <!-- Card 3 -->
-            <div class="card-shadow bg-white p-6 rounded-lg group relative overflow-hidden">
-                <img src="image/photo1.png" alt="Hardware Fellowship" class="w-full h-48 object-cover transition duration-300 group-hover:opacity-50 mb-4">
-                <h2 class="text-2xl font-medium mb-2">Hardware Fellowship</h2>
-                <h3 class="text-xl font-medium mb-1">Organized By: Robotics Club, IOE Pulchowk Campus</h3>
-                <h4 class="text-sm font-medium text-gray-600">Venue: IOE Pulchowk Campus</h4>
+            <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 group relative overflow-hidden hover:shadow-2xl transition duration-300">
+                <img src="image/photo1.png" alt="Hardware Fellowship" class="w-full h-48 object-cover rounded-md transition-transform duration-300 group-hover:scale-105">
+                <div class="mt-4">
+                    <h2 class="text-2xl font-semibold mb-1 text-gray-900 group-hover:text-red-600">Hardware Fellowship</h2>
+                    <h3 class="text-lg font-medium text-gray-700">Organized By: Robotics Club, IOE Pulchowk Campus</h3>
+                    <h4 class="text-sm font-medium text-gray-500">Venue: IOE Pulchowk Campus</h4>
+                </div>
             </div>
     
             <!-- Card 4 -->
-            <div class="card-shadow bg-white p-6 rounded-lg group relative overflow-hidden">
-                <img src="image/photo2.png" alt="Hands on Python Basics Workshop" class="w-full h-48 object-cover transition duration-300 group-hover:opacity-50 mb-4">
-                <h2 class="text-2xl font-medium mb-2">Hands-on Python Basics Workshop</h2>
-                <h3 class="text-xl font-medium mb-1">Organized By: Nepal Open Source Klub (NOSK)</h3>
-                <h4 class="text-sm font-medium text-gray-600">Venue: NCIT</h4>
+            <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-200 group relative overflow-hidden hover:shadow-2xl transition duration-300">
+                <img src="image/photo2.png" alt="Hands on Python Basics Workshop" class="w-full h-48 object-cover rounded-md transition-transform duration-300 group-hover:scale-105">
+                <div class="mt-4">
+                    <h2 class="text-2xl font-semibold mb-1 text-gray-900 group-hover:text-purple-600">Hands-on Python Basics Workshop</h2>
+                    <h3 class="text-lg font-medium text-gray-700">Organized By: Nepal Open Source Klub (NOSK)</h3>
+                    <h4 class="text-sm font-medium text-gray-500">Venue: NCIT</h4>
+                </div>
             </div>
-           
+    
         </div>
     </section>
     
+  
+    
+    <section id="certifications" class="mb-12">
+      <div class="absolute inset-0  opacity-40"></div>
+      <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Heading -->
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text transition-all duration-300 hover:scale-105">
+            Certifications & Achievements
+          </h2>
+          <p class="text-lg text-center mb-8 text-gray-600">
+            Check out some of the key certifications I've earned throughout my journey.
+          </p>
+        </div>
+    
+        <!-- Certification Cards (Grid Layout) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Certification 1 -->
+          <div class="group bg-white text-gray-900 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <div class="relative">
+              <img src="image/jsc.png" alt="JavaScript Essentials" class="w-full h-40 object-cover transition-all duration-300 group-hover:opacity-60">
+              <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 group-hover:opacity-0 transition-opacity duration-300">
+                <div class="text-center">
+                  <h3 class="text-2xl font-semibold text-white">JavaScript Essentials</h3>
+                  <p class="text-sm text-white mt-2">Certified by namastedev.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-sm text-gray-600 mb-4">A comprehensive course on JavaScript fundamentals, covering syntax, operators, and basic DOM manipulation.</p>
+              
+            </div>
+            <a href="#" onclick="openCertificate('image/jsc.png'); return false;" class="block w-full py-2 px-4 bg-blue-600 text-white text-center font-semibold rounded-b-lg transition-all duration-300 hover:bg-blue-800 splash-effect">
+    View Certificate
+</a>
+          </div>
+    
+          <!-- Certification 2 -->
+          <div class="group bg-white text-gray-900 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <div class="relative">
+              <img src="image/Reactc.png" alt="React Development" class="w-full h-40 object-cover transition-all duration-300 group-hover:opacity-60">
+              <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 group-hover:opacity-0 transition-opacity duration-300">
+                <div class="text-center">
+                  <h3 class="text-2xl font-semibold text-white">React Development</h3>
+                  <p class="text-sm text-white mt-2">Certified by Udemy</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-sm text-gray-600 mb-4">A deep dive into React, including hooks, component design, state management, and React Router.</p>
+            </div>
+            <a href="#" onclick="openCertificate('image/Reactc.png'); return false;" class="block  py-2 px-4 bg-green-600 text-white text-center font-semibold rounded-b-lg transition-all duration-300 hover:bg-green-800">
+              View Certificate
+            </a>
+          </div>
+    
+          <!-- Certification 3 -->
+          <div class="group bg-white text-gray-900 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <div class="relative">
+              <img src="image/Become a Python Maste.png"alt="Full Stack Web Development" class="w-full h-40 object-cover transition-all duration-300 group-hover:opacity-60">
+              <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 group-hover:opacity-0 transition-opacity duration-300">
+                <div class="text-center">
+                  <h3 class="text-2xl font-semibold text-white">Become a Python Master</h3>
+                  <p class="text-sm text-white mt-2">Certified by Programiz</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-sm text-gray-600 mb-4">A comprehensive course on full-stack Python, covering both (Basic) and backend (Advanced Concept).</p>
+              
+            </div>
+            <a href="#" onclick="openCertificate('image/Become a Python Maste.png'); return false;" class="block w-full py-2 px-4 bg-purple-600 text-white text-center font-semibold rounded-b-lg transition-all duration-300 hover:bg-purple-800">
+              View Certificate
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+   
+    
+    <section class="mb-12">
+      <h2 class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text transition-all duration-300 hover:scale-105">Gallery</h2>
+      <p class="text-lg text-center text-gray-600 mb-8">Explore some of the projects and visuals that reflect my work and creativity.</p>
+    
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Gallery Items with Slide-in Animation -->
+        <div class="gallery-item">
+          <img src="image/Nosk.png" alt="Gallery Image 1" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+        <div class="gallery-item">
+          <img src="image/css-display.png" alt="Gallery Image 2" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+        <div class="gallery-item">
+          <img src="image/photo2.png" alt="Gallery Image 3" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+        <div class="gallery-item">
+          <img src="image/currency.png" alt="Gallery Image 4" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+        <div class="gallery-item">
+          <img src="image/eduhub.png" alt="Gallery Image 5" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+        <div class="gallery-item">
+          <img src="image/DSCN3396.JPG" alt="Gallery Image 6" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+        <div class="gallery-item">
+          <img src="image/orbit.png" alt="Gallery Image 7" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+        <div class="gallery-item">
+          <img src="image/photo1.png" alt="Gallery Image 8" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+      </div>
+    </section>
+
+    
+  
+  
+          
+  
+  
+    
 
     <div id="contact"></div>
-      <section class="mb-12 text-center">
-        <h2 class="text-3xl font-bold mb-4 font-roboto">Contact Me</h2>
+      <section class="mb-12 text-center ">
+        <h2 class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text transition-all duration-300 hover:scale-105">Contact Me</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Contact Form -->
-          <div class="card-shadow bg-white p-6 rounded-lg">
+          <div class="card-shadow p-6 rounded-lg">
             <h3 class="text-xl font-medium mb-4 font-roboto">Get in Touch</h3>
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4" id="contactForm">
               <!-- Hidden Access Key Field for Web3Forms -->
@@ -470,7 +649,7 @@
           </div>
       
           <!-- Social Links -->
-          <div class="card-shadow bg-white p-6 rounded-lg">
+          <div class="card-shadow  p-6 rounded-lg">
             <h3 class="text-xl font-medium mb-4 font-roboto">Find Me Online</h3>
             <p class="text-gray-600 mb-4 font-roboto">
               You can connect with me through these platforms for collaborations, inquiries, or just to say hi! Click any icon below to visit my profile.
