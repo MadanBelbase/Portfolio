@@ -95,9 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-  
-
-    
 
 
   function openCertificate(imagePath) {
@@ -174,3 +171,9 @@ function openCertificate(imagePath) {
   };
 }
 
+
+              // JavaScript to handle the button click and reveal the Medium profile link
+              document.getElementById('showMediumProfile').addEventListener('click', function() {
+                document.getElementById('mediumLink').classList.remove('hidden');
+              });
+            

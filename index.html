@@ -19,7 +19,8 @@
   <!-- Main Content -->
   <div id="mainContent">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <header class="py-4 sticky top-0 left-0 w-full bg-white shadow-md z-50 transition-all duration-300 ease-in-out">
+      <header id="navbar"
+        class="py-4 sticky top-0 left-0 w-full bg-white shadow-md z-50 transition-all duration-300 ease-in-out">
         <nav class="flex items-center justify-between px-8">
           <!-- Logo -->
           <a href="#hero" class="text-2xl font-bold text-gray-800">Madan Belbase</a>
@@ -54,6 +55,7 @@
           </div>
         </div>
       </header>
+
 
 
       <main>
@@ -113,7 +115,8 @@
 
           <!-- Main Content Section -->
           <div class="ml-2 max-w-3xl mx-auto text-lg leading-relaxed text-center">
-            <h2 class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text transition-all duration-300 hover:scale-105">
+            <h2
+              class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text transition-all duration-300 hover:scale-105">
               About Me
             </h2>
             <p class="mb-4">
@@ -128,11 +131,6 @@
             </p>
           </div>
         </section>
-
-
-
-
-
 
         <section id="skills" class="mb-12">
           <h2
@@ -215,7 +213,7 @@
                     <span class="font-medium text-teal-600">50%</span>
                   </div>
                   <div class="bg-gray-200 h-4 rounded-full overflow-hidden">
-                    <div class="bg-gradient-to-r from-cyan-400 to-teal-500 h-4 rounded-full animate-bar"
+                    <div class="bg-gradient-to-r from-red-400 to-red-500 h-4 rounded-full animate-bar"
                       style="width: 50%;"></div>
                   </div>
                 </div>
@@ -336,123 +334,156 @@
         </section>
 
         <div id="blog"></div>
-
+        <!-- //NEW -->
         <section class="mb-12">
           <h2
             class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text transition-all duration-300 hover:scale-105">
             Blog</h2>
-          <p class="text-lg text-center mb-8 text-gray-600">Explore my latest blog posts and get insights into my
-            journey, thoughts, and experiences on various topics.</p>
+          <p class="text-lg text-center mb-10 text-gray-700 leading-relaxed">Stay updated with my latest blog posts,
+            insights, and experiences on diverse topics.</p>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
 
-            <!-- Blog 1 -->
+            <!-- Blog Card 1 -->
             <div
-              class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-              <img src="image/vite.png" alt="How to Integrate Tailwind CSS into React: Vite vs. Other Approaches"
-                class="w-full h-48 object-cover">
+              class="bg-white shadow-lg rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300">
+              <img src="image/vite.png" alt="How to Integrate Tailwind CSS into React" class="w-full h-52 object-cover">
               <div class="p-6">
-                <h3 class="text-xl font-medium text-gray-800 mb-2">How to Integrate Tailwind CSS into React: Vite vs.
-                  Other Approaches</h3>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">How to Integrate Tailwind CSS into React</h3>
                 <span class="text-sm text-gray-500">Dec 16, 2024</span>
-                <div class="mt-4">
+                <p class="mt-2 text-gray-600">Learn different approaches to integrating Tailwind CSS with React using
+                  Vite and other tools.</p>
+                <div class="mt-5">
                   <a href="https://medium.com/@madanbelbase927/how-to-integrate-tailwind-css-into-react-vite-vs-other-approaches-080b398eb413"
-                    class="text-blue-600 hover:underline">Read More</a>
+                    class="text-indigo-600 font-medium hover:underline">Read More →</a>
                 </div>
               </div>
             </div>
 
-            <!-- Blog 1.1 -->
+            <!-- Blog Card 2 -->
             <div
-              class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-              <img src="image/css-display.png"
-                alt="CSS Display Properties Simplified: Tips, Examples, and Best Practices"
-                class="w-full h-48 object-cover">
+              class="bg-white shadow-lg rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300">
+              <img src="image/css-display.png" alt="CSS Display Properties Simplified" class="w-full h-52 object-cover">
               <div class="p-6">
-                <h3 class="text-xl font-medium text-gray-800 mb-2">CSS Display Properties Simplified: Tips, Examples,
-                  and Best Practices</h3>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">CSS Display Properties Simplified</h3>
                 <span class="text-sm text-gray-500">Nov 19, 2024</span>
-                <div class="mt-4">
+                <p class="mt-2 text-gray-600">An easy guide to understanding and using CSS display properties
+                  effectively.</p>
+                <div class="mt-5">
                   <a href="https://medium.com/@madanbelbase927/css-display-properties-simplified-tips-examples-and-best-practices-d319f5a4d330"
-                    class="text-blue-600 hover:underline">Read More</a>
+                    class="text-indigo-600 font-medium hover:underline">Read More →</a>
                 </div>
               </div>
             </div>
 
-            <!-- Blog 2 -->
+            <!-- Blog Card 3 -->
             <div
-              class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+              class="bg-white shadow-lg rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300">
               <img src="image/box_model.png" alt="CSS Box Model: The Key to Precise Web Layouts"
-                class="w-full h-48 object-cover">
+                class="w-full h-52 object-cover">
               <div class="p-6">
-                <h3 class="text-xl font-medium text-gray-800 mb-2">CSS Box Model: The Key to Precise Web Layouts</h3>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">CSS Box Model: The Key to Precise Web Layouts</h3>
                 <span class="text-sm text-gray-500">Nov 13, 2024</span>
-                <div class="mt-4">
+                <p class="mt-2 text-gray-600">A comprehensive look at the CSS Box Model and how it influences layout
+                  design.</p>
+                <div class="mt-5">
                   <a href="https://medium.com/@madanbelbase927/css-box-model-the-key-to-precise-web-layouts-490294ebc639"
-                    class="text-blue-600 hover:underline">Read More</a>
+                    class="text-indigo-600 font-medium hover:underline">Read More →</a>
                 </div>
               </div>
             </div>
 
-            <!-- Blog 3 -->
+            <!-- Blog Card 4 -->
             <div
-              class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-              <img src="image/async.png"
-                alt="Getting Started with Asynchronous JavaScript: Callbacks, Promises, and Async/Await"
-                class="w-full h-48 object-cover">
+              class="bg-white shadow-lg rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300">
+              <img src="image/virtual.png" alt="Understanding Virtual Environments in Python"
+                class="w-full h-52 object-cover">
               <div class="p-6">
-                <h3 class="text-xl font-medium text-gray-800 mb-2">Getting Started with Asynchronous JavaScript:
-                  Callbacks, Promises, and Async/Await</h3>
-                <span class="text-sm text-gray-500">Nov 5, 2024</span>
-                <div class="mt-4">
-                  <a href="https://medium.com/@madanbelbase927/getting-started-with-asynchronous-javascript-callbacks-promises-and-async-await-fe7deda7156a"
-                    class="text-blue-600 hover:underline">Read More</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Blog 4 -->
-            <div
-              class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-              <img src="image/js.png" alt="Understanding “this” in JavaScript" class="w-full h-48 object-cover">
-              <div class="p-6">
-                <h3 class="text-xl font-medium text-gray-800 mb-2">Understanding “this” in JavaScript</h3>
-                <span class="text-sm text-gray-500">Oct 29, 2024</span>
-                <div class="mt-4">
-                  <a href="https://medium.com/@madanbelbase927/understanding-this-in-javascript-0157244f4d57"
-                    class="text-blue-600 hover:underline">Read More</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Blog 5 -->
-            <div
-              class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-              <img src="image/virtual.png" alt="Virtual Environment in Python" class="w-full h-48 object-cover">
-              <div class="p-6">
-                <h3 class="text-xl font-medium text-gray-800 mb-2">Virtual Environment in Python</h3>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">Understanding Virtual Environments in Python</h3>
                 <span class="text-sm text-gray-500">Aug 29, 2024</span>
-                <div class="mt-4">
+                <p class="mt-2 text-gray-600">A deep dive into virtual environments in Python and their significance.
+                </p>
+                <div class="mt-5">
                   <a href="https://medium.com/@madanbelbase927/virtual-environment-in-python-4d893b73d7cd"
-                    class="text-blue-600 hover:underline">Read More</a>
+                    class="text-indigo-600 font-medium hover:underline">Read More →</a>
                 </div>
               </div>
             </div>
 
-            <!-- Blog 6 -->
+            <!-- Blog Card 5 -->
             <div
-              class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
-              <img src="image/python.png" alt="A Beginner’s Guide to Python Programming"
-                class="w-full h-48 object-cover">
+              class="bg-white shadow-lg rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300">
+              <img src="image/async.png" alt="JavaScript Basics: A Beginner's Guide" class="w-full h-52 object-cover">
               <div class="p-6">
-                <h3 class="text-xl font-medium text-gray-800 mb-2">A Beginner’s Guide to Python Programming</h3>
-                <span class="text-sm text-gray-500">Aug 21, 2024</span>
-                <div class="mt-4">
-                  <a href="https://medium.com/@madanbelbase927/a-beginners-guide-to-python-programming-dac49b457f3c"
-                    class="text-blue-600 hover:underline">Read More</a>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3"> Getting Started with Asynchronous JavaScript:
+                  Callbacks, Promises, and Async/Await</h3>
+                <span class="text-sm text-gray-500"> Nov 5, 2024</span>
+                <p class="mt-2 text-gray-600">Explore callbacks, promises, and async/await to master asynchronous
+                  JavaScript.
+                <p>
+                <div class="mt-5">
+                  <a href="https://medium.com/@madanbelbase927/getting-started-with-asynchronous-javascript-callbacks-promises-and-async-await-fe7deda7156a"
+                    class="text-indigo-600 font-medium hover:underline">Read More →</a>
                 </div>
               </div>
             </div>
+
+            <!-- Blog Card 6 -->
+            <div
+              class="bg-white shadow-lg rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300">
+              <img src="image/this.png" alt="React Hooks Explained" class="w-full h-52 object-cover">
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">Understanding “this” in JavaScript</h3>
+                <span class="text-sm text-gray-500">Oct 29, 2024</span>
+                <p class="mt-2 text-gray-600">Understanding the this keyword in JavaScript is essential, as it refers to
+                  the context in which a function is called, influencing how variables and methods are accessed</p>
+                <div class="mt-5">
+                  <a href="https://medium.com/@madanbelbase927/understanding-this-in-javascript-0157244f4d57"
+                    class="text-indigo-600 font-medium hover:underline">Read More →</a>
+                </div>
+              </div>
+            </div>
+            <!-- Blog Card 7 -->
+            <div
+              class="bg-white shadow-lg rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300">
+              <img src="image/python.png" alt="React Hooks Explained" class="w-full h-52 object-cover">
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">A Beginner’s Guide to Python Programming</h3>
+                <span class="text-sm text-gray-500">Aug 21, 2024</span>
+                <p class="mt-2 text-gray-600">An introductory guide covering Python fundamentals for beginners.
+                <p>
+                <div class="mt-5">
+                  <a href="https://medium.com/@madanbelbase927/a-beginners-guide-to-python-programming-dac49b457f3c"
+                    class="text-indigo-600 font-medium hover:underline">Read More →</a>
+                </div>
+              </div>
+            </div>
+            <!-- Blog Card 7 -->
+            <div
+              class="bg-white shadow-lg rounded-2xl overflow-hidden transform hover:scale-105 transition duration-300">
+
+
+
+              <div class="w-full h-52 bg-cover bg-center" style="background-image: url('image/arrow.png');">
+                <div class="flex items-center justify-center h-full">
+                  <span class="text-4xl text-white">→</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">Visit My Medium Profile</h3>
+                <span class="text-sm text-gray-500">Explore my articles on various tech topics and more.</span>
+                <div class="mt-5">
+                  <a href="https://medium.com/@madanbelbase927"
+                    class="text-indigo-600 font-medium hover:underline">Check it out →</a>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
 
           </div>
         </section>
