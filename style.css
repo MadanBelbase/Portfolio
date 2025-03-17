@@ -102,22 +102,18 @@ body {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Typing Animation */
-@keyframes typing {
-  0% { width: 0; }
-  100% { width: 80%; }
-}
 
-.animate-typing {
+#typing-text {
   display: inline-block;
-  border-right: 2px solid rgb(82,81,81);
   white-space: nowrap;
-  overflow: hidden;
-  animation: typing 3s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
+  overflow: hidden; /* Prevent text from overflowing */
+  width: 100%; /* Adjust the width to fit content */
+  font-size: 24px; /* Font size for readability */
+  max-height: 10rem; /* Fixed height */
+  height: 3rem; /* Ensure that the height is fixed */
+  line-height: 1; /* Line height for better readability */
+  vertical-align: top; /* Aligns text at the top of the container */
+  color: #1FAB89;
 }
 
 
@@ -394,3 +390,6 @@ body {
   }
 }
 
+#logo {
+  transition: opacity 0.3s ease;
+}
