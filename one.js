@@ -108,7 +108,7 @@ if (cancelButton) {
 
 // <!-- Typing Effect Script -->
 
-const textArray = ["Computer Engineer", "Web Developer", "Tech Enthusiast"]; // Words to type
+const textArray = ["Blogger", "Web Developer", "Tech Enthusiast"]; // Words to type
 const typingText = document.getElementById("typing-text");
 let textIndex = 0;
 let charIndex = 0;
