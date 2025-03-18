@@ -106,37 +106,102 @@ if (cancelButton) {
 }
 
 
-// Text to be typed
-const text = "Student ||  Blogger || Frontend Developer";
+// <!-- Typing Effect Script -->
 
-// Setting up the typing animation
-let i = 0;
-const typingSpeed = 100; // Adjust typing speed (in milliseconds)
-const deletingSpeed = 50; // Adjust deleting speed
-const textElement = document.getElementById("typing-text");
+const textArray = ["Computer Engineer", "Web Developer", "Tech Enthusiast"]; // Words to type
+const typingText = document.getElementById("typing-text");
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-function typeText() {
-  if (i < text.length) {
-    textElement.innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeText, typingSpeed);
+function typeEffect() {
+  const currentText = textArray[textIndex];
+  if (!isDeleting) {
+    typingText.textContent = currentText.substring(0, charIndex + 1);
+    charIndex++;
   } else {
-    setTimeout(deleteText, 2000); // Delay before starting to delete
+    typingText.textContent = currentText.substring(0, charIndex - 1);
+    charIndex--;
   }
+
+  let typingSpeed = isDeleting ? 100 : 150;
+
+  if (!isDeleting && charIndex === currentText.length) {
+    typingSpeed = 1000; // Pause before deleting
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    textIndex = (textIndex + 1) % textArray.length;
+  }
+
+  setTimeout(typeEffect, typingSpeed);
 }
 
-function deleteText() {
-  if (i > 0) {
-    textElement.innerHTML = text.substring(0, i - 1);
-    i--;
-    setTimeout(deleteText, deletingSpeed);
-  } else {
-    setTimeout(typeText, 1000); // Delay before starting to type again
-  }
-}
+// Start typing effect on page load
+document.addEventListener("DOMContentLoaded", typeEffect);
 
-// Start typing on page load
-typeText();
+
+
+// <!-- Floating Particles Animation -->
+
+  const canvas = document.getElementById("particleCanvas");
+  const ctx = canvas.getContext("2d");
+
+  let particlesArray = [];
+  const numberOfParticles = 50;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  class Particle {
+    constructor() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 4 + 1;
+      this.speedX = Math.random() * 2 - 1;
+      this.speedY = Math.random() * 2 - 1;
+    }
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+
+      if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+      if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+    }
+    draw() {
+      ctx.fillStyle = "rgba(173, 216, 230, 0.8)";
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function createParticles() {
+    particlesArray = [];
+    for (let i = 0; i < numberOfParticles; i++) {
+      particlesArray.push(new Particle());
+    }
+  }
+
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particlesArray.forEach((particle) => {
+      particle.update();
+      particle.draw();
+    });
+    requestAnimationFrame(animateParticles);
+  }
+
+  window.addEventListener("resize", () => {
+    resizeCanvas();
+    createParticles();
+  });
+
+  resizeCanvas();
+  createParticles();
+  animateParticles();
 
   
   

@@ -12,7 +12,8 @@
 </head>
 
 <body>
-  <div class="min-h-screen">
+  <div class="min-h-screen" id="particles-js">
+    
    
     
     <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-lg z-50">
@@ -57,186 +58,211 @@
 
 
 
-<!-- Hero Section -->
-<section id="hero" class="section-container animate-fade-in-up mx-auto max-w-6xl px-6 mt-23">
-  <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-10 items-center mt-20">
+    <!-- Hero Section -->
+<section id="hero" class="relative section-container animate-fade-in-up mx-auto max-w-6xl px-6">
+  <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-10 items-center mt-10">
     <!-- Left Content Section -->
-    <div class="text-center md:text-center lg:text-left ml-8 mr-8">
-      <h5  class="text-xl font-bold mb-4 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text  " >Hi I'am </h5>
-      <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text ">
+    <div class="text-center md:text-center lg:text-left ml-8 mr-8 relative z-10">
+      <h5 class="text-xl font-bold mb-4 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text animate-pulse">
+        Hello, World! 🌍 I’m
+      </h5>
+      <h1 class="text-6xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text  animate-glow">
         Madan Belbase
       </h1>
-    <!-- Add this element to the part where you want the typing effect -->
-       <!-- Typing effect container -->
-       <div id="typing-text"></div>
+
+      <!-- Typing effect container -->
+      <div class="text-2xl font-semibold text-gray-300 dark:text-gray-100">
+        <span id="typing-text"></span><span class="blinking-cursor">|</span>
+      </div>
+
+      <p class="mt-4 text-lg text-gray-400 leading-relaxed">
+        A <span class="text-cyan-400 font-semibold">Developer</span> with a creative engineering mind ,  
+        blending  code & imagination  to build digital experiences.  
+        Passionate about <span class="text-indigo-400 font-semibold">tech,Cloud, and web innovation</span>!  
+      </p>
+
+      <!-- Quick Tech Stats -->
+<div class="mt-6 flex flex-wrap gap-4">
+  <span class="px-4 py-2 text-sm bg-gray-800 text-red-300 font-semibold rounded-full shadow-md">🚀 JavaScript Enthusiast</span>
+  <span class="px-4 py-2 text-sm bg-gray-800 text-blue-300 font-semibold rounded-full shadow-md">☁️ Cloud Computing</span>
+  <span class="px-4 py-2 text-sm bg-gray-800 text-pink-300 font-semibold rounded-full shadow-md">🎨 UI/UX Innovator</span>
+</div>
 
 
-
-
-      <div class="flex justify-center md:justify-center lg:justify-start gap-4">
+      <!-- Call to Action Buttons -->
+      <div class="flex justify-center md:justify-center lg:justify-start gap-4 mt-6">
         <a href="MadanBelbase.pdf" download
-          class="px-6 py-3 rounded-full bg-red-600 text-white font-semibold shadow-lg transition duration-300 hover:bg-red-700 hover:shadow-xl">
-          Download CV
+          class="px-6 py-3 rounded-full bg-indigo-500 text-white font-semibold shadow-lg transition duration-300 hover:bg-indigo-700 hover:shadow-xl">
+          📄 Download CV
         </a>
         <a href="#contact"
-          class="px-6 py-3 rounded-full border-2 border-red-600 text-red-600 font-semibold shadow-lg transition duration-300 hover:bg-red-600 hover:text-white hover:shadow-xl">
-          Hire Me
+          class="px-6 py-3 rounded-full border-2 border-cyan-400 text-cyan-400 font-semibold shadow-lg transition duration-300 hover:bg-cyan-400 hover:text-white hover:shadow-xl">
+          💼 Hire Me
         </a>
       </div>
     </div>
 
     <!-- Right Image Section -->
-    <div class="flex justify-center mt-8 md:mt-8 lg:mt-0">
+    <div class="flex justify-center mt-8 md:mt-8 lg:mt-0 relative">
       <img src="image/DSCN3396.JPG" alt="Profile"
-        class="w-72 h-72 object-cover rounded-full shadow-2xl border-4 border-white">
+        class="w-72 h-72 object-cover rounded-full shadow-2xl border-4 border-white transform transition-all duration-500 hover:scale-105 hover:rotate-2">
+      <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 px-4 py-2 rounded-lg shadow-lg text-gray-200 text-sm font-semibold">
+        🔥 Coding Beyond Limits
+      </div>
     </div>
+  </div>
+
+  <!-- Floating Particles Background -->
+  <div class="absolute inset-0 -z-10">
+    <canvas id="particleCanvas"></canvas>
   </div>
 </section>
 
 
 
-
-    <!-- Social Sidebar -->
+   <!-- Social Sidebar -->
 <aside class="fixed left-4 top-1/2 -translate-y-1/2 flex flex-col gap-6 z-50">
   <a href="https://github.com/MadanBelbase" target="_blank"
-    class="group flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full transition-all duration-300 hover:bg-red-500 hover:translate-x-2 shadow-md">
+    class="group flex items-center justify-center w-14 h-14 bg-gray-100 rounded-full transition-all duration-300 hover:bg-red-500 hover:translate-x-4 hover:shadow-xl shadow-md">
     <i class="fab fa-github text-2xl text-gray-700 transition-all duration-300 group-hover:text-white"></i>
   </a>
   <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank"
-    class="group flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full transition-all duration-300 hover:bg-blue-600 hover:translate-x-2 shadow-md">
+    class="group flex items-center justify-center w-14 h-14 bg-gray-100 rounded-full transition-all duration-300 hover:bg-blue-600 hover:translate-x-4 hover:shadow-xl shadow-md">
     <i class="fab fa-linkedin text-2xl text-gray-700 transition-all duration-300 group-hover:text-white"></i>
   </a>
   <a href="https://x.com/belbase_madan_" target="_blank"
-    class="group flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full transition-all duration-300 hover:bg-gray-900 hover:translate-x-2 shadow-md">
+    class="group flex items-center justify-center w-14 h-14 bg-gray-100 rounded-full transition-all duration-300 hover:bg-gray-900 hover:translate-x-4 hover:shadow-xl shadow-md">
     <i class="fab fa-twitter text-2xl text-gray-700 transition-all duration-300 group-hover:text-white"></i>
   </a>
   <a href="https://www.facebook.com/profile.php?id=61554181993528" target="_blank"
-    class="group flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full transition-all duration-300 hover:bg-blue-700 hover:translate-x-2 shadow-md">
+    class="group flex items-center justify-center w-14 h-14 bg-gray-100 rounded-full transition-all duration-300 hover:bg-blue-700 hover:translate-x-4 hover:shadow-xl shadow-md">
     <i class="fab fa-facebook text-2xl text-gray-700 transition-all duration-300 group-hover:text-white"></i>
   </a>
 </aside>
 
 
+  <!-- About Section -->
+<section id="about" class="section-container animate-fade-in-up relative py-16">
+  <h2 class="section-title text-center mb-8 text-4xl font-bold text-white tracking-wide text-shadow-md">About Me</h2>
+  
+  <div class="card p-10 max-w-3xl mx-auto rounded-xl shadow-2xl bg-white/90 backdrop-blur-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+    <p class="mb-6 text-lg leading-relaxed text-gray-800">
+      Hi, I'm a passionate <span class="font-semibold text-[var(--primary)]">Computer Engineering</span> student with a deep curiosity for technology and innovation. I continuously explore new ideas, pushing the boundaries of my knowledge in web development, AI, and software engineering.
+    </p>
+    <p class="text-lg leading-relaxed text-gray-700">
+      Beyond academics, I immerse myself in activities that refine my <span class="font-semibold text-[var(--accent)]">leadership</span>, <span class="font-semibold text-[var(--accent)]">communication</span>, and <span class="font-semibold text-[var(--accent)]">teamwork</span> skills. I thrive in collaborative environments and aspire to contribute to meaningful projects that make an impact.
+    </p>
+  </div>
+</section>
 
 
-    <!-- About Section -->
-    <section id="about" class="section-container animate-fade-in-up">
-      <h2 class="section-title text-center mb-6">About Me</h2>
-      <div class="card p-8 max-w-3xl mx-auto rounded-lg ">
-        <p class=" mb-4 text-lg">
-          I am a passionate <span class=" font-semibold">Computer Engineering</span> student with a diverse set of
-          interests and achievements.
-          My educational background, technical expertise, and aspirations drive my pursuit of continuous learning and
-          innovation.
-        </p>
-        <p class="text-[var(--gray-dark)] text-lg">
-          Outside of academics, I engage in extracurricular activities that enhance my <span
-            class="text-[var(--accent)] font-semibold">leadership</span>,
-          <span class="text-[var(--accent)] font-semibold">communication</span>, and <span
-            class="text-[var(--accent)] font-semibold">teamwork</span> skills. I thrive in collaborative environments
-          and aim to contribute meaningfully to my community.
-        </p>
-      </div>
-    </section>
 
-    <!-- Combined Skills & Education Section -->
-    <section id="skills-education" class="skills-education-section animate-fade-in-up">
-      <h2 class="skills-education-title">Skills & Education</h2>
-      <div class="skills-education-container">
+   <!-- Combined Skills & Education Section -->
+<section id="skills-education" class="skills-education-section animate-fade-in-up py-16">
+  <h2 class="skills-education-title text-center text-4xl font-bold text-white mb-8 tracking-wide">Skills & Education</h2>
+  
+  <div class="skills-education-container grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        <!-- Skills Box -->
-        <div class="skills-card">
-          <h3 class="skills-card-title text-2xl font-semibold mb-6 text-center" style="color: var(--primary);">
-            Skills
-          </h3>
-          <div class="skills-inner-container">
+    <!-- Skills Box -->
+    <div class="skills-card  p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+      <h3 class="skills-card-title text-2xl font-semibold mb-6 text-center" style="color: var(--primary);">
+        <i class="fas fa-laptop-code mr-2 text-2xl"></i> Skills
+      </h3>
+      <div class="skills-inner-container space-y-6">
 
-            <!-- Programming Languages Box -->
-            <div class="programming-box p-4">
-              <h4 class="text-xl font-semibold mb-4">Programming Languages</h4>
-              <div class="skills-list space-y-3">
-                <div class="skills-item flex justify-between">
-                  <span>HTML/CSS</span>
-                  <span class="skills-rating">★★★★☆</span>
-                </div>
-                <div class="skills-item flex justify-between">
-                  <span>JavaScript</span>
-                  <span class="skills-rating">★★★☆☆</span>
-                </div>
-                <div class="skills-item flex justify-between">
-                  <span>C/C++</span>
-                  <span class="skills-rating">★★☆☆☆</span>
-                </div>
-                <div class="skills-item flex justify-between">
-                  <span>Python</span>
-                  <span class="skills-rating">★★☆☆☆</span>
-                </div>
-              </div>
+        <!-- Programming Languages Box -->
+        <div class="programming-box p-4  rounded-lg ">
+          <h4 class="text-xl font-semibold mb-4 flex items-center">
+            <i class="fas fa-code mr-2"></i> Programming Languages
+          </h4>
+          <div class="skills-list space-y-3">
+            <div class="skills-item flex justify-between">
+              <span>HTML/CSS</span>
+              <span class="skills-rating">★★★★☆</span>
             </div>
-
-            <!-- Tools & Frameworks Box -->
-            <div class="tools-box p-4">
-              <h4 class="text-xl font-semibold mb-4">Tools & Frameworks</h4>
-              <div class="skills-list space-y-3">
-                <div class="skills-item flex justify-between">
-                  <span>React</span>
-                  <span class="skills-rating">★★★★☆</span>
-                </div>
-                <div class="skills-item flex justify-between">
-                  <span>Node.js</span>
-                  <span class="skills-rating">★★★☆☆</span>
-                </div>
-                <div class="skills-item flex justify-between">
-                  <span>Express</span>
-                  <span class="skills-rating">★★★☆☆</span>
-                </div>
-                <div class="skills-item flex justify-between">
-                  <span>MySQL</span>
-                  <span class="skills-rating">★★★☆☆</span>
-                </div>
-                <div class="skills-item flex justify-between">
-                  <span>MongoDB</span>
-                  <span class="skills-rating">★★★☆☆</span>
-                </div>
-              </div>
+            <div class="skills-item flex justify-between">
+              <span>JavaScript</span>
+              <span class="skills-rating">★★★☆☆</span>
             </div>
-
+            <div class="skills-item flex justify-between">
+              <span>C/C++</span>
+              <span class="skills-rating">★★☆☆☆</span>
+            </div>
+            <div class="skills-item flex justify-between">
+              <span>Python</span>
+              <span class="skills-rating">★★☆☆☆</span>
+            </div>
           </div>
         </div>
 
-        <!-- Education Box -->
-        <div class="education-card">
-          <h3 class="education-card-title">Education</h3>
-          <div class="education-list">
-            <!-- University -->
-            <div class="education-item flex justify-between">
-              <div class="education-details">
-                <p class="education-degree">Bachelor of Computer Engineering</p>
-                <p class="education-institution text-sm">Nepal College of Information Technology</p>
-              </div>
-              <span class="education-duration">2023 - Present</span>
+        <!-- Tools & Frameworks Box -->
+        <div class="tools-box p-4  rounded-lg ">
+          <h4 class="text-xl font-semibold mb-4 flex items-center">
+            <i class="fas fa-cogs mr-2"></i> Tools & Frameworks
+          </h4>
+          <div class="skills-list space-y-3">
+            <div class="skills-item flex justify-between">
+              <span>React</span>
+              <span class="skills-rating">★★★★☆</span>
             </div>
-            <!-- College -->
-            <div class="education-item flex justify-between">
-              <div class="education-details">
-                <p class="education-degree">+2 Science (Bio)</p>
-                <p class="education-institution text-sm">Morgan International College</p>
-              </div>
-              <span class="education-duration">2021 - 2023</span>
+            <div class="skills-item flex justify-between">
+              <span>Node.js</span>
+              <span class="skills-rating">★★★☆☆</span>
             </div>
-            <!-- School -->
-            <div class="education-item flex justify-between">
-              <div class="education-details">
-                <p class="education-degree">Schooling</p>
-                <p class="education-institution text-sm">Shree Devi Prabhav Secondary School</p>
-              </div>
-              <span class="education-duration">2010 - 2020</span>
+            <div class="skills-item flex justify-between">
+              <span>Express</span>
+              <span class="skills-rating">★★★☆☆</span>
+            </div>
+            <div class="skills-item flex justify-between">
+              <span>MySQL</span>
+              <span class="skills-rating">★★★☆☆</span>
+            </div>
+            <div class="skills-item flex justify-between">
+              <span>MongoDB</span>
+              <span class="skills-rating">★★★☆☆</span>
             </div>
           </div>
         </div>
 
       </div>
-    </section>
+    </div>
+
+    <!-- Education Box -->
+    <div class="education-card  rounded-xl  hover:scale-105 transition-all duration-300">
+      <h3 class="education-card-title text-2xl font-semibold mb-6 text-center" style="color: var(--primary);">
+        <i class="fas fa-graduation-cap mr-2 text-2xl"></i> Education
+      </h3>
+      <div class="education-list space-y-6">
+        <!-- University -->
+        <div class="education-item flex justify-between">
+          <div class="education-details">
+            <p class="education-degree text-lg font-semibold">Bachelor of Computer Engineering</p>
+            <p class="education-institution text-sm text-gray-600">Nepal College of Information Technology</p>
+          </div>
+          <span class="education-duration text-sm text-gray-500">2023 - Present</span>
+        </div>
+        <!-- College -->
+        <div class="education-item flex justify-between">
+          <div class="education-details">
+            <p class="education-degree text-lg font-semibold">+2 Science (Bio)</p>
+            <p class="education-institution text-sm text-gray-600">Morgan International College</p>
+          </div>
+          <span class="education-duration text-sm text-gray-500">2021 - 2023</span>
+        </div>
+        <!-- School -->
+        <div class="education-item flex justify-between">
+          <div class="education-details">
+            <p class="education-degree text-lg font-semibold">Schooling</p>
+            <p class="education-institution text-sm text-gray-600">Shree Devi Prabhav Secondary School</p>
+          </div>
+          <span class="education-duration text-sm text-gray-500">2010 - 2020</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 
 
@@ -291,66 +317,76 @@
       </div>
     </section>
 
-   <!-- Blog Section -->
-<section id="blog" class="py-16 bg-[#f8f9fa]">
+  <!-- Blog Section -->
+<section id="blog" class="py-16 ">
   <div class="text-center mb-12">
-    <h2 class="text-5xl font-bold text-gray-900">📰 Latest Blog</h2>
-    <p class="text-lg text-gray-700">Stay updated with insights, tutorials, and experiences.</p>
+    <h2 class="text-5xl font-bold text-gray-900 flex items-center justify-center gap-2">
+      📰 <span>Latest Blog</span>
+    </h2>
+    <p class="text-lg text-gray-700 mt-2">Stay updated with insights, tutorials, and experiences.</p>
   </div>
 
-  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-    <!-- Featured Article (Large, Left Side) -->
-    <article class="lg:col-span-2 border border-gray-300 p-6 rounded-lg shadow-md">
-      <h3 class="text-3xl font-serif font-bold text-gray-900 leading-snug">React State, Made Simple: A Practical Walkthrough</h3>
-      <p class="text-sm text-gray-600 mb-4">Published: Feb 24, 2025</p>
-      <img src="image/reactblog.png" alt="Tailwind CSS" class="w-full h-64 object-cover my-4 rounded-lg">
-      <p class="text-lg text-gray-800 leading-relaxed">Understanding state management in React helps build dynamic and interactive React applications.</p>
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 px-6">
+    <!-- Featured Article (Larger, Left Side) -->
+    <article class="lg:col-span-2  b p-6 rounded-xl  hover:shadow-xl transition">
+      <img src="image/reactblog.png" alt="React Blog" class="w-full h-64 object-cover rounded-lg mb-4">
+      <h3 class="text-3xl font-bold text-gray-900">React State, Made Simple: A Practical Walkthrough</h3>
+      <p class="text-sm text-gray-600 mt-2">Published: Feb 24, 2025</p>
+      <p class="text-lg text-gray-800 leading-relaxed mt-4">Understanding state management in React helps build dynamic and interactive applications.</p>
       <a href="https://medium.com/@madanbelbase927/react-state-made-simple-a-practical-walkthrough-0004b474f076"
-        target="_blank" class="mt-4 inline-block text-blue-600 font-semibold">Read Full Story →</a>
-    </article>
+        target="_blank" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">Read Full Story →</a>
+        <div class="space-y-8">
 
-  <!-- Side Articles (Right Side) -->
-<div class="space-y-6 lg:space-y-8 sm:px-4 md:px-6">
-  <!-- Article 1 -->
-  <article class="border-b border-gray-300 pb-4">
-    <h3 class="text-2xl font-serif font-bold text-gray-900">How to Integrate Tailwind CSS into React: Vite vs. Other Approaches</h3>
-    <p class="text-sm text-gray-600">Published: Dec 16, 2024</p>
-    <p class="text-gray-800 mt-2">Understanding how we can integrate Tailwind CSS into React using Vite and other approaches.</p>
-    <a href="https://medium.com/@madanbelbase927/how-to-integrate-tailwind-css-into-react-vite-vs-other-approaches-080b398eb413"
-      target="_blank" class="text-blue-600 font-semibold">Read More →</a>
-  </article>
 
-  <!-- Article 2 -->
-  <article class="border-b border-gray-300 pb-4">
-    <h3 class="text-2xl font-serif font-bold text-gray-900">Getting Started with Asynchronous JavaScript: Callbacks, Promises, and Async/Await</h3>
-    <p class="text-sm text-gray-600">Published: Oct 25, 2024</p>
-    <p class="text-gray-800 mt-2">Learn how JavaScript’s async/await simplifies asynchronous programming with practical examples.</p>
-    <a href="https://medium.com/@madanbelbase927/getting-started-with-asynchronous-javascript-callbacks-promises-and-async-await-fe7deda7156a"
-      target="_blank" class="text-blue-600 font-semibold">Read More →</a>
-  </article>
-
-  <!-- Article 3 -->
-  <article>
-    <h3 class="text-2xl font-serif font-bold text-gray-900">Understanding “this” in JavaScript</h3>
-    <p class="text-sm text-gray-600">Published: Oct 29, 2024</p>
-    <p class="text-gray-800 mt-2">Closures are a fundamental JavaScript concept. This article breaks them down with simple explanations.</p>
-    <a href="https://medium.com/@madanbelbase927/understanding-this-in-javascript-0157244f4d57" target="_blank"
-      class="text-blue-600 font-semibold">Read More →</a>
-  </article>
-</div>
-
-  </div>
-
-  <!-- Medium Profile Link -->
+          <!-- Article  -->
+          <article class="rounded-xl mt-5">
+            <h3 class="text-2xl font-bold text-gray-900">CSS Display Properties Simplified: Tips, Examples, and Best Practices</h3>
+            <p class="text-sm text-gray-600 mt-1">Published: Nov 16, 2024</p>
+            <p class="text-gray-800 mt-2">Understanding CSS Display Properties.</p>
+            <a href="https://medium.com/@madanbelbase927/css-display-properties-simplified-tips-examples-and-best-practices-d319f5a4d330"
+              target="_blank" class="text-blue-600 font-semibold hover:underline">Read More →</a>
+          </article>
+         <!-- Medium Profile Link -->
   <div class="text-center mt-12">
     <a href="https://medium.com/@madanbelbase927" target="_blank"
-      class="inline-block px-6 py-3 bg-red-700 text-white font-bold rounded-lg shadow-md hover:bg-gray-800 transition-all">
+      class="inline-block px-8 py-3  text-white font-bold rounded-lg shadow-md hover:bg-red-700 transition-all">
       Read More Articles on Medium →
     </a>
   </div>
-</section>
+    </article>
 
+    <!-- Side Articles (Right Side) -->
+    <div class="space-y-8">
+      <!-- Article 1 -->
+      <article class=" p-6 rounded-xl  hover:shadow-lg transition">
+        <h3 class="text-2xl font-bold text-gray-900">How to Integrate Tailwind CSS into React</h3>
+        <p class="text-sm text-gray-600 mt-1">Published: Dec 16, 2024</p>
+        <p class="text-gray-800 mt-2">Understanding how we can integrate Tailwind CSS into React using Vite and other approaches.</p>
+        <a href="https://medium.com/@madanbelbase927/how-to-integrate-tailwind-css-into-react-vite-vs-other-approaches-080b398eb413"
+          target="_blank" class="text-blue-600 font-semibold hover:underline">Read More →</a>
+      </article>
+
+      <!-- Article 2 -->
+      <article class=" p-6 rounded-xl hover:shadow-lg transition">
+        <h3 class="text-2xl font-bold text-gray-900">Getting Started with Asynchronous JavaScript</h3>
+        <p class="text-sm text-gray-600 mt-1">Published: Oct 25, 2024</p>
+        <p class="text-gray-800 mt-2">Learn how JavaScript’s async/await simplifies asynchronous programming with practical examples.</p>
+        <a href="https://medium.com/@madanbelbase927/getting-started-with-asynchronous-javascript-callbacks-promises-and-async-await-fe7deda7156a"
+          target="_blank" class="text-blue-600 font-semibold hover:underline">Read More →</a>
+      </article>
+
+      <!-- Article 3 -->
+      <article class=" p-6 rounded-xl  hover:shadow-lg transition">
+        <h3 class="text-2xl font-bold text-gray-900">Understanding “this” in JavaScript</h3>
+        <p class="text-sm text-gray-600 mt-1">Published: Oct 29, 2024</p>
+        <p class="text-gray-800 mt-2">Closures are a fundamental JavaScript concept. This article breaks them down with simple explanations.</p>
+        <a href="https://medium.com/@madanbelbase927/understanding-this-in-javascript-0157244f4d57" target="_blank"
+          class="text-blue-600 font-semibold hover:underline">Read More →</a>
+      </article>
+    </div>
+  </div>
+
+</section>
 
 
     <!-- Certifications Section -->
@@ -434,10 +470,10 @@
         </div>
 
         <!-- Gallery Item 4 -->
-        <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+        <!-- <div class="gallery-item overflow-hidden rounded-lg shadow-md">
           <img src="image/DSCN3396.JPG" alt="Gallery Image 4"
             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div>
+        </div> -->
 
         <!-- Gallery Item 5 -->
         <div class="gallery-item overflow-hidden rounded-lg shadow-md">
@@ -445,11 +481,11 @@
             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
         </div>
 
-        <!-- Gallery Item 6 -->
+        <!-- Gallery Item 6
         <div class="gallery-item overflow-hidden rounded-lg shadow-md">
           <img src="image/gallery6.jpg" alt="Gallery Image 6"
             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -458,140 +494,124 @@
 
     <!-- Contact Section -->
     <!-- Contact Section -->
-    <section id="contact" class="section-container animate-fade-in-up py-16">
-      
-      <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto px-8">
-        
-        <!-- Contact Form -->
-        <div class="contact-form-card rounded-3xl shadow-xl p-10 animate__animated animate__fadeInUp">
-          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
-            <input type="hidden" name="access_key" value="46d2b706-cb7b-411b-b4fa-a5674ad33811">
-    
-            <!-- Name Field -->
-            <div class="form-group">
-              <input type="text" name="name" placeholder="Your Name"
-                class="w-full p-5 bg-transparent border-2 border-white text-white rounded-full focus:ring-4 focus:ring-yellow-500 focus:outline-none transition duration-300 ease-in-out"
-                required>
-            </div>
-    
-            <!-- Email Field -->
-            <div class="form-group">
-              <input type="email" name="email" placeholder="Your Email"
-                class="w-full p-5 bg-transparent border-2 border-white text-white rounded-full focus:ring-4 focus:ring-yellow-500 focus:outline-none transition duration-300 ease-in-out"
-                required>
-            </div>
-    
-            <!-- Message Field -->
-            <div class="form-group">
-              <textarea name="message" placeholder="Your Message" rows="6"
-                class="w-full p-5 bg-transparent border-2 border-white text-white rounded-3xl focus:ring-4 focus:ring-yellow-500 focus:outline-none transition duration-300 ease-in-out"
-                required></textarea>
-            </div>
-    
-            <!-- Submit Button -->
-            <div class="form-group">
-              <button type="submit"
-                class="w-full py-4 px-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 ease-in-out">
-                Send Message
-              </button>
-            </div>
-          </form>
+<section id="contact" class="section-container animate-fade-in-up py-16 relative">
+  
+  <!-- Contact Form & Info Container -->
+  <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto px-8">
+
+    <!-- Contact Form -->
+    <div class="contact-form-card rounded-3xl animate__animated animate__fadeInUp transform hover:scale-105 transition duration-300 ease-in-out">
+      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+        <input type="hidden" name="access_key" value="46d2b706-cb7b-411b-b4fa-a5674ad33811">
+
+        <!-- Name Field -->
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name"
+            class="w-full p-5 bg-transparent border-2 border-white text-white rounded-full focus:ring-4 focus:ring-yellow-500 focus:outline-none transition duration-300 ease-in-out hover:bg-gray-800">
         </div>
 
-        <!-- Contact Info -->
-        <!-- Contact Info -->
-        <div class="card p-8  text-center">
-          <p class="text-gray-500 mb-6">Let's connect! Reach out via email, social media, or through the details below.
-          </p>
-
-          <!-- Email -->
-          <p class="mb-4 text-lg font-semibold">
-            <strong>Email:</strong>
-            <a href="mailto:madanbelbase927@email.com"
-              class="text-blue-600 hover:text-blue-800">madanbelbase927@email.com</a>
-          </p>
-
-          <!-- Location -->
-          <p class="mb-4 text-lg font-semibold">
-            <strong>Location:</strong> Kathmandu, Nepal
-          </p>
-
-          <!-- Availability or Call-to-Action -->
-          <p class="text-gray-600 mb-6">
-            Open to collaborations, freelance opportunities, or any questions you may have. Feel free to get in touch,
-            and I will respond as soon as possible!
-          </p>
-
-          <!-- Social Media Links -->
-          <div class="flex justify-center gap-6 mt-6">
-            <a href="https://github.com/MadanBelbase" target="_blank"
-              class="text-2xl text-gray-700 hover:text-blue-500 transition duration-300">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank"
-              class="text-2xl text-gray-700 hover:text-blue-500 transition duration-300">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://x.com/belbase_madan_" target="_blank"
-              class="text-2xl text-gray-700 hover:text-blue-500 transition duration-300">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </div>
-
-          <!-- Add more CTA or details if needed -->
-          <p class="mt-8 text-lg text-gray-700">
-            Interested in collaborating or have a project in mind? Don't hesitate to drop me a message!
-          </p>
+        <!-- Email Field -->
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email"
+            class="w-full p-5 bg-transparent border-2 border-white text-white rounded-full focus:ring-4 focus:ring-yellow-500 focus:outline-none transition duration-300 ease-in-out hover:bg-gray-800">
         </div>
-      </div>
-    </section>
 
-    <!-- Thank You Message Modal -->
-    <div id="thankYouModal" class="fixed inset-0 flex justify-center items-center bg-gray-700 bg-opacity-50 hidden">
-      <div class="bg-white p-8 rounded-lg shadow-lg text-center max-w-sm">
-        <!-- Image in Thank You Modal -->
-        <img src="image/DSCN3396.JPG" alt="Profile"
-          class="w-72 h-72 object-cover rounded-full shadow-2xl border-4 border-white">
+        <!-- Message Field -->
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Message" rows="6"
+            class="w-full p-5 bg-transparent border-2 border-white text-white rounded-3xl focus:ring-4 focus:ring-yellow-500 focus:outline-none transition duration-300 ease-in-out hover:bg-gray-800"></textarea>
+        </div>
 
-        <h3 class="text-2xl font-semibold text-green-600">Thank You!</h3>
-        <p class="mt-4 text-gray-600">Your message has been successfully sent. I will get back to you soon!</p>
-        <button onclick="closeThankYouModal()"
-          class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Close</button>
-      </div>
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button type="submit"
+            class="w-full py-4 px-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 ease-in-out hover:from-pink-600 hover:to-purple-700">
+            Send Message
+          </button>
+        </div>
+      </form>
     </div>
 
-    <!-- JavaScript to handle form submission and display thank you message -->
-    <script>
-      // Get the form and the thank you modal
-      const form = document.getElementById('contactForm');
-      const thankYouModal = document.getElementById('thankYouModal');
+    <!-- Contact Info -->
+    <div class="card p-8 text-center rounded-3xl  backdrop-blur-md transform hover:scale-105 transition-all duration-300 ease-in-out">
+      <p class="text-gray-500 mb-6">Let's connect! Reach out via email, social media, or through the details below.</p>
 
-      // Handle form submission
-      form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent default form submission
+      <!-- Email -->
+      <p class="mb-4 text-lg font-semibold">
+        <strong>Email:</strong>
+        <a href="mailto:madanbelbase927@email.com" class="text-blue-600 hover:text-blue-800 transition duration-300">madanbelbase927@email.com</a>
+      </p>
 
-        // Show the thank you message modal
-        thankYouModal.classList.remove('hidden');
+      <!-- Location -->
+      <p class="mb-4 text-lg font-semibold">
+        <strong>Location:</strong> Kathmandu, Nepal
+      </p>
 
-        // Optionally, reset the form after submission
-        form.reset();
-      });
+      <!-- Availability or Call-to-Action -->
+      <p class="text-gray-600 mb-6">
+        Open to collaborations, freelance opportunities, or any questions you may have. Feel free to get in touch, and I will respond as soon as possible!
+      </p>
 
-      // Function to close the thank you modal
-      function closeThankYouModal() {
-        thankYouModal.classList.add('hidden');
-      }
-    </script>
+      <!-- Social Media Links -->
+      <div class="flex justify-center gap-6 mt-6">
+        <a href="https://github.com/MadanBelbase" target="_blank" class="text-2xl text-gray-700 hover:text-blue-500 transition duration-300">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank" class="text-2xl text-gray-700 hover:text-blue-500 transition duration-300">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://x.com/belbase_madan_" target="_blank" class="text-2xl text-gray-700 hover:text-blue-500 transition duration-300">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
 
-
-
-    </main>
-    <footer class="py-8 text-center bg-white/80 backdrop-blur-md text-gray-600">
-
-      <!-- Copyright -->
-      <p class="mt-6 text-sm">© 2024 <span class="font-semibold">Madan Belbase</span>. All rights reserved.</p>
+      <!-- Add more CTA or details if needed -->
+      <p class="mt-8 text-lg text-gray-700">
+        Interested in collaborating or have a project in mind? Don't hesitate to drop me a message!
+      </p>
+    </div>
   </div>
-  </footer>
+</section>
+
+<!-- Thank You Message Modal -->
+<div id="thankYouModal" class="fixed inset-0 flex justify-center items-center bg-gray-700 bg-opacity-50 hidden">
+  <div class="bg-white p-8 rounded-lg shadow-lg text-center max-w-sm">
+    <img src="image/DSCN3396.JPG" alt="Profile"
+      class="w-72 h-72 object-cover rounded-full shadow-2xl border-4 border-white">
+
+    <h3 class="text-2xl font-semibold text-green-600">Thank You!</h3>
+    <p class="mt-4 text-gray-600">Your message has been successfully sent. I will get back to you soon!</p>
+    <button onclick="closeThankYouModal()"
+      class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Close</button>
+  </div>
+</div>
+
+<!-- JavaScript to handle form submission and display thank you message -->
+<script>
+  // Get the form and the thank you modal
+  const form = document.getElementById('contactForm');
+  const thankYouModal = document.getElementById('thankYouModal');
+
+  // Handle form submission
+  form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Show the thank you message modal
+    thankYouModal.classList.remove('hidden');
+
+    // Optionally, reset the form after submission
+    form.reset();
+  });
+
+  // Function to close the thank you modal
+  function closeThankYouModal() {
+    thankYouModal.classList.add('hidden');
+  }
+</script>
+
+<footer class="py-8 text-center bg-white/80 backdrop-blur-md text-gray-600">
+  <p class="mt-6 text-sm">© 2024 <span class="font-semibold">Madan Belbase</span>. All rights reserved.</p>
+</footer>
 
   </div>
   <script src="one.js"></script>

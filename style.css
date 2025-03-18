@@ -106,15 +106,15 @@ body {
 #typing-text {
   display: inline-block;
   white-space: nowrap;
-  overflow: hidden; /* Prevent text from overflowing */
-  width: 100%; /* Adjust the width to fit content */
-  font-size: 24px; /* Font size for readability */
-  max-height: 10rem; /* Fixed height */
-  height: 3rem; /* Ensure that the height is fixed */
-  line-height: 1; /* Line height for better readability */
-  vertical-align: top; /* Aligns text at the top of the container */
-  color: #1FAB89;
+  overflow: hidden; /* Ensures text doesn't overflow */
+  font-size: 24px; /* Readable font size */
+  max-height: 10rem; /* Fixed max height */
+  height: 3rem; /* Ensures a fixed height */
+  line-height: 1.4; /* Improves readability */
+  vertical-align: top; /* Aligns text properly */
+  color: #1FAB89; /* Text color */
 }
+
 
 
 
@@ -203,9 +203,6 @@ body {
   border-right: 1px dashed #ccc;
 }
 
-.tools-box {
-  /* No border for the tools box (optional) */
-}
 
 /* Skills List Styling */
 .skills-list .skills-item {
@@ -393,3 +390,30 @@ body {
 #logo {
   transition: opacity 0.3s ease;
 }
+
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff; }
+  50% { text-shadow: 0 0 20px #00e5ff, 0 0 40px #00e5ff; }
+  100% { text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff; }
+}
+.animate-glow { animation: glow 2s infinite alternate; }
+.blinking-cursor { animation: blink 1s infinite; }
+
+
+.group:hover .fa-github,
+  .group:hover .fa-linkedin,
+  .group:hover .fa-twitter,
+  .group:hover .fa-facebook {
+    transform: rotate(360deg);
+  }
+  
+  .group {
+    position: relative;
+  }
+
+  /* Customize transition */
+  .transition-all {
+    transition: all 0.3s ease-in-out;
+  }
+
+  
