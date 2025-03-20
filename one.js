@@ -163,8 +163,8 @@ document.getElementById("contactForm").addEventListener("submit", async function
       // Show Thank You message and make it full-screen
       const thankYouModal = document.getElementById("thankYouModal");
       thankYouModal.classList.remove("hidden");
-      thankYouModal.style.height = "100%";  // Full screen height
-      thankYouModal.style.width = "100%";   // Full screen width
+      thankYouModal.style.height = "40%";  // Full screen height
+      thankYouModal.style.width = "40%";   // Full screen width
 
       // Reset the form
       form.reset();
