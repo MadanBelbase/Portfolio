@@ -63,9 +63,9 @@ function createParticles() {
 
 let textX = Math.random() * window.innerWidth;
 let textY = Math.random() * window.innerHeight;
-let textSpeedX = 2;
-let textSpeedY = 2;
-const words = ["Madan Belbase", "Web Developer", "Tech Enthusiast"];
+let textSpeedX = 8;
+let textSpeedY = 8;
+const words = ["Madan Belbase", "Madan Belbase", "Madan Belbase"];
 let wordIndex = 0;
 let textOpacity = 1;
 
