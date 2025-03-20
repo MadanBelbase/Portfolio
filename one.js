@@ -140,60 +140,74 @@ function typeEffect() {
 // Start typing effect on page load
 document.addEventListener("DOMContentLoaded", typeEffect);
 
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
+  event.preventDefault(); // Prevent default form submission
 
+  const form = event.target;
+  const submitBtn = document.getElementById("submitBtn");
+  submitBtn.innerText = "Sending...";
+  submitBtn.disabled = true;
 
-// <!-- JavaScript to handle AJAX submission -->
+  const formData = new FormData(form);
 
-  document.getElementById("contactForm").addEventListener("submit", async function(event) {
-    event.preventDefault(); // Prevent default form submission
+  try {
+    // Send the form data via fetch API
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
 
-    const form = event.target;
-    const submitBtn = document.getElementById("submitBtn");
-    submitBtn.innerText = "Sending...";
-    submitBtn.disabled = true;
+    const result = await response.json();
 
-    const formData = new FormData(form);
+    if (result.success) {
+      // Show Thank You message and make it full-screen
+      const thankYouModal = document.getElementById("thankYouModal");
+      thankYouModal.classList.remove("hidden");
+      thankYouModal.style.height = "100%";  // Full screen height
+      thankYouModal.style.width = "100%";   // Full screen width
 
-    try {
-      // Send the form data via fetch API
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
+      // Reset the form
+      form.reset();
 
-      const result = await response.json();
-
-      if (result.success) {
-        // Show Thank You message
-        document.getElementById("thankYouModal").classList.remove("hidden");
-
-        // Reset the form
-        form.reset();
-
-        // Reset button text after a short delay
-        setTimeout(() => {
-          submitBtn.innerText = "Send Message";
-          submitBtn.disabled = false;
-        }, 2000);
-
-        // Redirect back to your site after showing the message
-        setTimeout(() => {
-          window.location.href = "https://madanbelbase.com.np/"; // Change this to your homepage or any other page
-        }, 3000);
-      } else {
-        alert("Error sending message. Please try again later.");
+      // Reset button text after a short delay
+      setTimeout(() => {
         submitBtn.innerText = "Send Message";
         submitBtn.disabled = false;
-      }
-    } catch (error) {
-      alert("Something went wrong. Please check your internet connection.");
+      }, 2000);
+
+      // Hide modal and redirect back to the contact section after 3 seconds
+      setTimeout(() => {
+        thankYouModal.classList.add("hidden");
+        window.location.hash = "#contact";  // Scroll back to the contact section
+      }, 3000);
+
+    } else {
+      alert("Error sending message. Please try again later.");
       submitBtn.innerText = "Send Message";
       submitBtn.disabled = false;
     }
+  } catch (error) {
+    alert("Something went wrong. Please check your internet connection.");
+    submitBtn.innerText = "Send Message";
+    submitBtn.disabled = false;
+  }
+});
+
+function closeThankYouModal() {
+  document.getElementById("thankYouModal").classList.add("hidden");
+}
+
+
+
+// Sidebar toggle logic for small devices
+  const toggleSidebar = document.getElementById("toggleSidebar");
+  const mobileSidebar = document.getElementById("mobileSidebar");
+  const closeSidebar = document.getElementById("closeSidebar");
+
+  toggleSidebar.addEventListener("click", () => {
+    mobileSidebar.classList.remove("hidden");
   });
 
-  function closeThankYouModal() {
-    document.getElementById("thankYouModal").classList.add("hidden");
-  }
-
-
+  closeSidebar.addEventListener("click", () => {
+    mobileSidebar.classList.add("hidden");
+  });

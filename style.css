@@ -176,7 +176,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-  text-align: left;
+  
 }
 
 @media (min-width: 768px) {
@@ -429,4 +429,35 @@ body {
 
 #mobileMenu.translate-x-full {
   transform: translateX(100%); /* Slide out */
+}
+/* Floating Entrance Animation */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.animate-floatIn {
+  animation: floatIn 1.2s ease-out;
+}
+
+/* Icon Pulse Effect */
+@keyframes pulseIcon {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.hover\:animate-pulseIcon:hover {
+  animation: pulseIcon 0.6s ease-in-out infinite alternate;
 }
