@@ -65,7 +65,7 @@ let textX = Math.random() * window.innerWidth;
 let textY = Math.random() * window.innerHeight;
 let textSpeedX = 8;
 let textSpeedY = 8;
-const words = ["Madan Belbase", "Madan Belbase", "Madan Belbase"];
+const words =["Madan Belbase", "Creative Coder", "Innovative Thinker"];
 let wordIndex = 0;
 let textOpacity = 1;
 
