@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,589 +8,535 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  
 </head>
-
 <body>
-  <div class="min-h-screen text-gray-100" id="particles-js">
-
-    <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-lg z-50">
-      <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <!-- Logo -->
-        <a href="#hero" id="logo" class="text-2xl font-bold bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text transition-opacity duration-300">
-          Madan Belbase
-        </a>
-    
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="#about" class="nav-link text-[var(--gray-dark)]">About</a>
-          <a href="#projects" class="nav-link text-[var(--gray-dark)]">Projects</a>
-          <a href="#blog" class="nav-link text-[var(--gray-dark)]">Blog</a>
-          <a href="#gallery" class="nav-link text-[var(--gray-dark)]">Gallery</a>
-          <a href="#contact" class="nav-link text-[var(--gray-dark)]">Contact</a>
-        </div>
-    
-        <!-- Mobile Menu Button (Hamburger) -->
-        <button id="menuButton" class="md:hidden text-2xl">☰</button>
-    
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="fixed top-0 right-0 bg-green-500 p-4 w-48 rounded-lg shadow-lg transform translate-x-full transition-transform ease-in-out duration-300">
-          <div class="flex justify-end">
-            <button id="closeMenu" class="text-xl font-bold text-white">X</button>
-          </div>
-          <div class="flex flex-col items-start space-y-2 mt-2">
-            <a href="#about" class="nav-link text-white hover:text-gray-900 transition duration-200">About</a>
-            <a href="#projects" class="nav-link text-white hover:text-gray-900 transition duration-200">Projects</a>
-            <a href="#blog" class="nav-link text-white hover:text-gray-900 transition duration-200">Blog</a>
-            <a href="#gallery" class="nav-link text-white hover:text-gray-900 transition duration-200">Gallery</a>
-            <a href="#contact" class="nav-link text-white hover:text-gray-900 transition duration-200">Contact</a>
-          </div>
-        </div>
-        
-    
-        <!-- Overlay -->
-        <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50"></div>
-      </nav>
-    </header>
-    
-
-
-
-    <!-- Hero Section -->
-<section id="hero" class="relative min-h-screen flex items-center justify-center px-6">
-  <!-- Background Animation -->
-  <div class="absolute inset-0 -z-10">
-    <canvas id="particleCanvas"></canvas>
-  </div>
-
-  <!-- Content Wrapper -->
-  <div class="mx-auto max-w-6xl w-full">
-    <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-10 items-center mt-10">
-      <!-- Left Content Section -->
-      <div class="text-center md:text-center lg:text-left ml-8 mr-8 relative z-10">
-        <h5 class="text-xl font-bold mb-4 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text animate-pulse">
-          Hello, World! 🌍 I’m
-        </h5>
-        <h1 class="text-6xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text animate-glow">
-          Madan Belbase
-        </h1>
-
-        <!-- Typing effect container -->
-        <div class="text-2xl font-semibold text-gray-300 dark:text-gray-100">
-          <span id="typing-text"></span><span class="blinking-cursor">|</span>
-        </div>
-
-        <p class="mt-4 text-lg text-white-900 leading-relaxed">
-          A <span class="text-red font-semibold">Developer</span> with a creative engineering mind ,  
-          blending code & imagination to build digital experiences.  
-          Passionate about <span class="text-green-400 font-semibold">tech, Cloud, and web innovation</span>!  
-        </p>
-
-        <!-- Quick Tech Stats -->
-        <div class="mt-6 flex flex-wrap gap-4">
-          <span class="px-4 py-2 text-sm bg-gray-800 text-red-300 font-semibold rounded-full shadow-md">🚀 JavaScript Enthusiast</span>
-          <span class="px-4 py-2 text-sm bg-gray-800 text-blue-300 font-semibold rounded-full shadow-md">☁️ Cloud Computing</span>
-          <span class="px-4 py-2 text-sm bg-gray-800 text-pink-300 font-semibold rounded-full shadow-md">🎨 UI/UX Innovator</span>
-        </div>
-
-        <!-- Call to Action Buttons -->
-        <div class="flex flex-col md:flex-row justify-center lg:justify-start gap-6 mt-8">
-          <a href="MadanBelbase.pdf" download="MadanBelbaseResume"
-            class="px-6 py-3 md:px-8 md:py-4 rounded-full bg-indigo-600 text-white font-semibold shadow-lg transform transition-all duration-300 ease-in-out hover:bg-indigo-700 hover:scale-105 hover:shadow-xl w-full md:w-auto">
-            📄 Resume
-          </a>
-          <a href="#contact"
-            class="px-6 py-3 md:px-8 md:py-4 rounded-full border-2 border-cyan-500 text-cyan-500 font-semibold shadow-lg transform transition-all duration-300 ease-in-out hover:bg-cyan-500 hover:text-white hover:scale-105 hover:shadow-xl w-full md:w-auto">
-            💼 Contact Me
-          </a>
-        </div>
-      </div>
-
-      <!-- Right Image Section -->
-      <div class="flex justify-center mt-8 md:mt-8 lg:mt-0 relative">
-        <img src="image/DSCN3396.JPG" alt="Profile"
-          class="w-72 h-72 object-cover rounded-full shadow-2xl border-4 border-white transform transition-all duration-500 hover:scale-105 hover:rotate-2">
-        <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 px-4 py-2 rounded-lg shadow-lg text-gray-200 text-sm font-semibold">
-          🔥 Coding Beyond Limits
-        </div>
-      </div>
+  <!-- 3D Cube Background -->
+  <div id="cube-container">
+    <div id="cube">
+      <div id="front"></div>
+      <div id="back"></div>
+      <div id="right"></div>
+      <div id="left"></div>
+      <div id="top"></div>
+      <div id="bottom"></div>
     </div>
   </div>
-</section>
 
-<!-- Social Sidebar (Hidden on Small Screens, Visible on md and larger) -->
-<aside class="hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 flex-col gap-6 z-50 animate-floatIn">
-  <a href="https://github.com/MadanBelbase" target="_blank"
-    class="group flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-lg rounded-xl transition-all duration-300 border border-white/20 shadow-lg hover:bg-red-500 hover:translate-x-6 hover:scale-110 hover:shadow-red-500/50 hover:rotate-6 hover:animate-pulseIcon">
-    <i class="fab fa-github text-3xl text-white transition-all duration-300 group-hover:text-white"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank"
-    class="group flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-lg rounded-xl transition-all duration-300 border border-white/20 shadow-lg hover:bg-blue-600 hover:translate-x-6 hover:scale-110 hover:shadow-blue-500/50 hover:rotate-6 hover:animate-pulseIcon">
-    <i class="fab fa-linkedin text-3xl text-white transition-all duration-300 group-hover:text-white"></i>
-  </a>
-  <a href="https://x.com/belbase_madan_" target="_blank"
-    class="group flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-lg rounded-xl transition-all duration-300 border border-white/20 shadow-lg hover:bg-gray-900 hover:translate-x-6 hover:scale-110 hover:shadow-gray-600/50 hover:rotate-6 hover:animate-pulseIcon">
-    <i class="fab fa-twitter text-3xl text-white transition-all duration-300 group-hover:text-white"></i>
-  </a>
-  <a href="https://www.facebook.com/profile.php?id=61554181993528" target="_blank"
-    class="group flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-lg rounded-xl transition-all duration-300 border border-white/20 shadow-lg hover:bg-blue-700 hover:translate-x-6 hover:scale-110 hover:shadow-blue-700/50 hover:rotate-6 hover:animate-pulseIcon">
-    <i class="fab fa-facebook text-3xl text-white transition-all duration-300 group-hover:text-white"></i>
-  </a>
-</aside>
+  <header class="fixed w-full bg-white/10 backdrop-blur-md shadow-lg z-50">
+    <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#hero" class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text ">
+        Madan Belbase
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="nav-link relative hover:text-green-400 ">About</a>
+        <a href="#projects" class="nav-link relative hover:text-green-400">Projects</a>
+        <a href="#blog" class="nav-link relative hover:text-green-400">Blog</a>
+        <a href="#contact" class="nav-link relative hover:text-green-400">Contact</a>
+      </div>
+      <button id="menuButton" class="md:hidden text-2xl">☰</button>
+    </nav>
+  </header>
 
-<!-- Floating Button (Visible on Small Screens, Hidden on md and larger) -->
-<button id="toggleSidebar"
-  class="md:hidden fixed bottom-6 right-6 bg-gray-800 text-white p-4 rounded-full shadow-lg hover:bg-gray-700 transition-all duration-300">
-  <i class="fas fa-share-alt text-xl"></i>
-</button>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed top-0 right-0 bg-black/60 backdrop-blur-lg z-40 transform translate-x-full transition-transform duration-300 md:hidden rounded-l-xl shadow-xl">
 
-<!-- Sidebar for Small Devices (Initially Hidden) -->
-<div id="mobileSidebar"
-  class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-  <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col gap-6">
-    <a href="https://github.com/MadanBelbase" target="_blank" class="text-white text-xl">GitHub</a>
-    <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank" class="text-white text-xl">LinkedIn</a>
-    <a href="https://x.com/belbase_madan_" target="_blank" class="text-white text-xl">Twitter</a>
-    <a href="https://www.facebook.com/profile.php?id=61554181993528" target="_blank" class="text-white text-xl">Facebook</a>
-    <button id="closeSidebar" class="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-500">
-      Close
-    </button>
+
+    <div class="flex justify-end p-4">
+      <button id="closeMenu" class="text-2xl text-red-500"></button>
+    </div>
+    <div class="flex flex-col items-center space-y-6 p-4">
+      <a href="#hero" class="nav-link text-xl relative hover:text-green-400">Home</a>
+      <a href="#about" class="nav-link text-xl relative hover:text-green-400">About</a>
+      <a href="#projects" class="nav-link text-xl relative hover:text-green-400">Projects</a>
+      <a href="#blog" class="nav-link text-xl relative hover:text-green-400">Blog</a>
+      <a href="#contact" class="nav-link text-xl relative hover:text-green-400">Contact</a>
+    </div>
   </div>
-</div>
 
-  <!-- About Section -->
-  <section id="about" class="section-container animate-fade-in-up relative py-16">
-    <h2 class="section-title text-center mb-8 text-4xl text-green-400 font-bold tracking-wide text-shadow-md">About Me</h2>
-    
-    <div class="card p-10 max-w-3xl mx-auto rounded-xl bg-white/90 backdrop-blur-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-      <p class="mb-6 text-lg leading-relaxed text-white">
-        Hi, I'm a passionate <span class="font-semibold text-[var(--primary)]">Computer Engineering</span> student with a deep curiosity for technology and innovation. I continuously explore new ideas, pushing the boundaries of my knowledge in web development, AI, and software engineering.
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden"></div>
+
+  <section id="hero" class="min-h-screen flex items-center justify-center px-6 bg-black/80 backdrop-blur-lg">
+    <div class="text-center">
+      <!-- Profile Image -->
+      <div class="flex justify-center mb-8">
+        <img src="image/DSCN3396.JPG" alt="Madan Belbase" class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-4 border-cyan-500 shadow-lg animate-float">
+      </div>
+  
+      <!-- Introduction Text -->
+      <h5 class="text-xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent animate-pulse">
+        Hello, World! 🌍 I’m
+      </h5>
+      <h1 class="text-6xl font-extrabold mb-4 bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text animate-glow">
+        Madan Belbase
+      </h1>
+      <div class="text-2xl font-semibold text-gray-300">
+        <span id="typing-text"></span><span class="blinking-cursor">|</span>
+      </div>
+      <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+        A <span class="text-cyan-400 font-semibold">Developer</span> with a creative engineering mind, blending code & imagination to build digital experiences. Passionate about <span class="text-purple-400 font-semibold">tech, cloud, and web innovation</span>!
       </p>
-      <p class="text-lg leading-relaxed text-white">
-        Beyond academics, I immerse myself in activities that refine my <span class="font-semibold text-[var(--accent)]">leadership</span>, <span class="font-semibold text-[var(--accent)]">communication</span>, and <span class="font-semibold text-[var(--accent)]">teamwork</span> skills. I thrive in collaborative environments and aspire to contribute to meaningful projects that make an impact.
-      </p>
+  
+      <!-- Social Media Links -->
+    <div class="flex items-center space-x-6 mt-8 justify-center">
+      <!-- GitHub -->
+      <a href="https://github.com/MadanBelbase" target="_blank" class="social-link p-3 rounded-lg border border-[#4e4e4e] transition-all transform hover:scale-110">
+        <i class="fab fa-github text-2xl"></i>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank" class="social-link p-3 rounded-lg border border-[#4e4e4e] transition-all transform hover:scale-110">
+        <i class="fab fa-linkedin text-2xl"></i>
+      </a>
+
+      <!-- Twitter (X) -->
+      <a href="https://x.com/belbase_madan_" target="_blank" class="social-link p-3 rounded-lg border border-[#4e4e4e] transition-all transform hover:scale-110">
+        <i class="fab fa-twitter text-2xl"></i>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/profile.php?id=61554181993528" target="_blank" class="social-link p-3 rounded-lg border border-[#4e4e4e] transition-all transform hover:scale-110">
+        <i class="fab fa-facebook text-2xl"></i>
+      </a>
+    </div>
+  
+      <!-- CTA Buttons -->
+      <div class="mt-8 flex justify-center gap-4">
+        <a href="MadanBelbase.pdf" download class="px-6 py-3 bg-cyan-500 text-white rounded-full hover:bg-purple-500 transition-all shadow-lg">
+          📄 Resume
+        </a>
+        <a href="#contact" class="px-6 py-3 border-2 border-purple-500 text-purple-400 rounded-full hover:bg-purple-500 hover:text-white transition-all shadow-lg">
+          💼 Contact Me
+        </a>
+      </div>
     </div>
   </section>
-  
 
-
-   <!-- Combined Skills & Education Section -->
-<section id="skills-education" class="skills-education-section animate-fade-in-up py-16">
-  <h2 class="skills-education-title text-center text-4xl font-bold  text-green-400  mb-8 tracking-wide">Skills & Education</h2>
-
-  
-  <div class="skills-education-container grid grid-cols-1 md:grid-cols-2 gap-8">
-
-    <!-- Skills Box -->
-    <div class="skills-card  p-6 rounded-xl  hover:scale-105 transition-all duration-300">
-      <h3 class="skills-card-title text-2xl font-semibold mb-6 text-center" ">
-        <i class="fas fa-laptop-code mr-2 text-2xl  text-white-900"></i> Skills
-      </h3>
-      <div class="skills-inner-container space-y-6">
-
-        <!-- Programming Languages Box -->
-        <div class="programming-box p-4  rounded-lg ">
-          <h4 class="text-xl font-semibold mb-4 flex items-center">
-            <i class="fas fa-code mr-2"></i> Programming Languages
-          </h4>
-          <div class="skills-list space-y-3">
-            <div class="skills-item flex justify-between">
-              <span>HTML/CSS</span>
-              <span class="skills-rating">★★★★☆</span>
-            </div>
-            <div class="skills-item flex justify-between">
-              <span>JavaScript</span>
-              <span class="skills-rating">★★★☆☆</span>
-            </div>
-            <div class="skills-item flex justify-between">
-              <span>C/C++</span>
-              <span class="skills-rating">★★☆☆☆</span>
-            </div>
-            <div class="skills-item flex justify-between">
-              <span>Python</span>
-              <span class="skills-rating">★★☆☆☆</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tools & Frameworks Box -->
-        <div class="tools-box p-4  rounded-lg ">
-          <h4 class="text-xl font-semibold mb-4 flex items-center">
-            <i class="fas fa-cogs mr-2"></i> Tools & Frameworks
-          </h4>
-          <div class="skills-list space-y-3">
-            <div class="skills-item flex justify-between">
-              <span>React</span>
-              <span class="skills-rating">★★★★☆</span>
-            </div>
-            <div class="skills-item flex justify-between">
-              <span>Node.js</span>
-              <span class="skills-rating">★★★☆☆</span>
-            </div>
-            <div class="skills-item flex justify-between">
-              <span>Express</span>
-              <span class="skills-rating">★★★☆☆</span>
-            </div>
-            <div class="skills-item flex justify-between">
-              <span>MySQL</span>
-              <span class="skills-rating">★★★☆☆</span>
-            </div>
-            <div class="skills-item flex justify-between">
-              <span>MongoDB</span>
-              <span class="skills-rating">★★★☆☆</span>
-            </div>
-          </div>
-        </div>
-
+  <!-- About & Education Section -->
+<section id="about" class="py-16 px-6">
+  <h2 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text text-transparent">
+    About Me & Education
+  </h2>
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- About Me -->
+      <div   class="card p-8 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105">
+        <h3 class="text-2xl font-bold mb-4 text-[var(--primary)]">About Me</h3>
+        <p class="text-lg text-gray-300 mb-6">
+          Hi, I'm <span class="text-[var(--primary)] font-semibold">Madan Belbase</span>, a passionate <span class="text-[var(--primary)] font-semibold">Computer Engineering</span> student with a deep curiosity for technology and innovation. I continuously explore new ideas, pushing the boundaries of my knowledge in web development, AI, and software engineering.
+        </p>
+        <p class="text-lg text-gray-300">
+          Beyond academics, I immerse myself in activities that refine my <span class="text-[var(--primary)] font-semibold">leadership</span>, <span class="text-[var(--primary)] font-semibold">communication</span>, and <span class="text-[var(--primary)] font-semibold">teamwork</span> skills. I thrive in collaborative environments and aspire to contribute to meaningful projects that make an impact.
+        </p>
       </div>
-    </div>
 
-    <!-- Education Box -->
-    <div class="education-card  rounded-xl  hover:scale-105 transition-all duration-300">
-      <h3 class="education-card-title text-2xl font-semibold mb-6 text-center">
-        <i class="fas fa-graduation-cap mr-2 text-2xl"></i> Education
-      </h3>
-      <div class="education-list space-y-6">
-        <!-- University -->
-        <div class="education-item flex justify-between">
-          <div class="education-details">
-            <p class="education-degree text-lg font-semibold">Bachelor of Computer Engineering</p>
-            <p class="education-institution text-sm text-gray-600">Nepal College of Information Technology</p>
+      <!-- Education -->
+      <div class="card p-8 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105">
+        <h3 class="text-2xl font-bold mb-4 text-[var(--primary)]">Education</h3>
+        <div class="space-y-6">
+          <!-- University -->
+          <div class="flex items-start space-x-4">
+            <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
+              <i class="fas fa-graduation-cap text-2xl text-[var(--primary)]"></i>
+            </div>
+            <div>
+              <p class="text-lg font-semibold text-gray-300">Bachelor of Computer Engineering</p>
+              <p class="text-sm text-gray-400">Nepal College of Information Technology</p>
+              <p class="text-xs text-gray-500">2023 - Present</p>
+            </div>
           </div>
-          <span class="education-duration text-sm text-gray-500">2023 - Present</span>
-        </div>
-        <!-- College -->
-        <div class="education-item flex justify-between">
-          <div class="education-details">
-            <p class="education-degree text-lg font-semibold">+2 Science (Bio)</p>
-            <p class="education-institution text-sm text-gray-600">Morgan International College</p>
+          <!-- College -->
+          <div class="flex items-start space-x-4">
+            <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
+              <i class="fas fa-school text-2xl text-[var(--primary)]"></i>
+            </div>
+            <div>
+              <p class="text-lg font-semibold text-gray-300">+2 Science (Bio)</p>
+              <p class="text-sm text-gray-400">Morgan International College</p>
+              <p class="text-xs text-gray-500">2021 - 2023</p>
+            </div>
           </div>
-          <span class="education-duration text-sm text-gray-500">2021 - 2023</span>
-        </div>
-        <!-- School -->
-        <div class="education-item flex justify-between">
-          <div class="education-details">
-            <p class="education-degree text-lg font-semibold">Schooling</p>
-            <p class="education-institution text-sm text-gray-600">Shree Devi Prabhav Secondary School</p>
+          <!-- School -->
+          <div class="flex items-start space-x-4">
+            <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
+              <i class="fas fa-book text-2xl text-[var(--primary)]"></i>
+            </div>
+            <div>
+              <p class="text-lg font-semibold text-gray-300">Schooling</p>
+              <p class="text-sm text-gray-400">Shree Devi Prabhav Secondary School</p>
+              <p class="text-xs text-gray-500">2010 - 2020</p>
+            </div>
           </div>
-          <span class="education-duration text-sm text-gray-500">2010 - 2020</span>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
+<!-- Skills Section -->
+<section id="skills" class="py-16 px-6">
+  <h2 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text">
+    Skills
+  </h2>
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <!-- Skill 1: HTML/CSS -->
+      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+        <div class="flex flex-col items-center text-center">
+          <i class="fab fa-html5 text-5xl text-[var(--primary)] mb-4"></i>
+          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">HTML/CSS</h3>
+          <p class="text-gray-300">Building responsive and modern web interfaces.</p>
+        </div>
+      </div>
+
+      <!-- Skill 2: JavaScript -->
+      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+        <div class="flex flex-col items-center text-center">
+          <i class="fab fa-js-square text-5xl text-[var(--primary)] mb-4"></i>
+          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">JavaScript</h3>
+          <p class="text-gray-300">Creating dynamic and interactive web applications.</p>
+        </div>
+      </div>
+
+      <!-- Skill 3: React -->
+      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+        <div class="flex flex-col items-center text-center">
+          <i class="fab fa-react text-5xl text-[var(--primary)] mb-4"></i>
+          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">React</h3>
+          <p class="text-gray-300">Building scalable and efficient front-end applications.</p>
+        </div>
+      </div>
+
+      <!-- Skill 4: Node.js -->
+      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+        <div class="flex flex-col items-center text-center">
+          <i class="fab fa-node-js text-5xl text-[var(--primary)] mb-4"></i>
+          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">Node.js</h3>
+          <p class="text-gray-300">Developing fast and scalable server-side applications.</p>
+        </div>
+      </div>
+
+      <!-- Skill 5: Python -->
+      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+        <div class="flex flex-col items-center text-center">
+          <i class="fab fa-python text-5xl text-[var(--primary)] mb-4"></i>
+          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">Python</h3>
+          <p class="text-gray-300">Writing clean and efficient scripts and applications.</p>
+        </div>
+      </div>
+
+      <!-- Skill 6: MongoDB -->
+      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+        <div class="flex flex-col items-center text-center">
+          <i class="fas fa-database text-5xl text-[var(--primary)] mb-4"></i>
+          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">MongoDB</h3>
+          <p class="text-gray-300">Designing and managing NoSQL databases.</p>
+        </div>
+      </div>
+
+      <!-- Skill 7: Tailwind CSS -->
+      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+        <div class="flex flex-col items-center text-center">
+          <i class="fab fa-css3-alt text-5xl text-[var(--primary)] mb-4"></i>
+          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">Tailwind CSS</h3>
+          <p class="text-gray-300">Creating modern and responsive designs.</p>
+        </div>
+      </div>
+
+      <!-- Skill 8: Git -->
+      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+        <div class="flex flex-col items-center text-center">
+          <i class="fab fa-git-alt text-5xl text-[var(--primary)] mb-4"></i>
+          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">Git</h3>
+          <p class="text-gray-300">Version control and collaboration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Projects Section -->
+<section id="projects" class="py-16 px-6">
+  <h2 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text text-transparent">
+    Projects
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <!-- Project 1: Currency Converter -->
+    <div class="card p-6">
+      <img src="image/currency.png" alt="Currency Converter" class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-xl font-bold mb-2">Currency Converter</h3>
+      <p class="text-gray-300">Real-time currency converter using React & APIs.</p>
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">React</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">API</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Tailwind CSS</span>
+      </div>
+      <a href="https://github.com/MadanBelbase/Currency-converter-" target="_blank" class="mt-4 inline-block text-[var(--primary)] hover:underline">View Project →</a>
+    </div>
+
+    <!-- Project 2: Employee Management System -->
+    <div class="card p-6">
+      <img src="image/Emp.png" alt="Employee Management System" class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-xl font-bold mb-2">Employee Management System</h3>
+      <p class="text-gray-300">Manage employees efficiently with this system.</p>
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Node.js</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Express</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">React</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">MySQL</span>
+      </div>
+      <!-- <a href="#" class="mt-4 inline-block text-[var(--primary)] hover:underline">View Project →</a> -->
+    </div>
+
+    <!-- Project 3: EduHub Platform -->
+    <div class="card p-6">
+      <img src="image/eduhub.png" alt="EduHub Platform" class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-xl font-bold mb-2">EduHub Platform</h3>
+      <p class="text-gray-300">Educational platform UI with HTML, CSS, and JavaScript.</p>
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">HTML</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">CSS</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">JavaScript</span>
+      </div>
+      <!-- <a href="#" class="mt-4 inline-block text-[var(--primary)] hover:underline">View Project →</a> -->
+    </div>
+
+    <!-- Project 4: News API App -->
+    <div class="card p-6">
+      <img src="image/news.png" alt="News API App" class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-xl font-bold mb-2">News API App</h3>
+      <p class="text-gray-300">News fetching app using JavaScript and News API.</p>
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">JavaScript</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">News API</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Bootstrap</span>
+      </div>
+      <a href="https://github.com/MadanBelbase/Learning-Utsav-challenge/tree/main/Advanced%20javascript/News%20search%20App" target="_blank" class="mt-4 inline-block text-[var(--primary)] hover:underline">View Project →</a>
+    </div>
+
+    <!-- Project 5: Portfolio Website -->
+    <div class="card p-6">
+      <img src="image/portfolio.png" alt="Portfolio Website" class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+      <p class="text-gray-300">A modern and responsive portfolio website.</p>
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">HTML</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">tailwind CSS</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">JavaScript</span>
+      </div>
+      <!-- <a href="#" class="mt-4 inline-block text-[var(--primary)] hover:underline">View Project →</a> -->
+    </div>
+
+    <!-- Project 6: Task Manager App -->
+    <!-- <div class="card p-6">
+      <img src="image/task-manager.png" alt="Task Manager App" class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-xl font-bold mb-2">Task Manager App</h3>
+      <p class="text-gray-300">A simple task manager app built with React.</p>
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">React</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Node.js</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">MongoDB</span>
+      </div>
+      <a href="#" class="mt-4 inline-block text-[var(--primary)] hover:underline">View Project →</a>
+    </div> -->
+  </div>
+</section>
+
+ <!-- Blog Section -->
+<section id="blog" class="py-16 px-6">
+  <h2 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text text-transparent">
+    Blog
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <!-- Featured Blog Post (Larger Card) -->
+    <div class="card p-6 md:col-span-2 lg:col-span-3">
+      <img src="image/reactblog.png" alt="React State, Made Simple" class="w-full h-64 object-cover rounded-lg mb-4">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="image/DSCN3396.JPG" alt="Author" class="w-10 h-10 rounded-full">
+        <div>
+          <p class="text-sm text-gray-400">Madan Belbase</p>
+          <p class="text-xs text-gray-500">Published: Feb 24, 2025</p>
+        </div>
+      </div>
+      <h3 class="text-2xl font-bold mb-2">React State, Made Simple</h3>
+      <p class="text-gray-300 mb-4">A practical walkthrough of React state management. Learn how to manage state effectively in React applications.</p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">React</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">JavaScript</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">State Management</span>
+      </div>
+      <a href="https://medium.com/@madanbelbase927/react-state-made-simple-a-practical-walkthrough-0004b474f076" target="_blank" class="text-[var(--primary)] hover:underline">Read More →</a>
+    </div>
+
+    <!-- Blog Post 1 -->
+    <div class="card p-6">
+      <img src="image/css-display.png" alt="CSS Display Properties Simplified" class="w-full h-48 object-cover rounded-lg mb-4">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="image/DSCN3396.JPG" alt="Author" class="w-10 h-10 rounded-full">
+        <div>
+          <p class="text-sm text-gray-400">Madan Belbase</p>
+          <p class="text-xs text-gray-500">Published: Nov 16, 2024</p>
+        </div>
+      </div>
+      <h3 class="text-xl font-bold mb-2">CSS Display Properties Simplified</h3>
+      <p class="text-gray-300 mb-4">Understanding CSS display properties with tips, examples, and best practices.</p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">CSS</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Web Development</span>
+      </div>
+      <a href="https://medium.com/@madanbelbase927/css-display-properties-simplified-tips-examples-and-best-practices-d319f5a4d330" target="_blank" class="text-[var(--primary)] hover:underline">Read More →</a>
+    </div>
+
+    <!-- Blog Post 2 -->
+    <div class="card p-6">
+      <img src="image/vite.png" alt="Integrate Tailwind CSS into React" class="w-full h-48 object-cover rounded-lg mb-4">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="image/DSCN3396.JPG" alt="Author" class="w-10 h-10 rounded-full">
+        <div>
+          <p class="text-sm text-gray-400">Madan Belbase</p>
+          <p class="text-xs text-gray-500">Published: Dec 16, 2024</p>
+        </div>
+      </div>
+      <h3 class="text-xl font-bold mb-2">Integrate Tailwind CSS into React</h3>
+      <p class="text-gray-300 mb-4">Learn how to integrate Tailwind CSS into React using Vite and other approaches.</p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Tailwind CSS</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">React</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Vite</span>
+      </div>
+      <a href="https://medium.com/@madanbelbase927/how-to-integrate-tailwind-css-into-react-vite-vs-other-approaches-080b398eb413" target="_blank" class="text-[var(--primary)] hover:underline">Read More →</a>
+    </div>
+
+    <!-- Blog Post 3 -->
+    <div class="card p-6">
+      <img src="image/async.png" alt="Getting Started with Asynchronous JavaScript" class="w-full h-48 object-cover rounded-lg mb-4">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="image/DSCN3396.JPG" alt="Author" class="w-10 h-10 rounded-full">
+        <div>
+          <p class="text-sm text-gray-400">Madan Belbase</p>
+          <p class="text-xs text-gray-500">Published: Oct 25, 2024</p>
+        </div>
+      </div>
+      <h3 class="text-xl font-bold mb-2">Getting Started with Asynchronous JavaScript</h3>
+      <p class="text-gray-300 mb-4">Learn how JavaScript’s async/await simplifies asynchronous programming with practical examples.</p>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">JavaScript</span>
+        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Async/Await</span>
+      </div>
+      <a href="https://medium.com/@madanbelbase927/getting-started-with-asynchronous-javascript-callbacks-promises-and-async-await-fe7deda7156a" target="_blank" class="text-[var(--primary)] hover:underline">Read More →</a>
+    </div>
   </div>
 </section>
 
 
-
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section  relative py-16 ">
-      <h2 class="text-center text-4xl  text-green-400 font-bold mb-10 text-green-400">🚀 Featured Projects</h2>
-
-      <div class="max-w-5xl mx-auto px-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Employee management system -->
-          <div class="  rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
-            <img src="image/Emp.png" alt="Currency Converter" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-100 mb-2">कर्मस्थापन</h3>
-              <p class="text-gray-100 mb-4">Manage Employees Efficiently
-                Streamline your workforce management with our powerful system.</p>
-              <!-- <a href="https://github.com/MadanBelbase/Currency-converter-" target="_blank" class="text-blue-600 hover:underline text-sm">View Project →</a> -->
-            </div>
-          </div>
-          <!-- Currency Converter -->
-          <div class="  rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
-            <img src="image/currency.png" alt="Currency Converter" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-100 mb-2">Currency Converter</h3>
-              <p class="text-gray-100 mb-4">Real-time currency converter using React & APIs.</p>
-              <a href="https://github.com/MadanBelbase/Currency-converter-" target="_blank"
-                class="text-blue-600 hover:underline text-sm">View Project →</a>
-            </div>
-          </div>
-
-          <!-- EduHub -->
-          <div class=" rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
-            <img src="image/eduhub.png" alt="EduHub" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-100 mb-2">EduHub Platform</h3>
-              <p class="text-gray-100 mb-4">Educational platform UI with HTML, CSS, and JavaScript.</p>
-              <a href="#" class="text-gray-100 text-sm hover:underline">Only UI </a>
-            </div>
-          </div>
-
-          <!-- News API App -->
-          <div class=" rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
-            <img src="image/news.png" alt="News API" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-100 mb-2">News API App</h3>
-              <p class="text-gray-100 mb-4">News fetching app using JavaScript and News API.</p>
-              <a href="https://github.com/MadanBelbase/Learning-Utsav-challenge/tree/main/Advanced%20javascript/News%20search%20App"
-                target="_blank" class="text-blue-600 hover:underline text-sm">View Project →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  <!-- Blog Section -->
-<section id="blog" class="relative py-16 ">
-  <div class="text-center mb-12">
-    <h2 class="text-5xl font-bold text-green-600 flex items-center justify-center gap-2">
-      📰 <span>Latest Blog</span>
-    </h2>
-    <p class="text-lg text-gray-100 mt-2">Stay updated with insights, tutorials, and experiences.</p>
-  </div>
-
-  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 px-6">
-    <!-- Featured Article (Larger, Left Side) -->
-    <article class="lg:col-span-2  b p-6 rounded-xl  hover:shadow-xl transition">
-      <img src="image/reactblog.png" alt="React Blog" class="w-full h-64 object-cover rounded-lg mb-4">
-      <h3 class="text-3xl font-bold text-gray-100">React State, Made Simple: A Practical Walkthrough</h3>
-      <p class="text-sm text-gray-100 mt-2">Published: Feb 24, 2025</p>
-      <p class="text-lg text-gray-100 leading-relaxed mt-4">Understanding state management in React helps build dynamic and interactive applications.</p>
-      <a href="https://medium.com/@madanbelbase927/react-state-made-simple-a-practical-walkthrough-0004b474f076"
-        target="_blank" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">Read Full Story →</a>
-        <div class="space-y-8">
-
-
-          <!-- Article  -->
-          <article class="rounded-xl mt-5">
-            <h3 class="text-2xl font-bold text-gray-100">CSS Display Properties Simplified: Tips, Examples, and Best Practices</h3>
-            <p class="text-sm text-gray-100 mt-1">Published: Nov 16, 2024</p>
-            <p class="text-gray-800 mt-2">Understanding CSS Display Properties.</p>
-            <a href="https://medium.com/@madanbelbase927/css-display-properties-simplified-tips-examples-and-best-practices-d319f5a4d330"
-              target="_blank" class="text-blue-600 font-semibold hover:underline">Read More →</a>
-          </article>
-         <!-- Medium Profile Link -->
-  <div class="text-center mt-12">
-    <a href="https://medium.com/@madanbelbase927" target="_blank"
-      class="inline-block px-8 py-3  text-white font-bold rounded-lg shadow-md hover:bg-red-700 transition-all">
-      Read More Articles on Medium →
-    </a>
-  </div>
-    </article>
-
-    <!-- Side Articles (Right Side) -->
-    <div class="space-y-8">
-      <!-- Article 1 -->
-      <article class=" p-6 rounded-xl  hover:shadow-lg transition">
-        <h3 class="text-2xl font-bold text-gray-100">How to Integrate Tailwind CSS into React</h3>
-        <p class="text-sm text-gray-100 mt-1">Published: Dec 16, 2024</p>
-        <p class="text-gray-100 mt-2">Understanding how we can integrate Tailwind CSS into React using Vite and other approaches.</p>
-        <a href="https://medium.com/@madanbelbase927/how-to-integrate-tailwind-css-into-react-vite-vs-other-approaches-080b398eb413"
-          target="_blank" class="text-blue-600 font-semibold hover:underline">Read More →</a>
-      </article>
-
-      <!-- Article 2 -->
-      <article class=" p-6 rounded-xl hover:shadow-lg transition">
-        <h3 class="text-2xl font-bold text-gray-100">Getting Started with Asynchronous JavaScript</h3>
-        <p class="text-sm text-gray-100 mt-1">Published: Oct 25, 2024</p>
-        <p class="text-gray-100 mt-2">Learn how JavaScript’s async/await simplifies asynchronous programming with practical examples.</p>
-        <a href="https://medium.com/@madanbelbase927/getting-started-with-asynchronous-javascript-callbacks-promises-and-async-await-fe7deda7156a"
-          target="_blank" class="text-blue-600 font-semibold hover:underline">Read More →</a>
-      </article>
-
-      <!-- Article 3 -->
-      <article class=" p-6 rounded-xl  hover:shadow-lg transition">
-        <h3 class="text-2xl font-bold text-gray-100">Understanding “this” in JavaScript</h3>
-        <p class="text-sm text-gray-100 mt-1">Published: Oct 29, 2024</p>
-        <p class="text-gray-100 mt-2">Closures are a fundamental JavaScript concept. This article breaks them down with simple explanations.</p>
-        <a href="https://medium.com/@madanbelbase927/understanding-this-in-javascript-0157244f4d57" target="_blank"
-          class="text-blue-600 font-semibold hover:underline">Read More →</a>
-      </article>
-    </div>
-  </div>
-
-</section>
-
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="section-container animate-fade-in-up py-16 relative">
-      <h2 class="section-title text-center text-3xl font-bold mb-12 text-green-600">Certifications</h2>
-
-      <div class="certifications-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <!-- Certificate 1 -->
-        <div
-          class="cert-card bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
-          <img src="image/jsc.png" alt="JavaScript Essentials Certificate" class="cert-img w-full h-48 object-cover"
-            onclick="openCertificate('image/jsc.png')">
-          <div class="cert-info p-4">
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">JavaScript Essentials</h3>
-            <p class="text-gray-600 mb-4">NamasteDev</p>
-            <a href="#certifications" onclick="openCertificate('image/jsc.png')"
-              class="text-blue-600 hover:underline text-sm">View Certificate →</a>
-          </div>
-        </div>
-
-        <!-- Certificate 2 -->
-        <div
-          class="cert-card bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
-          <img src="image/Reactc.png" alt="Python Basics Certificate" class="cert-img w-full h-48 object-cover"
-            onclick="openCertificate('image/python-cert.png')">
-          <div class="cert-info p-4">
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">React Development</h3>
-            <p class="text-gray-600 mb-4">Certified by Udemy</p>
-            <a href="#certifications" onclick="openCertificate('image/Reactc.png')"
-              class="text-blue-600 hover:underline text-sm">View Certificate →</a>
-          </div>
-        </div>
-
-        <!-- Certificate 3 -->
-        <div
-          class="cert-card bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
-          <img src="image/Become a Python Maste.png" alt="Web Design Certificate"
-            class="cert-img w-full h-48 object-cover" onclick="openCertificate('image/web-design-cert.png')">
-          <div class="cert-info p-4">
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Become a Python Master</h3>
-            <p class="text-gray-600 mb-4">Certified by Programiz</p>
-            <a href="#certifications" onclick="openCertificate('image/Become a Python Maste.png')"
-              class="text-blue-600 hover:underline text-sm">View Certificate →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Modal for Pop-Out Image -->
-    <div id="certModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
-      <div class="modal-content bg-white rounded-lg overflow-hidden p-4">
-        <span class="close-btn text-red-600 absolute top-4 right-4 cursor-pointer text-2xl">&times;</span>
-        <img id="modalImage" src="" alt="Certificate Image" class="w-full h-auto max-w-xl mx-auto">
-      </div>
-    </div>
-
-
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section-container animate-fade-in-up py-16 relative">
-      <h2 class="section-title text-center text-3xl font-bold mb-8 text-green-600">📸 Gallery</h2>
-
-      <!-- Gallery Grid -->
-      <div class="gallery-grid grid gap-8 max-w-screen-lg mx-auto">
-        <!-- Gallery Item 1 -->
-        <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-          <img src="image/photo1.png" alt="Gallery Image 1"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div>
-
-        <!-- Gallery Item 2 -->
-        <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-          <img src="image/photo2.png" alt="Gallery Image 2"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div>
-
-        <!-- Gallery Item 3 -->
-        <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-          <img src="image/orbit.png" alt="Gallery Image 3"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div>
-
-        <!-- Gallery Item 4 -->
-        <!-- <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-          <img src="image/DSCN3396.JPG" alt="Gallery Image 4"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div> -->
-
-        <!-- Gallery Item 5 -->
-        <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-          <img src="image/Nosk.png" alt="Gallery Image 5"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div>
-
-        <!-- Gallery Item 6
-        <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-          <img src="image/gallery6.jpg" alt="Gallery Image 6"
-            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-        </div> -->
-      </div>
-    </section>
-
-
-
-
-  
 <!-- Contact Section -->
-<section id="contact" class="section-container animate-fade-in-up py-16 px-6 sm:px-4 relative">
-  <h2 class="section-title text-center text-3xl font-bold mb-8 text-green-600">Contact</h2>
+<section id="contact" class="py-16 px-6">
+  <h2 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text">
+    Contact
+  </h2>
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Contact Form -->
+      <div class="contact-form-card bg-gradient-to-br from-[#1e1f26] to-[#0f172a] p-8 rounded-2xl border border-[#4e4e4e] shadow-2xl transform transition-all duration-300 hover:scale-105">
+        <form id="contactForm" class="flex flex-col gap-6">
+          <input type="hidden" name="access_key" value="46d2b706-cb7b-411b-b4fa-a5674ad33811">
 
-  <!-- Contact Form & Info Container -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <!-- Name Input -->
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-[#1e1f26] text-gray-300 rounded-lg border border-[#4e4e4e] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]">
+          </div>
 
-    <!-- Contact Form -->
-    <div class="contact-form-card bg-[#14161c] p-6 sm:p-4 rounded-2xl border border-[#4e4e4e] shadow-lg transform transition-transform duration-300 hover:scale-105">
-      <form id="contactForm" class="flex flex-col gap-4">
-        <input type="hidden" name="access_key" value="46d2b706-cb7b-411b-b4fa-a5674ad33811">
+          <!-- Email Input -->
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-[#1e1f26] text-gray-300 rounded-lg border border-[#4e4e4e] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]">
+          </div>
 
-        <input type="text" name="name" required class="w-full p-3 bg-[#1e1f26] text-black rounded-lg border border-[#4e4e4e] focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Your Name">
-        
-        <input type="email" name="email" required class="w-full p-3 bg-[#1e1f26] text-black rounded-lg border border-[#4e4e4e] focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Your Email">
-        
-        <textarea name="message" required class="w-full p-3 bg-[#1e1f26] text-black rounded-lg border border-[#4e4e4e] focus:outline-none focus:ring-2 focus:ring-yellow-500 min-h-[150px] resize-y" placeholder="Your Message"></textarea>
+          <!-- Message Textarea -->
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-[#1e1f26] text-gray-300 rounded-lg border border-[#4e4e4e] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"></textarea>
+          </div>
 
-        <input type="checkbox" name="botcheck" class="hidden">
-
-        <button type="submit" id="submitBtn" class="bg-yellow-500 text-black py-3 rounded-lg font-semibold hover:bg-yellow-400 transition duration-200">
-          Send Message
-        </button>
-      </form>
-    </div>
-
-    <!-- Contact Details -->
-    <div class="card p-6 sm:p-4 text-center rounded-2xl backdrop-blur-md transform hover:scale-105 transition-all duration-300 ease-in-out">
-      <p class="text-gray-100 mb-4">Let's connect! Reach out via email or social media.</p>
-
-      <!-- Email -->
-      <p class="mb-3 text-lg font-semibold">
-        <strong>Email:</strong>
-        <a href="mailto:madanbelbase927@email.com" class="text-blue-500 hover:text-blue-700 transition">madanbelbase927@email.com</a>
-      </p>
-
-      <!-- Location -->
-      <p class="mb-3 text-lg font-semibold">
-        <strong>Location:</strong> Kathmandu, Nepal
-      </p>
-
-      <p class="text-gray-100 mb-4">
-        Open to collaborations and freelance opportunities. Get in touch!
-      </p>
-
-      <!-- Social Media Links -->
-      <div class="flex justify-center gap-5 mt-4">
-        <a href="https://github.com/MadanBelbase" target="_blank" class="text-2xl text-gray-100 hover:text-blue-500 transition"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank" class="text-2xl text-gray-100 hover:text-blue-500 transition"><i class="fab fa-linkedin"></i></a>
-        <a href="https://x.com/belbase_madan_" target="_blank" class="text-2xl text-gray-100 hover:text-blue-500 transition"><i class="fab fa-twitter"></i></a>
+          <!-- Submit Button -->
+          <button type="submit" id="submitBtn" class="w-full px-6 py-3 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white rounded-lg font-semibold hover:from-[var(--secondary)] hover:to-[var(--primary)] transition-all transform hover:scale-105">
+            Send Message
+          </button>
+        </form>
       </div>
 
-      <p class="mt-6 text-lg text-gray-100">
-        Have a project in mind? Drop me a message!
-      </p>
+      <!-- Contact Details -->
+      <div class="contact-details-card bg-gradient-to-br from-[#1e1f26] to-[#0f172a] p-8 rounded-2xl border border-[#4e4e4e] shadow-2xl transform transition-all duration-300 hover:scale-105">
+        <p class="text-lg text-gray-300 mb-6">Let's connect! Reach out via email or social media.</p>
+        <div class="space-y-6">
+          <!-- Email -->
+          <div class="flex items-center space-x-4">
+            <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
+              <i class="fas fa-envelope text-2xl text-[var(--primary)]"></i>
+            </div>
+            <div>
+              <p class="text-gray-300 font-semibold">Email</p>
+              <p class="text-gray-400">madanbelbase927@email.com</p>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="flex items-center space-x-4">
+            <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
+              <i class="fas fa-map-marker-alt text-2xl text-[var(--primary)]"></i>
+            </div>
+            <div>
+              <p class="text-gray-300 font-semibold">Location</p>
+              <p class="text-gray-400">Kathmandu, Nepal</p>
+            </div>
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="flex items-center space-x-6 mt-6">
+            <!-- GitHub -->
+            <a href="https://github.com/MadanBelbase" target="_blank" class="social-link p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e] hover:bg-[var(--primary)] transition-all transform hover:scale-110">
+              <i class="fab fa-github text-2xl text-gray-300 hover:text-white"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank" class="social-link p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e] hover:bg-[var(--primary)] transition-all transform hover:scale-110">
+              <i class="fab fa-linkedin text-2xl text-gray-300 hover:text-white"></i>
+            </a>
+
+            <!-- Twitter (X) -->
+            <a href="https://x.com/belbase_madan_" target="_blank" class="social-link p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e] hover:bg-[var(--primary)] transition-all transform hover:scale-110">
+              <i class="fab fa-twitter text-2xl text-gray-300 hover:text-white"></i>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=61554181993528" target="_blank" class="social-link p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e] hover:bg-[var(--primary)] transition-all transform hover:scale-110">
+              <i class="fab fa-facebook text-2xl text-gray-300 hover:text-white"></i>
+            </a>
+          </div>
+          <!-- Footer -->
+  <footer class="py-8 text-center text-white  backdrop-blur-md text-gray-100">
+    <p class="mt-6 text-sm" >© 2025 <span class="font-semibold">Madan Belbase</span>. All rights reserved.</p>
+  </footer>
+        </div>
+      </div>
     </div>
   </div>
- <!-- Thank You Message Modal -->
-<!-- Thank You Message Modal -->
-<div id="thankYouModal" class="fixed inset-0 flex justify-center items-center mx-auto  hidden">
-  <div class="bg-red-500 p-4 rounded-lg shadow-xl text-center max-w-xs w-64 h-64 border border-[#555] transform transition-all duration-300">
-    <img src="image/DSCN3396.JPG" alt="Profile" class="w-24 h-24 object-cover rounded-full shadow-lg border-4 border-gradient-to-r from-green-400 via-teal-500 to-blue-600 mx-auto">
-    
-    <h3 class="text-xl font-bold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-teal-500 mt-4">Thank You!</h3>
-    <p class="mt-2 text-gray-300 text-sm">Your message has been successfully sent. I will get back to you soon!</p>
-    
-  </div>
+</section>
+
+<!-- Thank You Modal -->
+<div id="thankYouModal" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 hidden z-50">
+  <div class="bg-gradient-to-br from-[#1e1f26] to-[#0f172a] p-8 rounded-2xl border border-[#4e4e4e] text-center">
+    <h3 class="text-2xl font-bold text-[var(--primary)] mb-4">Thank You!</h3>
+    <p class="text-gray-300">Your message has been sent successfully. I'll get back to you soon!</p>
+    <button id="closeModal" class="mt-6 px-6 py-2 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white rounded-lg hover:from-[var(--secondary)] hover:to-[var(--primary)] transition-all transform hover:scale-105">
+      Close
+    </button>
 </div>
 
 
-</section>
-
-
-  
-  <footer class="py-8 text-center bg-white/80 backdrop-blur-md text-gray-100 relative">
-    <p class="mt-6 text-sm" >© 2024 <span class="font-semibold">Madan Belbase</span>. All rights reserved.</p>
-  </footer>
-  
-  </div>
-  <script src="one.js"></script>
-  <script src="Particle.js"></script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
-
 </html>
