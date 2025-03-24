@@ -1,12 +1,37 @@
-// Smooth Scroll for Nav Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+    const targetElement = document.querySelector(this.getAttribute('href'));
+    const targetPosition = targetElement.offsetTop;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 1000; // Duration in milliseconds (adjust this for slower or faster scrolling)
+    let startTime = null;
+
+    function scrollAnimation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const scrollAmount = easeInOut(timeElapsed, startPosition, distance, duration);
+      
+      window.scrollTo(0, scrollAmount);
+      
+      if (timeElapsed < duration) {
+        requestAnimationFrame(scrollAnimation);
+      }
+    }
+
+    function easeInOut(t, b, c, d) {
+      let time = t / (d / 2);
+      if (time < 1) return (c / 2) * time * time + b;
+      time--;
+      return (-c / 2) * (time * (time - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(scrollAnimation);
   });
+});
+
   
   const menuButton = document.getElementById('menuButton');
   const closeMenu = document.getElementById('closeMenu');
