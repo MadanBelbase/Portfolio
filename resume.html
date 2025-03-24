@@ -5,29 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madan Belbase - Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Gradient Background */
+        .resume-bg {
+            background: linear-gradient(135deg, rgba(52, 50, 50, 0.8), rgba(146, 143, 143, 0.9)), url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Custom Animations */
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 10px rgba(96, 165, 250, 0.8); }
+            50% { text-shadow: 0 0 20px rgba(96, 165, 250, 0.8); }
+        }
+        .animate-glow { animation: glow 3s ease-in-out infinite; }
+    </style>
 </head>
-<body class="bg-gray-50 font-sans text-black leading-relaxed">
+<body class="font-sans text-white leading-relaxed">
 
-    <!-- Main Content Section -->
-    <div class="min-h-screen flex flex-col justify-center items-center py-10">
-        <div class="bg-white shadow-xl rounded-2xl p-8 max-w-3xl w-full space-y-8">
+    <!-- Resume Container -->
+    <div class="min-h-screen flex items-center justify-center p-6 resume-bg backdrop-blur-lg">
+        <div class="bg-black/70 backdrop-blur-lg rounded-2xl shadow-2xl p-8 max-w-3xl w-full space-y-8">
 
-            <!-- Header Section with Photo -->
+            <!-- Header Section -->
             <div class="text-center">
                 <!-- Profile Picture -->
-                <img src="image/proflie.jpeg" alt="Madan Belbase" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-200">
-                
+                <img src="image/proflie.jpeg" alt="Madan Belbase" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-cyan-500/50 hover:border-cyan-500 transition-all duration-500 shadow-lg hover:shadow-cyan-500/50">
+
                 <!-- Name and Contact Info -->
-                <h1 class="text-4xl font-extrabold text-black mb-2">Madan Belbase</h1>
-                <p class="text-lg text-gray-700 mb-2">Web Developer | AI/ML Enthusiast | Full-Stack Developer</p>
-                <p class="text-gray-500 mb-4">Kathmandu, Nepal | +977 9867201696 | <a href="mailto:madanbelbase927@gmail.com" class="text-blue-500">madanbelbase927@gmail.com</a></p>
-                <p class="text-gray-500"><a href="https://madanbelbase.com.np" class="text-blue-500">madanbelbase.com.np</a></p>
+                <h1 class="text-4xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent animate-glow">
+                    Madan Belbase
+                </h1>
+                <p class="text-lg text-gray-300 mt-2">Web Developer | AI/ML Enthusiast | Full-Stack Developer</p>
+                <p class="text-gray-400 mt-2">Kathmandu, Nepal | +977 9867201696 | <a href="mailto:madanbelbase927@gmail.com" class="text-cyan-400 hover:text-cyan-500 transition-all">madanbelbase927@gmail.com</a></p>
+                <p class="text-gray-400"><a href="https://madanbelbase.com.np" class="text-purple-400 hover:text-purple-500 transition-all">madanbelbase.com.np</a></p>
             </div>
 
             <!-- About Me Section -->
             <section>
-                <h2 class="text-2xl font-semibold text-black mt-6">About Me</h2>
-                <p class="text-gray-700">
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">About Me</h2>
+                <p class="text-gray-300">
                     I'm a passionate web developer and AI/ML enthusiast with a keen interest in building innovative and scalable web applications. 
                     Currently pursuing my Bachelor's in Computer Engineering at Nepal College of Information Technology, I am dedicated to mastering full-stack development and contributing to open-source communities. 
                     My goal is to create solutions that improve people's lives through technology and make a lasting impact in the tech industry.
@@ -36,82 +53,86 @@
 
             <!-- Projects Section -->
             <section>
-                <h2 class="text-2xl font-semibold text-black">Projects</h2>
-                <ul class="list-inside list-disc text-gray-700">
-                    <li><strong class="text-blue-600">EduHub:</strong> Platform providing access to courses, tutorials, and educational resources (UI ONLY) - <em>HTML, CSS, JavaScript</em></li>
-                    <li><strong class="text-blue-600">कम�स्थापन:</strong> Web-based system for managing employee records and payroll - <em>React.js, Node.js, Express.js, MySQL</em></li>
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Projects</h2>
+                <ul class="list-inside list-disc text-gray-300">
+                    <li><strong class="text-purple-400">EduHub:</strong> Platform providing access to courses, tutorials, and educational resources (UI ONLY) - <em>HTML, CSS, JavaScript</em></li>
+                    <li><strong class="text-purple-400">कम�स्थापन:</strong> Web-based system for managing employee records and payroll - <em>React.js, Node.js, Express.js, MySQL</em></li>
                 </ul>
             </section>
 
             <!-- Education Section -->
             <section>
-                <h2 class="text-2xl font-semibold text-black mt-6">Education</h2>
-                <ul class="list-inside list-disc text-gray-700">
-                    <li><strong class="text-blue-600">Morgan International College</strong>, Basundhara, Kathmandu (2021 - 2022) - +2 Science</li>
-                    <li><strong class="text-blue-600">Nepal College of Information Technology</strong>, Balkumari, Lalitpur (2024 - 2028) - Bachelor of Computer Engineering (On Scholarship)</li>
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Education</h2>
+                <ul class="list-inside list-disc text-gray-300">
+                    <li><strong class="text-purple-400">Morgan International College</strong>, Basundhara, Kathmandu (2021 - 2022) - +2 Science</li>
+                    <li><strong class="text-purple-400">Nepal College of Information Technology</strong>, Balkumari, Lalitpur (2024 - 2028) - Bachelor of Computer Engineering (On Scholarship)</li>
                 </ul>
             </section>
 
             <!-- Experience Section -->
             <section>
-                <h2 class="text-2xl font-semibold text-black mt-6">Experience</h2>
-                <ul class="list-inside list-disc text-gray-700">
-                    <li><strong class="text-blue-600">Hackademia 2.0</strong> - College Ambassador (Jul 2024 - Oct 2024)</li>
-                    <li><strong class="text-blue-600">Code for Change</strong> - College Representative (Jan 2025 - Present)</li>
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Experience</h2>
+                <ul class="list-inside list-disc text-gray-300">
+                    <li><strong class="text-purple-400">Hackademia 2.0</strong> - College Ambassador (Jul 2024 - Oct 2024)</li>
+                    <li><strong class="text-purple-400">Code for Change</strong> - College Representative (Jan 2025 - Present)</li>
+                    <li><strong class="text-purple-400">AWS Cloud Club - Nepal</strong> - College Representative (March 2025 - Present)</li>
                 </ul>
             </section>
 
             <!-- Skills Section -->
             <section>
-                <h2 class="text-2xl font-semibold text-black mt-6">Skills</h2>
-                <ul class="list-inside list-disc text-gray-700">
-                    <li><strong class="text-blue-600">Web Development:</strong> HTML, CSS, React.js, Node.js</li>
-                    <li><strong class="text-blue-600">Databases:</strong> MySQL, PostgreSQL</li>
-                    <li><strong class="text-blue-600">Tools:</strong> Git, GitHub, VS Code, Figma</li>
-                    <li><strong class="text-blue-600">Concepts:</strong> OOP, Data Structures, APIs</li>
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Skills</h2>
+                <ul class="list-inside list-disc text-gray-300">
+                    <li><strong class="text-purple-400">Web Development:</strong> HTML, CSS, React.js, Node.js</li>
+                    <li><strong class="text-purple-400">Databases:</strong> MySQL, PostgreSQL</li>
+                    <li><strong class="text-purple-400">Tools:</strong> Git, GitHub, VS Code, Figma</li>
+                    <li><strong class="text-purple-400">Concepts:</strong> OOP, Data Structures, APIs</li>
                 </ul>
             </section>
 
             <!-- Awards Section -->
             <section>
-                <h2 class="text-2xl font-semibold text-black mt-6">Awards</h2>
-                <p class="text-gray-700">Pokhara University Scholarship (2023)</p>
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Awards</h2>
+                <p class="text-gray-300">Pokhara University Scholarship (2023)</p>
             </section>
 
             <!-- Languages Section -->
             <section>
-                <h2 class="text-2xl font-semibold text-black mt-6">Languages</h2>
-                <p class="text-gray-700">Nepali (Native), English</p>
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Languages</h2>
+                <p class="text-gray-300">Nepali (Native), English</p>
             </section>
 
             <!-- Contact Section -->
             <section>
-                <h2 class="text-2xl font-semibold text-black mt-6">Connect with Me</h2>
-                <div class="flex justify-center gap-6 mt-4">
-                    <a href="https://www.linkedin.com/in/madanbelbase" target="_blank" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Connect with Me</h2>
+                <div class="flex justify-center gap-6">
+                    <a href="https://www.linkedin.com/in/madanbelbase" target="_blank" class="text-gray-300 hover:text-cyan-500 transition-all">
                         LinkedIn
                     </a>
-                    <a href="https://github.com/madanbelbase" target="_blank" class="text-gray-700 hover:text-black transition duration-300">
+                    <a href="https://github.com/madanbelbase" target="_blank" class="text-gray-300 hover:text-purple-500 transition-all">
                         GitHub
                     </a>
-                    <a href="https://twitter.com/madanbelbase" target="_blank" class="text-blue-400 hover:text-blue-600 transition duration-300">
+                    <a href="https://twitter.com/madanbelbase" target="_blank" class="text-gray-300 hover:text-cyan-500 transition-all">
                         Twitter
                     </a>
                 </div>
             </section>
-            <div class="mt-6 flex justify-center gap-4">
-    <a href="MadanBelbase.pdf" download class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">Download Resume</a>
-    <a href="/Portfolio/index.html" class="bg-gray-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-gray-600 transition duration-300">Back to Home</a>
-</div>
 
+            <!-- CTA Buttons -->
+            <div class="mt-8 flex justify-center gap-4">
+                <!-- <a href="MadanBelbase.pdf" download class="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50">
+                    📄 Download Resume
+                </a> -->
+                <a href="/index.html" class="px-6 py-3 border-2 border-purple-500 text-purple-400 rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 shadow-lg hover:shadow-purple-500/50">
+                    💼 Back to Home
+                </a>
+            </div>
         </div>
     </div>
 
     <!-- Footer Section -->
-    <footer class="bg-gray-800 text-white text-center py-4 mt-8">
-        <p>&copy; 2024 <a href="https://madanbelbase.com.np" class="text-blue-400">madanbelbase.com.np</a></p>
+    <footer class="bg-black/80 text-white text-center py-4">
+        <p>&copy; 2025 <a href="https://madanbelbase.com.np" class="text-cyan-400">madanbelbase.com.np</a></p>
     </footer>
-
 </body>
 </html>
-
