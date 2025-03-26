@@ -23,618 +23,969 @@
     </div>
   </div>
 
-  <header class="fixed w-full bg-white/10 backdrop-blur-md shadow-lg z-50">
-    <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="#hero" class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text ">
-        Madan Belbase
+ <!-- Navigation Header -->
+<header class="fixed w-full bg-[#0f172a]/90 backdrop-blur-md shadow-lg z-50 border-b border-cyan-500/20">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <!-- Logo/Name with gradient animation -->
+      <a href="#hero" class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text  hover:animate-pulse transition-all duration-300">
+          Madan Belbase
       </a>
-      <div class="hidden md:flex space-x-8">
-        <a href="#about" class="nav-link relative hover:text-green-400 ">About</a>
-        <a href="#projects" class="nav-link relative hover:text-green-400">Projects</a>
-        <a href="#blog" class="nav-link relative hover:text-green-400">Blog</a>
-        <a href="/resume.html" class="nav-link relative hover:text-green-400">Resume</a>
-        <a href="#contact" class="nav-link relative hover:text-green-400">Contact</a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <a href="#about" class="nav-link px-3 py-2 text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group">
+              <span>About</span>
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="#projects" class="nav-link px-3 py-2 text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group">
+              <span>Projects</span>
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="#blog" class="nav-link px-3 py-2 text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group">
+              <span>Blog</span>
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="/resume.html" class="nav-link px-3 py-2 text-gray-300 hover:text-purple-400 transition-all duration-300 relative group">
+              <span>Resume</span>
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a href="#contact" class="nav-link px-3 py-2 text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group">
+              <span>Contact</span>
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
+          </a>
       </div>
-      <button id="menuButton" class="md:hidden text-2xl">☰</button>
-    </nav>
-  </header>
 
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="fixed top-0 right-0 bg-black/60 backdrop-blur-lg z-40 transform translate-x-full transition-transform duration-300 md:hidden rounded-l-xl shadow-xl">
+      <!-- Mobile Menu Button -->
+      <button id="menuButton" class="md:hidden p-2 rounded-lg hover:bg-gray-700/50 transition-all focus:outline-none focus:ring-2 focus:ring-cyan-400/50" aria-label="Menu">
+          <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+      </button>
+  </nav>
+</header>
 
-
-    <div class="flex justify-end p-4">
-      <button id="closeMenu" class="text-2xl text-red-500"></button>
-    </div>
-    <div class="flex flex-col items-center space-y-6 p-4">
-      <a href="#hero" class="nav-link text-xl relative hover:text-green-400">Home</a>
-      <a href="#about" class="nav-link text-xl relative hover:text-green-400">About</a>
-      <a href="#projects" class="nav-link text-xl relative hover:text-green-400">Projects</a>
-      <a href="#blog" class="nav-link text-xl relative hover:text-green-400">Blog</a>
-      <a href="/resume.html" class="nav-link relative hover:text-green-400">Resume</a>
-      <a href="#contact" class="nav-link text-xl relative hover:text-green-400">Contact</a>
-    </div>
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-[#0f172a] z-40 transform translate-x-full transition-transform duration-300 ease-in-out shadow-xl border-l border-cyan-500/20">
+  <div class="flex justify-between items-center p-4 border-b border-gray-700/50">
+      <span class="text-xl font-semibold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Navigation</span>
+      <button id="closeMenu" class="p-2 rounded-full hover:bg-gray-700/50 transition-all text-gray-300 hover:text-red-400" aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+      </button>
   </div>
-
-  <!-- Overlay -->
-  <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden"></div>
-
-  <section id="hero" class="min-h-screen flex items-center justify-center px-6 bg-black/80 backdrop-blur-lg relative overflow-hidden">
-    <!-- Decorative Gradient Blobs -->
-    <div class="absolute inset-0 z-0">
-      <div class="w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl absolute -top-32 -left-32 animate-float"></div>
-      <div class="w-96 h-96 bg-purple-500/20 rounded-full blur-3xl absolute -bottom-32 -right-32 animate-float-delay"></div>
-    </div>
-  
-    <div class="text-center relative z-10">
-      <!-- Profile Image -->
-      <div class="flex justify-center mb-8">
-        <img src="image/DSCN3396.JPG" alt="Madan Belbase" class="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full border-4 border-cyan-500/50 hover:border-cyan-500 transition-all duration-500 shadow-2xl hover:shadow-cyan-500/50 animate-float">
-      </div>
-  
-      <!-- Introduction Text -->
-      <h5 class="text-xl font-medium mb-4 text-gray-300 animate-fade-in">
-        Hello, World! 🌍 I’m
-      </h5>
-      <h1 class="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text  animate-glow">
-        Madan Belbase
-      </h1>
-      <div class="text-2xl font-semibold text-gray-300 mb-6">
-        <span id="typing-text" class="typing-animation"></span><span class="blinking-cursor">|</span>
-      </div>
-      <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8 animate-fade-in">
-        A <span class="text-cyan-400 font-semibold">Developer</span> with a creative engineering mind, blending code & imagination to build digital experiences. Passionate about <span class="text-purple-400 font-semibold">tech, cloud and web innovation</span>!
-      </p>
-  
-      <!-- Social Media Links -->
-      <div class="flex items-center justify-center space-x-6 mb-8">
-        <!-- GitHub -->
-        <a href="https://github.com/MadanBelbase" target="_blank" class="text-gray-300 hover:text-cyan-500 transition-all duration-300">
-          <i class="fab fa-github text-2xl"></i>
-        </a>
-  
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank" class="text-gray-300 hover:text-purple-500 transition-all duration-300">
-          <i class="fab fa-linkedin text-2xl"></i>
-        </a>
-  
-        <!-- Twitter (X) -->
-        <a href="https://x.com/belbase_madan_" target="_blank" class="text-gray-300 hover:text-cyan-500 transition-all duration-300">
-          <i class="fab fa-twitter text-2xl"></i>
-        </a>
-  
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/profile.php?id=61554181993528" target="_blank" class="text-gray-300 hover:text-purple-500 transition-all duration-300">
-          <i class="fab fa-facebook text-2xl"></i>
-        </a>
-      </div>
-  
-      <!-- CTA Buttons -->
-      <div class="flex justify-center gap-4">
-        <a href="/resume.html"  class="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50">
-          📄 Resume
-        </a>
-        <a href="#contact" class="px-6 py-3 border-2 border-purple-500 text-purple-400 rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 shadow-lg hover:shadow-purple-500/50">
-          💼 Contact Me
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About & Education Section -->
-<section id="about" class="py-16 px-6">
-  <h2 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text">
-    About Me & Education
-  </h2>
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- About Me -->
-      <div   class="card p-8 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105">
-        <h3 class="text-2xl font-bold mb-4 text-[var(--primary)]">About Me</h3>
-        <p class="text-lg text-gray-300 mb-6">
-          Hi, I'm <span class="text-[var(--primary)] font-semibold">Madan Belbase</span>, a passionate <span class="text-[var(--primary)] font-semibold">Computer Engineering</span> student with a deep curiosity for technology and innovation. I continuously explore new ideas, pushing the boundaries of my knowledge in web development, AI, and software engineering.
-        </p>
-        <p class="text-lg text-gray-300">
-          Beyond academics, I immerse myself in activities that refine my <span class="text-[var(--primary)] font-semibold">leadership</span>, <span class="text-[var(--primary)] font-semibold">communication</span>, and <span class="text-[var(--primary)] font-semibold">teamwork</span> skills. I thrive in collaborative environments and aspire to contribute to meaningful projects that make an impact.
-        </p>
-      </div>
-
-      <!-- Education -->
-      <div class="card p-8 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105">
-        <h3 class="text-2xl font-bold mb-4 text-[var(--primary)]">Education</h3>
-        <div class="space-y-6">
-          <!-- University -->
-          <div class="flex items-start space-x-4">
-            <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
-              <i class="fas fa-graduation-cap text-2xl text-[var(--primary)]"></i>
-            </div>
-            <div>
-              <p class="text-lg font-semibold text-gray-300">Bachelor of Computer Engineering</p>
-              <p class="text-sm text-gray-400">Nepal College of Information Technology</p>
-              <p class="text-xs text-gray-500">2023 - Present</p>
-            </div>
-          </div>
-          <!-- College -->
-          <div class="flex items-start space-x-4">
-            <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
-              <i class="fas fa-school text-2xl text-[var(--primary)]"></i>
-            </div>
-            <div>
-              <p class="text-lg font-semibold text-gray-300">+2 Science (Bio)</p>
-              <p class="text-sm text-gray-400">Morgan International College</p>
-              <p class="text-xs text-gray-500">2021 - 2023</p>
-            </div>
-          </div>
-          <!-- School -->
-          <div class="flex items-start space-x-4">
-            <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
-              <i class="fas fa-book text-2xl text-[var(--primary)]"></i>
-            </div>
-            <div>
-              <p class="text-lg font-semibold text-gray-300">Schooling</p>
-              <p class="text-sm text-gray-400">Shree Devi Prabhav Secondary School</p>
-              <p class="text-xs text-gray-500">2010 - 2020</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="py-16 px-6">
-  <h2 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text">
-    Skills
-  </h2>
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-      <!-- Skill 1: HTML/CSS -->
-      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-        <div class="flex flex-col items-center text-center">
-          <i class="fab fa-html5 text-5xl text-[var(--primary)] mb-4"></i>
-          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">HTML/CSS</h3>
-          <p class="text-gray-300">Building responsive and modern web interfaces.</p>
-        </div>
-      </div>
-
-      <!-- Skill 2: JavaScript -->
-      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-        <div class="flex flex-col items-center text-center">
-          <i class="fab fa-js-square text-5xl text-[var(--primary)] mb-4"></i>
-          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">JavaScript</h3>
-          <p class="text-gray-300">Creating dynamic and interactive web applications.</p>
-        </div>
-      </div>
-
-      <!-- Skill 3: React -->
-      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-        <div class="flex flex-col items-center text-center">
-          <i class="fab fa-react text-5xl text-[var(--primary)] mb-4"></i>
-          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">React</h3>
-          <p class="text-gray-300">Building scalable and efficient front-end applications.</p>
-        </div>
-      </div>
-
-      <!-- Skill 4: Node.js -->
-      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-        <div class="flex flex-col items-center text-center">
-          <i class="fab fa-node-js text-5xl text-[var(--primary)] mb-4"></i>
-          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">Node.js</h3>
-          <p class="text-gray-300">Developing fast and scalable server-side applications.</p>
-        </div>
-      </div>
-
-      <!-- Skill 5: Python -->
-      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-        <div class="flex flex-col items-center text-center">
-          <i class="fab fa-python text-5xl text-[var(--primary)] mb-4"></i>
-          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">Python</h3>
-          <p class="text-gray-300">Writing clean and efficient scripts and applications.</p>
-        </div>
-      </div>
-
-      <!-- Skill 6: MongoDB -->
-      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-        <div class="flex flex-col items-center text-center">
-          <i class="fas fa-database text-5xl text-[var(--primary)] mb-4"></i>
-          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">MongoDB</h3>
-          <p class="text-gray-300">Designing and managing NoSQL databases.</p>
-        </div>
-      </div>
-
-      <!-- Skill 7: Tailwind CSS -->
-      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-        <div class="flex flex-col items-center text-center">
-          <i class="fab fa-css3-alt text-5xl text-[var(--primary)] mb-4"></i>
-          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">Tailwind CSS</h3>
-          <p class="text-gray-300">Creating modern and responsive designs.</p>
-        </div>
-      </div>
-
-      <!-- Skill 8: Git -->
-      <div class="card p-6 bg-gradient-to-br from-[#1e1f26] to-[#0f172a] border border-[#4e4e4e] rounded-2xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
-        <div class="flex flex-col items-center text-center">
-          <i class="fab fa-git-alt text-5xl text-[var(--primary)] mb-4"></i>
-          <h3 class="text-xl font-bold text-[var(--primary)] mb-2">Git</h3>
-          <p class="text-gray-300">Version control and collaboration.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Experience Section -->
-<section id="experience" class="py-16 px-6">
-  <h2 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text">
-    Experience
-  </h2>
-  <div class="max-w-6xl mx-auto">
-    <!-- Experience Cards Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Experience Card 1 -->
-      <div class="experience-card bg-gradient-to-br from-[#1e1f26] to-[#0f172a] p-8 rounded-2xl border border-[#4e4e4e] shadow-2xl transform transition-all duration-300 hover:scale-105">
-        <div class="flex items-center space-x-4 mb-6">
-          <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
-            <i class="fas fa-briefcase text-2xl text-[var(--primary)]"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-gray-300">Hackademia 2.0</h3>
-            <p class="text-gray-400">College Ambassador</p>
-          </div>
-        </div>
-        <p class="text-gray-300 mb-4">
-          Represented Hackademia 2.0 as a College Ambassador, promoting the event and encouraging student participation in hackathons and coding competitions.
-        </p>
-        <p class="text-gray-400 text-sm">
-          <span class="font-semibold">Duration:</span> Jul 2024 - Oct 2024
-        </p>
-      </div>
-
-      <!-- Experience Card 2 -->
-      <div class="experience-card bg-gradient-to-br from-[#1e1f26] to-[#0f172a] p-8 rounded-2xl border border-[#4e4e4e] shadow-2xl transform transition-all duration-300 hover:scale-105">
-        <div class="flex items-center space-x-4 mb-6">
-          <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
-            <i class="fas fa-users text-2xl text-[var(--primary)]"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-gray-300">Code for Change</h3>
-            <p class="text-gray-400">College Representative</p>
-          </div>
-        </div>
-        <p class="text-gray-300 mb-4">
-          Acted as the College Representative for Code for Change, organizing coding workshops and fostering a community of developers passionate about social impact.
-        </p>
-        <p class="text-gray-400 text-sm">
-          <span class="font-semibold">Duration:</span> Jan 2025 - Present
-        </p>
-      </div>
-
-      <!-- Experience Card 3
-      <div class="experience-card bg-gradient-to-br from-[#1e1f26] to-[#0f172a] p-8 rounded-2xl border border-[#4e4e4e] shadow-2xl transform transition-all duration-300 hover:scale-105">
-        <div class="flex items-center space-x-4 mb-6">
-          <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
-            <i class="fas fa-laptop-code text-2xl text-[var(--primary)]"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-gray-300">Freelance Web Developer</h3>
-            <p class="text-gray-400">Full-Stack Developer</p>
-          </div>
-        </div>
-        <p class="text-gray-300 mb-4">
-          Worked as a freelance web developer, building responsive and scalable web applications for clients using modern technologies like React.js, Node.js, and MongoDB.
-        </p>
-        <p class="text-gray-400 text-sm">
-          <span class="font-semibold">Duration:</span> Mar 2023 - Present
-        </p>
-      </div> -->
-
-      <!-- Experience Card 4 -->
-      <!-- <div class="experience-card bg-gradient-to-br from-[#1e1f26] to-[#0f172a] p-8 rounded-2xl border border-[#4e4e4e] shadow-2xl transform transition-all duration-300 hover:scale-105">
-        <div class="flex items-center space-x-4 mb-6">
-          <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
-            <i class="fas fa-chalkboard-teacher text-2xl text-[var(--primary)]"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-gray-300">Coding Instructor</h3>
-            <p class="text-gray-400">Part-Time Instructor</p>
-          </div>
-        </div>
-        <p class="text-gray-300 mb-4">
-          Taught coding and web development to students at a local institute, covering topics like HTML, CSS, JavaScript, and Python.
-        </p>
-        <p class="text-gray-400 text-sm">
-          <span class="font-semibold">Duration:</span> Jun 2022 - Dec 2022
-        </p>
-      </div> -->
-    </div>
-  </div>
-</section>
-
-
-  <!-- Projects Section -->
-<section id="projects" class="py-16 px-6">
-  <h2 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text ">
-    Projects
-  </h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    <!-- Project 1: Currency Converter -->
-    <div class="card p-6">
-      <img src="image/currency.png" alt="Currency Converter" class="w-full h-48 object-cover rounded-lg mb-4">
-      <h3 class="text-xl font-bold mb-2">Currency Converter</h3>
-      <p class="text-gray-300">Real-time currency converter using React & APIs.</p>
-      <div class="flex flex-wrap gap-2 mt-4">
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">React</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">API</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Tailwind CSS</span>
-      </div>
-      <a href="https://github.com/MadanBelbase/Currency-converter-" target="_blank" class="mt-4 inline-block text-[var(--primary)] hover:underline">View Project →</a>
-    </div>
-
-    <!-- Project 2: Employee Management System -->
-    <div class="card p-6">
-      <img src="image/Emp.png" alt="Employee Management System" class="w-full h-48 object-cover rounded-lg mb-4">
-      <h3 class="text-xl font-bold mb-2">Employee Management System</h3>
-      <p class="text-gray-300">Manage employees efficiently with this system.</p>
-      <div class="flex flex-wrap gap-2 mt-4">
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Node.js</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Express</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">React</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">MySQL</span>
-      </div>
-      <!-- <a href="#" class="mt-4 inline-block text-[var(--primary)] hover:underline">View Project →</a> -->
-    </div>
-
-    <!-- Project 3: EduHub Platform -->
-    <div class="card p-6">
-      <img src="image/eduhub.png" alt="EduHub Platform" class="w-full h-48 object-cover rounded-lg mb-4">
-      <h3 class="text-xl font-bold mb-2">EduHub Platform</h3>
-      <p class="text-gray-300">Educational platform UI with HTML, CSS, and JavaScript.</p>
-      <div class="flex flex-wrap gap-2 mt-4">
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">HTML</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">CSS</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">JavaScript</span>
-      </div>
-      <!-- <a href="#" class="mt-4 inline-block text-[var(--primary)] hover:underline">View Project →</a> -->
-    </div>
-
-    <!-- Project 4: News API App -->
-    <div class="card p-6">
-      <img src="image/news.png" alt="News API App" class="w-full h-48 object-cover rounded-lg mb-4">
-      <h3 class="text-xl font-bold mb-2">News API App</h3>
-      <p class="text-gray-300">News fetching app using JavaScript and News API.</p>
-      <div class="flex flex-wrap gap-2 mt-4">
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">JavaScript</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">News API</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Bootstrap</span>
-      </div>
-      <a href="https://github.com/MadanBelbase/Learning-Utsav-challenge/tree/main/Advanced%20javascript/News%20search%20App" target="_blank" class="mt-4 inline-block text-[var(--primary)] hover:underline">View Project →</a>
-    </div>
-
-    <!-- Project 5: Portfolio Website -->
-    <div class="card p-6">
-      <img src="image/portfolio.png" alt="Portfolio Website" class="w-full h-48 object-cover rounded-lg mb-4">
-      <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
-      <p class="text-gray-300">A modern and responsive portfolio website.</p>
-      <div class="flex flex-wrap gap-2 mt-4">
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">HTML</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">tailwind CSS</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">JavaScript</span>
-      </div>
-      <!-- <a href="#" class="mt-4 inline-block text-[var(--primary)] hover:underline">View Project →</a> -->
-    </div>
-
-    <!-- Project 6: Task Manager App -->
-    <!-- <div class="card p-6">
-      <img src="image/task-manager.png" alt="Task Manager App" class="w-full h-48 object-cover rounded-lg mb-4">
-      <h3 class="text-xl font-bold mb-2">Task Manager App</h3>
-      <p class="text-gray-300">A simple task manager app built with React.</p>
-      <div class="flex flex-wrap gap-2 mt-4">
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">React</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Node.js</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">MongoDB</span>
-      </div>
-      <a href="#" class="mt-4 inline-block text-[var(--primary)] hover:underline">View Project →</a>
-    </div> -->
-  </div>
-</section>
-
- <!-- Blog Section -->
-<section id="blog" class="py-16 px-6">
-  <h2 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text">
-    Blog
-  </h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    <!-- Featured Blog Post (Larger Card) -->
-    <div class="card p-6 md:col-span-2 lg:col-span-3">
-      <img src="image/reactblog.png" alt="React State, Made Simple" class="w-full h-64 object-cover rounded-lg mb-4">
-      <div class="flex items-center space-x-4 mb-4">
-        <img src="image/DSCN3396.JPG" alt="Author" class="w-10 h-10 rounded-full">
-        <div>
-          <p class="text-sm text-gray-400">Madan Belbase</p>
-          <p class="text-xs text-gray-500">Published: Feb 24, 2025</p>
-        </div>
-      </div>
-      <h3 class="text-2xl font-bold mb-2">React State, Made Simple</h3>
-      <p class="text-gray-300 mb-4">A practical walkthrough of React state management. Learn how to manage state effectively in React applications.</p>
-      <div class="flex flex-wrap gap-2 mb-4">
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">React</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">JavaScript</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">State Management</span>
-      </div>
-      <a href="https://medium.com/@madanbelbase927/react-state-made-simple-a-practical-walkthrough-0004b474f076" target="_blank" class="text-[var(--primary)] hover:underline">Read More →</a>
-    </div>
-
-    <!-- Blog Post 1 -->
-    <div class="card p-6">
-      <img src="image/css-display.png" alt="CSS Display Properties Simplified" class="w-full h-48 object-cover rounded-lg mb-4">
-      <div class="flex items-center space-x-4 mb-4">
-        <img src="image/DSCN3396.JPG" alt="Author" class="w-10 h-10 rounded-full">
-        <div>
-          <p class="text-sm text-gray-400">Madan Belbase</p>
-          <p class="text-xs text-gray-500">Published: Nov 16, 2024</p>
-        </div>
-      </div>
-      <h3 class="text-xl font-bold mb-2">CSS Display Properties Simplified</h3>
-      <p class="text-gray-300 mb-4">Understanding CSS display properties with tips, examples, and best practices.</p>
-      <div class="flex flex-wrap gap-2 mb-4">
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">CSS</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Web Development</span>
-      </div>
-      <a href="https://medium.com/@madanbelbase927/css-display-properties-simplified-tips-examples-and-best-practices-d319f5a4d330" target="_blank" class="text-[var(--primary)] hover:underline">Read More →</a>
-    </div>
-
-    <!-- Blog Post 2 -->
-    <div class="card p-6">
-      <img src="image/vite.png" alt="Integrate Tailwind CSS into React" class="w-full h-48 object-cover rounded-lg mb-4">
-      <div class="flex items-center space-x-4 mb-4">
-        <img src="image/DSCN3396.JPG" alt="Author" class="w-10 h-10 rounded-full">
-        <div>
-          <p class="text-sm text-gray-400">Madan Belbase</p>
-          <p class="text-xs text-gray-500">Published: Dec 16, 2024</p>
-        </div>
-      </div>
-      <h3 class="text-xl font-bold mb-2">Integrate Tailwind CSS into React</h3>
-      <p class="text-gray-300 mb-4">Learn how to integrate Tailwind CSS into React using Vite and other approaches.</p>
-      <div class="flex flex-wrap gap-2 mb-4">
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Tailwind CSS</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">React</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Vite</span>
-      </div>
-      <a href="https://medium.com/@madanbelbase927/how-to-integrate-tailwind-css-into-react-vite-vs-other-approaches-080b398eb413" target="_blank" class="text-[var(--primary)] hover:underline">Read More →</a>
-    </div>
-
-    <!-- Blog Post 3 -->
-    <div class="card p-6">
-      <img src="image/async.png" alt="Getting Started with Asynchronous JavaScript" class="w-full h-48 object-cover rounded-lg mb-4">
-      <div class="flex items-center space-x-4 mb-4">
-        <img src="image/DSCN3396.JPG" alt="Author" class="w-10 h-10 rounded-full">
-        <div>
-          <p class="text-sm text-gray-400">Madan Belbase</p>
-          <p class="text-xs text-gray-500">Published: Oct 25, 2024</p>
-        </div>
-      </div>
-      <h3 class="text-xl font-bold mb-2">Getting Started with Asynchronous JavaScript</h3>
-      <p class="text-gray-300 mb-4">Learn how JavaScript’s async/await simplifies asynchronous programming with practical examples.</p>
-      <div class="flex flex-wrap gap-2 mb-4">
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">JavaScript</span>
-        <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Async/Await</span>
-      </div>
-      <a href="https://medium.com/@madanbelbase927/getting-started-with-asynchronous-javascript-callbacks-promises-and-async-await-fe7deda7156a" target="_blank" class="text-[var(--primary)] hover:underline">Read More →</a>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Contact Section -->
-<section id="contact" class="py-16 px-6">
-  <h2 class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] bg-clip-text">
-    Contact
-  </h2>
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Contact Form -->
-      <div class="contact-form-card bg-gradient-to-br from-[#1e1f26] to-[#0f172a] p-8 rounded-2xl border border-[#4e4e4e] shadow-2xl transform transition-all duration-300 hover:scale-105">
-        <form id="contactForm" class="flex flex-col gap-6">
-          <input type="hidden" name="access_key" value="46d2b706-cb7b-411b-b4fa-a5674ad33811">
-
-          <!-- Name Input -->
-          <div>
-            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
-            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-[#1e1f26] text-gray-300 rounded-lg border border-[#4e4e4e] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]">
-          </div>
-
-          <!-- Email Input -->
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
-            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-[#1e1f26] text-gray-300 rounded-lg border border-[#4e4e4e] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]">
-          </div>
-
-          <!-- Message Textarea -->
-          <div>
-            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-[#1e1f26] text-gray-300 rounded-lg border border-[#4e4e4e] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"></textarea>
-          </div>
-
-          <!-- Submit Button -->
-          <button type="submit" id="submitBtn" class="w-full px-6 py-3 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white rounded-lg font-semibold hover:from-[var(--secondary)] hover:to-[var(--primary)] transition-all transform hover:scale-105">
-            Send Message
-          </button>
-        </form>
-      </div>
-
-      <!-- Contact Details -->
-      <div class="contact-details-card bg-gradient-to-br from-[#1e1f26] to-[#0f172a] p-8 rounded-2xl border border-[#4e4e4e] shadow-2xl transform transition-all duration-300 hover:scale-105">
-        <p class="text-lg text-gray-300 mb-6">Let's connect! Reach out via email or social media.</p>
-        <div class="space-y-6">
-          <!-- Email -->
-          <div class="flex items-center space-x-4">
-            <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
-              <i class="fas fa-envelope text-2xl text-[var(--primary)]"></i>
-            </div>
-            <div class="space-y-2">
-              <p class="text-gray-300 font-semibold text-sm sm:text-base">Email</p>
-              <p class="text-gray-400 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mt-2 break-words sm:whitespace-nowrap">
-                madanbelbase927@email.com
-              </p>
-            </div>
-          </div>
-
-          <!-- Location -->
-          <div class="flex items-center space-x-4">
-            <div class="p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e]">
-              <i class="fas fa-map-marker-alt text-2xl text-[var(--primary)]"></i>
-            </div>
-            <div>
-              <p class="text-gray-300 font-semibold">Location</p>
-              <p class="text-gray-400">Kathmandu, Nepal</p>
-            </div>
-          </div>
-
-          <!-- Social Media Links -->
-          <div class="flex flex-wrap justify-center items-center gap-4 mt-6">
-            <!-- GitHub -->
-            <a href="https://github.com/MadanBelbase" target="_blank" class="social-link p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e] hover:bg-[var(--primary)] transition-transform hover:scale-110">
-              <i class="fab fa-github text-2xl text-gray-300 hover:text-white"></i>
-            </a>
-
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank" class="social-link p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e] hover:bg-[var(--primary)] transition-transform hover:scale-110">
-              <i class="fab fa-linkedin text-2xl text-gray-300 hover:text-white"></i>
-            </a>
-
-            <!-- Twitter (X) -->
-            <a href="https://x.com/belbase_madan_" target="_blank" class="social-link p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e] hover:bg-[var(--primary)] transition-transform hover:scale-110">
-              <i class="fab fa-twitter text-2xl text-gray-300 hover:text-white"></i>
-            </a>
-
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/profile.php?id=61554181993528" target="_blank" class="social-link p-3 bg-[#1e1f26] rounded-lg border border-[#4e4e4e] hover:bg-[var(--primary)] transition-transform hover:scale-110">
-              <i class="fab fa-facebook text-2xl text-gray-300 hover:text-white"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer Section -->
-<footer class="py-8 text-center text-white backdrop-blur-md bg-[#0f172a]/80">
-  <p class="mt-6 text-sm">© 2025 <span class="font-semibold">Madan Belbase</span>. All rights reserved.</p>
-</footer>
-
-<!-- Thank You Modal -->
-<div id="thankYouModal" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 hidden z-50">
-  <div class="bg-gradient-to-br from-[#1e1f26] to-[#0f172a] p-8 rounded-2xl border border-[#4e4e4e] text-center">
-    <h3 class="text-2xl font-bold text-[var(--primary)] mb-4">Thank You!</h3>
-    <p class="text-gray-300">Your message has been sent successfully. I'll get back to you soon!</p>
-    <button id="closeModal" class="mt-6 px-6 py-2 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white rounded-lg hover:from-[var(--secondary)] hover:to-[var(--primary)] transition-all transform hover:scale-105">
-      Close
-    </button>
+  <div class="flex flex-col space-y-2 p-4">
+      <a href="#hero" class="nav-link px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800/50 hover:text-cyan-400 transition-all duration-300" onclick="closeMobileMenu()">
+          <span class="flex items-center">
+              <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+              </svg>
+              Home
+          </span>
+      </a>
+      <a href="#about" class="nav-link px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800/50 hover:text-cyan-400 transition-all duration-300" onclick="closeMobileMenu()">
+          <span class="flex items-center">
+              <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+              </svg>
+              About
+          </span>
+      </a>
+      <a href="#projects" class="nav-link px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800/50 hover:text-cyan-400 transition-all duration-300" onclick="closeMobileMenu()">
+          <span class="flex items-center">
+              <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+              </svg>
+              Projects
+          </span>
+      </a>
+      <a href="#blog" class="nav-link px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800/50 hover:text-cyan-400 transition-all duration-300" onclick="closeMobileMenu()">
+          <span class="flex items-center">
+              <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+              </svg>
+              Blog
+          </span>
+      </a>
+      <a href="/resume.html" class="nav-link px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800/50 hover:text-purple-400 transition-all duration-300" onclick="closeMobileMenu()">
+          <span class="flex items-center">
+              <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+              Resume
+          </span>
+      </a>
+      <a href="#contact" class="nav-link px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800/50 hover:text-cyan-400 transition-all duration-300" onclick="closeMobileMenu()">
+          <span class="flex items-center">
+              <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              Contact
+          </span>
+      </a>
   </div>
 </div>
+
+<!-- Overlay -->
+<div id="overlay" class="fixed inset-0 bg-black/70 z-30 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <section id="hero" class="min-h-screen flex items-center justify-center px-6 bg-gray-950 relative overflow-hidden">
+    <!-- Modern Grid Background with Animated Nodes -->
+    <div class="absolute inset-0 z-0 opacity-30">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIHN0cm9rZT0iIzEwMTExNCIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBkPSJNMCAwaDYwTTAgNjBINjBNNjAgMEg2ME02MCA2MEg2MCIvPjwvZz48L2c+PC9zdmc+')]"></div>
+      <!-- Animated Connection Nodes -->
+      <div class="node-connection">
+        <div class="node" style="top:20%; left:15%"></div>
+        <div class="node" style="top:30%; left:80%"></div>
+        <div class="node" style="top:70%; left:25%"></div>
+        <div class="node" style="top:80%; left:70%"></div>
+        <svg class="connections" width="100%" height="100%">
+          <line x1="15%" y1="20%" x2="80%" y2="30%" class="connection-line"/>
+          <line x1="25%" y1="70%" x2="70%" y2="80%" class="connection-line"/>
+          <line x1="80%" y1="30%" x2="25%" y2="70%" class="connection-line"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="text-center relative z-10 max-w-4xl w-full px-4">
+      <!-- Modern Terminal Header -->
+      <div class="terminal-window bg-gray-900/80 backdrop-blur-lg rounded-xl border border-gray-800 shadow-2xl overflow-hidden mb-8 mx-auto max-w-2xl">
+        <div class="terminal-header bg-gray-800/90 px-4 py-3 flex items-center border-b border-gray-700">
+          <div class="flex space-x-2 mr-4">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          </div>
+          <div class="text-xs text-gray-400 font-mono">~/madan-belbase/profile.js</div>
+        </div>
+        <div class="terminal-body p-6 text-left">
+          <div class="mb-4">
+            <span class="text-purple-400">const</span> <span class="text-cyan-400">aboutMe</span> <span class="text-gray-400">=</span> <span class="text-gray-600">{</span>
+          </div>
+          <div class="ml-6 mb-1">
+            <span class="text-green-400">name</span><span class="text-gray-400">:</span> <span class="text-yellow-400">'Madan Belbase'</span><span class="text-gray-400">,</span>
+          </div>
+          <div class="ml-6 mb-1">
+            <span class="text-green-400">role</span><span class="text-gray-400">:</span> <span class="text-yellow-400">'Backend Architect'</span><span class="text-gray-400">,</span>
+          </div>
+          <div class="ml-6 mb-1">
+            <span class="text-green-400">specialties</span><span class="text-gray-400">:</span> <span class="text-gray-600">[</span>
+            <span class="text-yellow-400">'Node.js'</span><span class="text-gray-400">,</span> 
+            <span class="text-gray-400"></span> 
+            <span class="text-yellow-400">'API Design'</span><span class="text-gray-600">]</span><span class="text-gray-400">,</span>
+          </div>
+          <div class="ml-6 mb-4">
+            <span class="text-green-400">currentStack</span><span class="text-gray-400">:</span> <span class="text-cyan-400">process</span><span class="text-gray-400">.</span><span class="text-cyan-400">env</span><span class="text-gray-400">.</span><span class="text-cyan-400">STACK</span> <span class="text-gray-400">||</span> <span class="text-yellow-400">'Node, JavaScript'</span>
+          </div>
+          <div class="text-gray-600">}</div>
+          <div class="mt-6">
+            <span class="text-gray-400">$</span> <span class="text-green-400">npm</span> <span class="text-cyan-400">run</span> <span class="text-yellow-400">start-portfolio</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modern Profile with Tech Glow -->
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
+        <div class="relative group">
+          <div class="absolute -inset-2 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+          <div class="relative rounded-full border-2 border-gray-700 overflow-hidden w-40 h-40 md:w-48 md:h-48 group-hover:border-cyan-400 transition-all duration-300">
+            <img src="image/DSCN3396.JPG" alt="Madan Belbase" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
+          </div>
+        </div>
+        <div class="text-left max-w-md">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Madan Belbase</h1>
+          <div class="text-xl text-cyan-400 font-mono mb-4">Backend Engineer</div>
+          <p class="text-gray-300 text-lg">
+            Building <span class="text-cyan-400">scalable systems</span> and <span class="text-purple-400">efficient architectures</span>. 
+            Passionate about <span class="text-green-400">clean code</span> and <span class="text-yellow-400">performance optimization</span>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Modern Tech Stack Badges -->
+      <div class="flex flex-wrap justify-center gap-3 mb-10 max-w-2xl mx-auto">
+        <div class="tech-badge">
+          <span class="text-cyan-400">Node.js</span>
+          <span class="text-gray-400">v18+</span>
+        </div>
+        <div class="tech-badge">
+          <span class="text-blue-400">JavaScript</span>
+          <span class="text-gray-400"></span>
+        </div>
+        <div class="tech-badge">
+          <span class="text-green-400">PostgreSQL</span>
+          <span class="text-gray-400">15+</span>
+        </div>
+        <div class="tech-badge">
+          <span class="text-green-400">React</span>
+         
+        </div>
+        <div class="tech-badge">
+          <span class="text-green-400">MySQL</span>
+          
+        </div>
+      </div>
+
+      <!-- Modern CTA Buttons -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/resume.html" class="modern-cta bg-cyan-600 hover:bg-cyan-500 border-cyan-700">
+          <span class="text-gray-900">$</span> view resume
+        </a>
+        <a href="#contact" class="modern-cta bg-gray-800 hover:bg-gray-700 border-gray-700 text-cyan-400">
+          <span class="text-gray-400">></span> contactMe()
+        </a>
+      </div>
+    </div>
+</section>
+  <!-- About & Education Section - Developer Theme -->
+<section id="about" class="py-16 px-6 bg-gray-950 relative overflow-hidden">
+  <!-- Animated background nodes -->
+  <div class="absolute inset-0 z-0 opacity-10">
+    <div class="node" style="top:15%; left:10%"></div>
+    <div class="node" style="top:25%; left:85%"></div>
+    <div class="node" style="top:75%; left:15%"></div>
+    <div class="node" style="top:85%; left:80%"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    <!-- Terminal-style header -->
+    <div class="terminal-header bg-gray-900 border border-gray-800 rounded-t-xl p-4 max-w-2xl mx-auto mb-1">
+      <div class="flex items-center">
+        <div class="flex space-x-2 mr-4">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <div class="text-sm text-gray-400 font-mono">~/madan-belbase/about_education.js</div>
+      </div>
+    </div>
+
+    <h2 class="text-4xl font-bold text-center mb-8 font-mono bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+      &gt; aboutMe.education
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- About Me - JSON Inspired -->
+      <div class="terminal-card bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-b-xl rounded-tr-xl overflow-hidden">
+        <div class="p-1 bg-gray-800 text-xs text-gray-400 font-mono px-4 py-2 border-b border-gray-800">
+          // aboutMe.json
+        </div>
+        <div class="p-6">
+          <pre class="text-sm md:text-base overflow-x-auto"><code class="language-json"><span class="text-gray-600">{</span>
+  "<span class="text-green-400">name</span>": "<span class="text-yellow-400">Madan Belbase</span>",
+  "<span class="text-green-400">role</span>": "<span class="text-yellow-400">Computer Engineering Student</span>",
+  "<span class="text-green-400">focus</span>": <span class="text-gray-600">[</span>
+    "<span class="text-yellow-400">Backend Development</span>",
+    "<span class="text-yellow-400">System Design</span>"
+  <span class="text-gray-600">]</span>,
+  "<span class="text-green-400">skills</span>": <span class="text-gray-600">{</span>
+    "<span class="text-green-400">technical</span>": <span class="text-gray-600">[</span>
+      "<span class="text-yellow-400">Node.js</span>", 
+      "<span class="text-yellow-400">API</span>",
+      "<span class="text-yellow-400">Database Design</span>"
+    <span class="text-gray-600">]</span>,
+    "<span class="text-green-400">soft</span>": <span class="text-gray-600">[</span>
+      "<span class="text-yellow-400">Leadership</span>",
+      "<span class="text-yellow-400">Problem Solving</span>",
+      "<span class="text-yellow-400">Collaboration</span>"
+    <span class="text-gray-600">]</span>
+  <span class="text-gray-600">}</span>
+<span class="text-gray-600">}</span></code></pre>
+        </div>
+      </div>
+
+      <!-- Education - Database Table Inspired -->
+      <div class="terminal-card bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-b-xl rounded-tl-xl overflow-hidden">
+        <div class="p-1 bg-gray-800 text-xs text-gray-400 font-mono px-4 py-2 border-b border-gray-800">
+          // education.sql
+        </div>
+        <div class="p-6">
+          <div class="overflow-x-auto">
+            <table class="w-full font-mono text-sm">
+              <thead>
+                <tr class="text-left border-b border-gray-800 text-cyan-400">
+                  <th class="pb-2 pr-4">INSTITUTION</th>
+                  <th class="pb-2 pr-4">DEGREE</th>
+                  <th class="pb-2">YEAR</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-800">
+                <tr class="hover:bg-gray-800/50 transition-colors">
+                  <td class="py-3 pr-4 text-purple-400">Nepal College of IT</td>
+                  <td class="py-3 pr-4">B.E. Computer</td>
+                  <td class="py-3 text-gray-400">2023-Present</td>
+                </tr>
+                <tr class="hover:bg-gray-800/50 transition-colors">
+                  <td class="py-3 pr-4 text-purple-400">Morgan Int'l College</td>
+                  <td class="py-3 pr-4">+2 Science</td>
+                  <td class="py-3 text-gray-400">2021-2023</td>
+                </tr>
+                <tr class="hover:bg-gray-800/50 transition-colors">
+                  <td class="py-3 pr-4 text-purple-400">Shree Devi Prabhav</td>
+                  <td class="py-3 pr-4">SEE</td>
+                  <td class="py-3 text-gray-400">2010-2020</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mt-4 text-xs text-gray-500 font-mono">
+            <span class="text-green-400">-- </span>3 rows in set (0.00 sec)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Console Output Style Footer -->
+    <div class="max-w-2xl mx-auto mt-8 bg-black/50 border border-gray-800 rounded-lg p-4 font-mono text-sm">
+      <div class="text-green-400 mb-2">$ madan --skills --education</div>
+      <div class="text-gray-300">
+        <div class="mb-1"><span class="text-purple-400">></span> <span class="text-cyan-400">Loaded</span> education history (3 institutions)</div>
+        <div><span class="text-purple-400">></span> <span class="text-cyan-400">Loaded</span> skill sets (6 technical, 3 soft skills)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section - Developer Terminal Theme -->
+<section id="skills" class="py-16 px-6 bg-gray-950 relative overflow-hidden">
+  <!-- Animated background connections -->
+  <div class="absolute inset-0 z-0 opacity-10">
+    <svg width="100%" height="100%" class="connections">
+      <line x1="10%" y1="20%" x2="90%" y2="30%" class="connection-line"/>
+      <line x1="15%" y1="50%" x2="85%" y2="60%" class="connection-line"/>
+      <line x1="20%" y1="80%" x2="80%" y2="70%" class="connection-line"/>
+    </svg>
+  </div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    <!-- Terminal-style header -->
+    <div class="terminal-header bg-gray-900 border border-gray-800 rounded-t-xl p-4 max-w-2xl mx-auto mb-1">
+      <div class="flex items-center">
+        <div class="flex space-x-2 mr-4">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <div class="text-sm text-gray-400 font-mono">~/madan-belbase/skills.sh --all</div>
+      </div>
+    </div>
+
+    <h2 class="text-4xl font-bold text-center mb-8 font-mono bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+      $ mySkills --expertise
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <!-- Skill Card Template -->
+      <!-- Node.js -->
+      <div class="skill-card group">
+        <div class="skill-icon bg-gray-900/50 border border-gray-800">
+          <i class="fab fa-node-js text-5xl text-green-500"></i>
+          <div class="skill-progress">
+            <div class="skill-progress-bar bg-green-500" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill-details">
+          <h3 class="font-mono font-bold text-lg text-green-400">Node.js</h3>
+          <p class="text-gray-400 text-sm">Runtime Environment</p>
+          <div class="mt-2 text-xs text-gray-500 font-mono">
+            <span class="text-green-400">const</span> expertise = <span class="text-yellow-400">85%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="skill-card group">
+        <div class="skill-icon bg-gray-900/50 border border-gray-800">
+          <i class="fab fa-js-square text-5xl text-yellow-400"></i>
+          <div class="skill-progress">
+            <div class="skill-progress-bar bg-yellow-400" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="skill-details">
+          <h3 class="font-mono font-bold text-lg text-yellow-400">JavaScript</h3>
+          <p class="text-gray-400 text-sm">Programming Language</p>
+          <div class="mt-2 text-xs text-gray-500 font-mono">
+            <span class="text-green-400">let</span> proficiency = <span class="text-yellow-400">80%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Python -->
+      <div class="skill-card group">
+        <div class="skill-icon bg-gray-900/50 border border-gray-800">
+          <i class="fab fa-python text-5xl text-blue-400"></i>
+          <div class="skill-progress">
+            <div class="skill-progress-bar bg-blue-400" style="width: 15%"></div>
+          </div>
+        </div>
+        <div class="skill-details">
+          <h3 class="font-mono font-bold text-lg text-blue-400">Python</h3>
+          <p class="text-gray-400 text-sm">Scripting & Automation</p>
+          <div class="mt-2 text-xs text-gray-500 font-mono">
+            <span class="text-green-400">def</span> skill_level() -> <span class="text-yellow-400">15%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- React -->
+      <div class="skill-card group">
+        <div class="skill-icon bg-gray-900/50 border border-gray-800">
+          <i class="fab fa-react text-5xl text-cyan-400"></i>
+          <div class="skill-progress">
+            <div class="skill-progress-bar bg-blue-400" style="width: 78%"></div>
+          </div>
+        </div>
+        <div class="skill-details">
+          <h3 class="font-mono font-bold text-lg text-cyan-400">React</h3>
+          <p class="text-gray-400 text-sm">Frontend Library</p>
+          <div class="mt-2 text-xs text-gray-500 font-mono">
+            <span class="text-green-400">export</span> const experience = <span class="text-yellow-400">78%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MongoDB -->
+      <div class="skill-card group">
+        <div class="skill-icon bg-gray-900/50 border border-gray-800">
+          <i class="fas fa-database text-5xl text-green-400"></i>
+          <div class="skill-progress">
+            <div class="skill-progress-bar bg-green-400" style="width: 82%"></div>
+          </div>
+        </div>
+        <div class="skill-details">
+          <h3 class="font-mono font-bold text-lg text-green-400">MongoDB</h3>
+          <p class="text-gray-400 text-sm">NoSQL Database</p>
+          <div class="mt-2 text-xs text-gray-500 font-mono">
+            <span class="text-green-400">db</span>.skillLevel.<span class="text-yellow-400">find</span>({mongo: 82})
+          </div>
+        </div>
+      </div>
+
+      <!-- AWS -->
+      <div class="skill-card group">
+        <div class="skill-icon bg-gray-900/50 border border-gray-800">
+          <i class="fab fa-aws text-5xl text-orange-400"></i>
+          <div class="skill-progress">
+            <div class="skill-progress-bar bg-orange-400" style="width:10%"></div>
+          </div>
+        </div>
+        <div class="skill-details">
+          <h3 class="font-mono font-bold text-lg text-orange-400">AWS</h3>
+          <p class="text-gray-400 text-sm">Cloud Services</p>
+          <div class="mt-2 text-xs text-gray-500 font-mono">
+            <span class="text-green-400">aws</span> skill-level <span class="text-yellow-400">10%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Git -->
+      <div class="skill-card group">
+        <div class="skill-icon bg-gray-900/50 border border-gray-800">
+          <i class="fab fa-git-alt text-5xl text-red-400"></i>
+          <div class="skill-progress">
+            <div class="skill-progress-bar bg-red-400" style="width: 88%"></div>
+          </div>
+        </div>
+        <div class="skill-details">
+          <h3 class="font-mono font-bold text-lg text-red-400">Git</h3>
+          <p class="text-gray-400 text-sm">Version Control</p>
+          <div class="mt-2 text-xs text-gray-500 font-mono">
+            <span class="text-green-400">git</span> check-skill <span class="text-yellow-400">88%</span>
+          </div>
+        </div>
+      </div>
+
+  
+      </div>
+    </div>
+
+    <!-- Console Output Style Footer -->
+    <div class="max-w-2xl mx-auto mt-8 bg-black/50 border border-gray-800 rounded-lg p-4 font-mono text-sm">
+      <div class="text-green-400 mb-2">$ skill-assessment --complete</div>
+      <div class="text-gray-300">
+        <div><span class="text-purple-400">></span> <span class="text-cyan-400">Loaded</span> 7 primary skills</div>
+        <div><span class="text-purple-400">></span> <span class="text-cyan-400">Average</span> proficiency: <span class="text-yellow-400">62.57%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Projects Section - Developer Terminal Theme -->
+<section id="projects" class="py-16 px-6 bg-gray-950 relative overflow-hidden">
+  <!-- Animated background nodes -->
+  <div class="absolute inset-0 z-0 opacity-10">
+    <div class="node" style="top:10%; left:15%"></div>
+    <div class="node" style="top:20%; left:85%"></div>
+    <div class="node" style="top:80%; left:20%"></div>
+    <div class="node" style="top:90%; left:75%"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    <!-- Terminal-style header -->
+    <div class="terminal-header bg-gray-900 border border-gray-800 rounded-t-xl p-4 max-w-2xl mx-auto mb-1">
+      <div class="flex items-center">
+        <div class="flex space-x-2 mr-4">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <div class="text-sm text-gray-400 font-mono">~/madan-belbase/projects --all</div>
+      </div>
+    </div>
+
+    <h2 class="text-4xl font-bold text-center mb-8 font-mono bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+      $ myProjects --showcase
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Project 1: Currency Converter -->
+      <div class="project-card group">
+        <div class="project-image-container">
+          <img src="image/currency.png" alt="Currency Converter" class="project-image">
+          <div class="project-tech-badges">
+            <span class="tech-badge react">React</span>
+            <span class="tech-badge api">API</span>
+            <span class="tech-badge tailwind">Tailwind</span>
+          </div>
+        </div>
+        <div class="project-details">
+          <h3 class="project-title">Currency Converter</h3>
+          <p class="project-description">Real-time currency converter using React & APIs</p>
+          <div class="project-footer">
+            <a href="https://github.com/MadanBelbase/Currency-converter-" target="_blank" class="project-link">
+              <span class="text-gray-400">$</span> git clone <span class="text-cyan-400">currency-converter</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Employee Management System -->
+      <div class="project-card group">
+        <div class="project-image-container">
+          <img src="image/Emp.png" alt="Employee Management System" class="project-image">
+          <div class="project-tech-badges">
+            <span class="tech-badge node">Node.js</span>
+            <span class="tech-badge express">Express</span>
+            <span class="tech-badge react">React</span>
+            <span class="tech-badge mysql">MySQL</span>
+          </div>
+        </div>
+        <div class="project-details">
+          <h3 class="project-title">Employee Management</h3>
+          <p class="project-description">Full-stack employee management system</p>
+          <div class="project-footer">
+            <div class="project-link text-gray-500">
+              <span class="text-gray-400">#</span> Private repository
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: EduHub Platform -->
+      <div class="project-card group">
+        <div class="project-image-container">
+          <img src="image/eduhub.png" alt="EduHub Platform" class="project-image">
+          <div class="project-tech-badges">
+            <span class="tech-badge html">HTML</span>
+            <span class="tech-badge css">CSS</span>
+            <span class="tech-badge js">JavaScript</span>
+          </div>
+        </div>
+        <div class="project-details">
+          <h3 class="project-title">EduHub Platform</h3>
+          <p class="project-description">Educational platform UI</p>
+          <div class="project-footer">
+            <div class="project-link text-gray-500">
+              <span class="text-gray-400">#</span> Demo available
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: News API App -->
+      <div class="project-card group">
+        <div class="project-image-container">
+          <img src="image/news.png" alt="News API App" class="project-image">
+          <div class="project-tech-badges">
+            <span class="tech-badge js">JavaScript</span>
+            <span class="tech-badge api">News API</span>
+            <span class="tech-badge bootstrap">Bootstrap</span>
+          </div>
+        </div>
+        <div class="project-details">
+          <h3 class="project-title">News API App</h3>
+          <p class="project-description">News fetching application</p>
+          <div class="project-footer">
+            <a href="https://github.com/MadanBelbase/Learning-Utsav-challenge/tree/main/Advanced%20javascript/News%20search%20App" target="_blank" class="project-link">
+              <span class="text-gray-400">$</span> git clone <span class="text-cyan-400">news-app</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: Portfolio Website -->
+      <div class="project-card group">
+        <div class="project-image-container">
+          <img src="image/portfolio.png" alt="Portfolio Website" class="project-image">
+          <div class="project-tech-badges">
+            <span class="tech-badge html">HTML</span>
+            <span class="tech-badge tailwind">Tailwind</span>
+            <span class="tech-badge js">JavaScript</span>
+          </div>
+        </div>
+        <div class="project-details">
+          <h3 class="project-title">Portfolio Website</h3>
+          <p class="project-description">Modern responsive portfolio</p>
+          <div class="project-footer">
+            <div class="project-link text-gray-500">
+              <span class="text-gray-400">#</span> Currently viewing
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6: Coming Soon -->
+      <div class="project-card group bg-gray-900/50 border-2 border-dashed border-gray-700 flex items-center justify-center min-h-[300px]">
+        <div class="text-center p-6">
+          <div class="text-4xl mb-2 text-gray-600">+</div>
+          <h3 class="text-xl font-mono text-gray-400">Next Project</h3>
+          <p class="text-sm text-gray-500 mt-2">Under development</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Console Output Style Footer -->
+    <div class="max-w-2xl mx-auto mt-8 bg-black/50 border border-gray-800 rounded-lg p-4 font-mono text-sm">
+      <div class="text-green-400 mb-2">$ projects --status</div>
+      <div class="text-gray-300">
+        <div><span class="text-purple-400">></span> <span class="text-cyan-400">Loaded</span> 5 completed projects</div>
+        <div><span class="text-purple-400">></span> <span class="text-cyan-400">1</span> project in development</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+ <!-- Blog Section - Developer Terminal Theme -->
+<section id="blog" class="py-16 px-6 bg-gray-950 relative overflow-hidden">
+  <!-- Animated background nodes -->
+  <div class="absolute inset-0 z-0 opacity-10">
+    <div class="node" style="top:15%; left:20%"></div>
+    <div class="node" style="top:25%; left:80%"></div>
+    <div class="node" style="top:75%; left:15%"></div>
+    <div class="node" style="top:85%; left:75%"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    <!-- Terminal-style header -->
+    <div class="terminal-header bg-gray-900 border border-gray-800 rounded-t-xl p-4 max-w-2xl mx-auto mb-1">
+      <div class="flex items-center">
+        <div class="flex space-x-2 mr-4">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <div class="text-sm text-gray-400 font-mono">~/madan-belbase/blog --latest</div>
+      </div>
+    </div>
+
+    <h2 class="text-4xl font-bold text-center mb-8 font-mono bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+      $ myArticles --tech-blog
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Featured Blog Post (Larger Card) -->
+      <div class="blog-card featured md:col-span-2 lg:col-span-3 group">
+        <div class="blog-image-container">
+          <img src="image/reactblog.png" alt="React State, Made Simple" class="blog-image">
+          <div class="blog-featured-badge">
+            <span class="text-xs font-mono bg-cyan-500 text-gray-900 px-2 py-1 rounded">FEATURED</span>
+          </div>
+        </div>
+        <div class="blog-content">
+          <div class="flex items-center space-x-3 mb-4">
+            <img src="image/DSCN3396.JPG" alt="Author" class="w-8 h-8 rounded-full border border-gray-700">
+            <div class="font-mono text-sm">
+              <p class="text-gray-400">Madan Belbase</p>
+              <p class="text-xs text-gray-500">Published: Feb 24, 2025</p>
+            </div>
+          </div>
+          <h3 class="blog-title">React State, Made Simple</h3>
+          <p class="blog-excerpt">A practical walkthrough of React state management. Learn how to manage state effectively in React applications.</p>
+          <div class="blog-tags">
+            <span class="blog-tag react">React</span>
+            <span class="blog-tag javascript">JavaScript</span>
+            <span class="blog-tag state">State</span>
+          </div>
+          <a href="https://medium.com/@madanbelbase927/react-state-made-simple-a-practical-walkthrough-0004b474f076" target="_blank" class="blog-link">
+            <span class="text-gray-400">$</span> read <span class="text-cyan-400">--full-article</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Blog Post 1 -->
+      <div class="blog-card group">
+        <div class="blog-image-container">
+          <img src="image/css-display.png" alt="CSS Display Properties Simplified" class="blog-image">
+        </div>
+        <div class="blog-content">
+          <div class="flex items-center space-x-3 mb-3">
+            <img src="image/DSCN3396.JPG" alt="Author" class="w-8 h-8 rounded-full border border-gray-700">
+            <div class="font-mono text-sm">
+              <p class="text-gray-400">Madan Belbase</p>
+              <p class="text-xs text-gray-500">Published: Nov 16, 2024</p>
+            </div>
+          </div>
+          <h3 class="blog-title">CSS Display Properties</h3>
+          <p class="blog-excerpt">Understanding CSS display properties with tips, examples, and best practices.</p>
+          <div class="blog-tags">
+            <span class="blog-tag css">CSS</span>
+            <span class="blog-tag webdev">Web Dev</span>
+          </div>
+          <a href="https://medium.com/@madanbelbase927/css-display-properties-simplified-tips-examples-and-best-practices-d319f5a4d330" target="_blank" class="blog-link">
+            <span class="text-gray-400">$</span> read <span class="text-cyan-400">--full-article</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="blog-card group">
+        <div class="blog-image-container">
+          <img src="image/vite.png" alt="Integrate Tailwind CSS into React" class="blog-image">
+        </div>
+        <div class="blog-content">
+          <div class="flex items-center space-x-3 mb-3">
+            <img src="image/DSCN3396.JPG" alt="Author" class="w-8 h-8 rounded-full border border-gray-700">
+            <div class="font-mono text-sm">
+              <p class="text-gray-400">Madan Belbase</p>
+              <p class="text-xs text-gray-500">Published: Dec 16, 2024</p>
+            </div>
+          </div>
+          <h3 class="blog-title">Tailwind + React</h3>
+          <p class="blog-excerpt">Learn how to integrate Tailwind CSS into React using Vite and other approaches.</p>
+          <div class="blog-tags">
+            <span class="blog-tag tailwind">Tailwind</span>
+            <span class="blog-tag react">React</span>
+            <span class="blog-tag vite">Vite</span>
+          </div>
+          <a href="https://medium.com/@madanbelbase927/how-to-integrate-tailwind-css-into-react-vite-vs-other-approaches-080b398eb413" target="_blank" class="blog-link">
+            <span class="text-gray-400">$</span> read <span class="text-cyan-400">--full-article</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="blog-card group">
+        <div class="blog-image-container">
+          <img src="image/async.png" alt="Getting Started with Asynchronous JavaScript" class="blog-image">
+        </div>
+        <div class="blog-content">
+          <div class="flex items-center space-x-3 mb-3">
+            <img src="image/DSCN3396.JPG" alt="Author" class="w-8 h-8 rounded-full border border-gray-700">
+            <div class="font-mono text-sm">
+              <p class="text-gray-400">Madan Belbase</p>
+              <p class="text-xs text-gray-500">Published: Oct 25, 2024</p>
+            </div>
+          </div>
+          <h3 class="blog-title">Async JavaScript</h3>
+          <p class="blog-excerpt">Learn how JavaScript's async/await simplifies asynchronous programming.</p>
+          <div class="blog-tags">
+            <span class="blog-tag javascript">JavaScript</span>
+            <span class="blog-tag async">Async/Await</span>
+          </div>
+          <a href="https://medium.com/@madanbelbase927/getting-started-with-asynchronous-javascript-callbacks-promises-and-async-await-fe7deda7156a" target="_blank" class="blog-link">
+            <span class="text-gray-400">$</span> read <span class="text-cyan-400">--full-article</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Console Output Style Footer -->
+    <div class="max-w-2xl mx-auto mt-8 bg-black/50 border border-gray-800 rounded-lg p-4 font-mono text-sm">
+      <div class="text-green-400 mb-2">$ blog --stats</div>
+      <div class="text-gray-300">
+        <div><span class="text-purple-400">></span> <span class="text-cyan-400">Loaded</span> 4 technical articles</div>
+        <div><span class="text-purple-400">></span> <span class="text-cyan-400">Topics</span>: React, CSS, JavaScript, Tailwind</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact Section - Developer Terminal Theme -->
+<section id="contact" class="py-16 px-6 bg-gray-950 relative overflow-hidden">
+  <!-- Animated background nodes -->
+  <div class="absolute inset-0 z-0 opacity-10">
+    <div class="node" style="top:20%; left:15%"></div>
+    <div class="node" style="top:30%; left:85%"></div>
+    <div class="node" style="top:70%; left:20%"></div>
+    <div class="node" style="top:80%; left:75%"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    <!-- Terminal-style header -->
+    <div class="terminal-header bg-gray-900 border border-gray-800 rounded-t-xl p-4 max-w-2xl mx-auto mb-1">
+      <div class="flex items-center">
+        <div class="flex space-x-2 mr-4">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <div class="text-sm text-gray-400 font-mono">~/madan-belbase/contact --send-message</div>
+      </div>
+    </div>
+
+    <h2 class="text-4xl font-bold text-center mb-8 font-mono bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+      $ contactMe --connect
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Contact Form - Terminal Style -->
+      <div class="terminal-card bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-xl overflow-hidden">
+        <div class="p-1 bg-gray-800 text-xs text-gray-400 font-mono px-4 py-2 border-b border-gray-800">
+          // contact_form.js
+        </div>
+        <div class="p-6">
+          <form id="contactForm" class="space-y-6">
+            <input type="hidden" name="access_key" value="46d2b706-cb7b-411b-b4fa-a5674ad33811">
+
+            <!-- Name Input -->
+            <div>
+              <label for="name"  class="block text-sm font-mono text-gray-400 mb-2">
+                <span class="text-purple-400">const</span> <span class="text-cyan-400">name</span> = 
+              </label>
+              <input type="text" id="name" name="name" required 
+                     class="w-full px-4 py-3 bg-gray-800 text-gray-300 rounded-lg border border-gray-700 focus:outline-none focus:ring-1 focus:ring-cyan-500 font-mono">
+            </div>
+
+            <!-- Email Input -->
+            <div>
+              <label for="email" class="block text-sm font-mono text-gray-400 mb-2">
+                <span class="text-purple-400">const</span> <span class="text-cyan-400">email</span> = 
+              </label>
+              <input type="email" id="email" name="email" required 
+                     class="w-full px-4 py-3 bg-gray-800 text-gray-300 rounded-lg border border-gray-700 focus:outline-none focus:ring-1 focus:ring-cyan-500 font-mono">
+            </div>
+
+            <!-- Message Textarea -->
+            <div>
+              <label for="message"  class="block text-sm font-mono text-gray-400 mb-2">
+                <span class="text-purple-400">let</span> <span class="text-cyan-400">message</span> = 
+              </label>
+              <textarea id="message" name="message" rows="5" required 
+                        class="w-full px-4 py-3 bg-gray-800 text-gray-300 rounded-lg border border-gray-700 focus:outline-none focus:ring-1 focus:ring-cyan-500 font-mono"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submitBtn" 
+                    class="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 text-white rounded-lg font-mono hover:from-cyan-500 hover:to-purple-500 transition-all transform hover:scale-[1.02]">
+              <span class="text-gray-300">$</span> submitForm()
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Details - Terminal Style -->
+      <div class="terminal-card bg-gray-900/80 backdrop-blur-sm border border-gray-800 rounded-xl overflow-hidden">
+        <div class="p-1 bg-gray-800 text-xs text-gray-400 font-mono px-4 py-2 border-b border-gray-800">
+          // contact_info.json
+        </div>
+        <div class="p-6">
+          <p class="text-gray-300 mb-6 font-mono">
+            <span class="text-cyan-400">console.log</span>(<span class="text-yellow-400">"Let's connect! Reach out via email or social media."</span>)
+          </p>
+          
+          <div class="space-y-6">
+            <!-- Email -->
+            <div class="flex items-start space-x-4">
+              <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex-shrink-0">
+                <i class="fas fa-envelope text-xl text-cyan-400"></i>
+              </div>
+              <div>
+                <p class="text-gray-400 font-mono text-sm mb-1">
+                  <span class="text-purple-400">"email"</span>: 
+                </p>
+                <p class="text-gray-300 break-all font-mono">
+                  <span class="text-yellow-400">"madanbelbase927@gmail.com"</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="flex items-start space-x-4">
+              <div class="p-3 bg-gray-800 rounded-lg border border-gray-700 flex-shrink-0">
+                <i class="fas fa-map-marker-alt text-xl text-purple-400"></i>
+              </div>
+              <div>
+                <p class="text-gray-400 font-mono text-sm mb-1">
+                  <span class="text-purple-400">"location"</span>: 
+                </p>
+                <p class="text-gray-300 font-mono">
+                  <span class="text-yellow-400">"Kathmandu, Nepal"</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+              <p class="text-gray-400 font-mono text-sm mb-3">
+                <span class="text-purple-400">"socials"</span>: 
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <a href="https://github.com/MadanBelbase" target="_blank" class="social-icon bg-gray-800 hover:bg-gray-700 border border-gray-700 text-gray-300 hover:text-white">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/madan-belbase/" target="_blank" class="social-icon bg-gray-800 hover:bg-blue-600 border border-gray-700 text-gray-300 hover:text-white">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://x.com/belbase_madan_" target="_blank" class="social-icon bg-gray-800 hover:bg-black border border-gray-700 text-gray-300 hover:text-white">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61554181993528" target="_blank" class="social-icon bg-gray-800 hover:bg-blue-500 border border-gray-700 text-gray-300 hover:text-white">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer - Terminal Style -->
+<footer class="py-8 text-center bg-gray-900/90 backdrop-blur-md border-t border-gray-800">
+  <div class="max-w-6xl mx-auto px-6">
+    <p class="text-gray-400 font-mono text-sm">
+      <span class="text-gray-600">//</span> © 2025 <span class="text-cyan-400">Madan Belbase</span>. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<!-- Thank You Modal - Terminal Style -->
+<div id="thankYouModal" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-70 hidden z-50">
+  <div class="terminal-card bg-gray-900 border border-gray-700 max-w-md mx-4">
+    <div class="p-1 bg-gray-800 text-xs text-gray-400 font-mono px-4 py-2 border-b border-gray-800">
+      // message_status.js
+    </div>
+    <div class="p-6 text-center">
+      <div class="text-green-400 text-5xl mb-4">✓</div>
+      <h3 class="text-2xl font-bold text-white mb-2 font-mono">Success!</h3>
+      <p class="text-gray-300 mb-6">
+        Your message has been queued for delivery. I'll respond soon!
+      </p>
+      <button id="closeModal" class="px-6 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-lg border border-gray-700 font-mono transition-all">
+        <span class="text-gray-400">$</span> closeModal()
+      </button>
+    </div>
+  </div>
+</div>
+
+
+  
+  
+
   <!-- Scripts -->
   <script src="script.js"></script>
 </body>

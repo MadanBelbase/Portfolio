@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post - Madan Belbase</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --dark: #1e293b;
+      --darker: #0f172a;
+    }
+    body {
+      background-color: var(--darker);
+      color: #e2e8f0;
+    }
+    .card {
+      background-color: var(--dark);
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .prose {
+      max-width: 65ch;
+    }
+    .prose p {
+      margin-bottom: 1.25em;
+      line-height: 1.6;
+    }
+    .prose img {
+      border-radius: 0.5rem;
+      margin: 1.5em 0;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <header class="py-6 border-b border-gray-700">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl font-bold">Madan's <span class="text-[var(--primary)]">Blog</span></h1>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <!-- Blog Post Content -->
+    <article class="max-w-4xl mx-auto">
+      <!-- Featured Image -->
+      <img src="image/css-display.png" alt="CSS Display Properties Simplified" class="w-full h-96 object-cover rounded-lg mb-8">
+      
+      <!-- Author and Date -->
+      <div class="flex items-center space-x-4 mb-8">
+        <img src="image/DSCN3396.JPG" alt="Author" class="w-12 h-12 rounded-full">
+        <div>
+          <p class="text-sm text-gray-400">Madan Belbase</p>
+          <p class="text-xs text-gray-500">Published: Nov 16, 2024 · 5 min read</p>
+        </div>
+      </div>
+      
+      <!-- Title -->
+      <h1 class="text-3xl md:text-4xl font-bold mb-6">CSS Display Properties Simplified</h1>
+      
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span class="px-3 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">CSS</span>
+        <span class="px-3 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Web Development</span>
+        <span class="px-3 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Frontend</span>
+      </div>
+      
+      <!-- Content -->
+      <div class="prose prose-invert">
+        <p class="lead">Understanding CSS display properties is fundamental to creating modern web layouts. This guide will walk you through the most important display values with practical examples and best practices.</p>
+        
+        <h2>The Display Property Basics</h2>
+        <p>The CSS <code>display</code> property specifies how an element should be rendered on the page. It's one of the most important CSS properties that affects layout.</p>
+        
+        <h3>Block Elements</h3>
+        <p>Elements with <code>display: block</code> take up the full width available and force a line break before and after the element.</p>
+        
+        <pre><code class="language-css">.block-element {
+  display: block;
+  width: 100%;
+}</code></pre>
+        
+        <h3>Inline Elements</h3>
+        <p>Inline elements don't start on a new line and only take up as much width as necessary.</p>
+        
+        <img src="image/display-example.png" alt="CSS Display Example" class="w-full">
+        
+        <h2>Flexbox and Grid</h2>
+        <p>Modern CSS offers powerful layout systems:</p>
+        
+        <ul>
+          <li><strong>Flexbox</strong> (<code>display: flex</code>) - For one-dimensional layouts</li>
+          <li><strong>Grid</strong> (<code>display: grid</code>) - For two-dimensional layouts</li>
+        </ul>
+        
+        <h2>Best Practices</h2>
+        <p>When working with display properties:</p>
+        
+        <ol>
+          <li>Use semantic HTML first</li>
+          <li>Start with mobile layouts</li>
+          <li>Use flexbox for components</li>
+          <li>Use grid for page layouts</li>
+          <li>Avoid unnecessary nesting</li>
+        </ol>
+        
+        <p>Mastering display properties will give you fine-grained control over your layouts and help you create responsive designs more efficiently.</p>
+      </div>
+      
+      <!-- Share and Actions -->
+      <div class="mt-12 pt-8 border-t border-gray-700">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div class="flex space-x-4">
+            <button class="flex items-center space-x-2 text-gray-400 hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+              </svg>
+              <span>Like</span>
+            </button>
+            <button class="flex items-center space-x-2 text-gray-400 hover:text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+              </svg>
+              <span>Comment</span>
+            </button>
+          </div>
+          
+          <div class="flex space-x-3">
+            <button class="p-2 rounded-full bg-gray-800 hover:bg-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+              </svg>
+            </button>
+            <button class="p-2 rounded-full bg-gray-800 hover:bg-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+              </svg>
+            </button>
+            <button class="p-2 rounded-full bg-gray-800 hover:bg-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Comment Section -->
+        <div class="mt-12">
+          <h3 class="text-xl font-bold mb-6">Comments (3)</h3>
+          
+          <div class="space-y-6">
+            <!-- Comment 1 -->
+            <div class="flex space-x-4">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="w-10 h-10 rounded-full">
+              <div class="flex-1">
+                <div class="bg-gray-800 p-4 rounded-lg">
+                  <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-medium">Sarah Johnson</h4>
+                    <span class="text-xs text-gray-500">2 days ago</span>
+                  </div>
+                  <p class="text-gray-300">Great explanation! The examples really helped me understand the difference between inline and inline-block.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Comment 2 -->
+            <div class="flex space-x-4">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-10 h-10 rounded-full">
+              <div class="flex-1">
+                <div class="bg-gray-800 p-4 rounded-lg">
+                  <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-medium">Michael Chen</h4>
+                    <span class="text-xs text-gray-500">1 week ago</span>
+                  </div>
+                  <p class="text-gray-300">Could you add more examples of when to use grid vs flexbox? Sometimes it's hard to decide which one to use.</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Add Comment Form -->
+            <div class="mt-8">
+              <h4 class="font-medium mb-4">Leave a comment</h4>
+              <form>
+                <textarea class="w-full bg-gray-800 border border-gray-700 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]" rows="4" placeholder="Write your thoughts here..."></textarea>
+                <button type="submit" class="mt-4 px-6 py-2 bg-[var(--primary)] text-white rounded-lg hover:bg-blue-600 transition">Post Comment</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Related Posts -->
+    <section class="mt-16">
+      <h2 class="text-2xl font-bold mb-8">Related Posts</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Blog Post 2 -->
+        <div class="card p-6 hover:translate-y-[-4px] transition">
+          <img src="image/vite.png" alt="Integrate Tailwind CSS into React" class="w-full h-48 object-cover rounded-lg mb-4">
+          <div class="flex items-center space-x-4 mb-4">
+            <img src="image/DSCN3396.JPG" alt="Author" class="w-10 h-10 rounded-full">
+            <div>
+              <p class="text-sm text-gray-400">Madan Belbase</p>
+              <p class="text-xs text-gray-500">Published: Dec 16, 2024</p>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Integrate Tailwind CSS into React</h3>
+          <p class="text-gray-300 mb-4">Learn how to integrate Tailwind CSS into React using Vite and other approaches.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Tailwind CSS</span>
+            <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">React</span>
+          </div>
+          <a href="#" class="text-[var(--primary)] hover:underline">Read More →</a>
+        </div>
+        
+        <!-- Blog Post 3 -->
+        <div class="card p-6 hover:translate-y-[-4px] transition">
+          <img src="image/async.png" alt="Getting Started with Asynchronous JavaScript" class="w-full h-48 object-cover rounded-lg mb-4">
+          <div class="flex items-center space-x-4 mb-4">
+            <img src="image/DSCN3396.JPG" alt="Author" class="w-10 h-10 rounded-full">
+            <div>
+              <p class="text-sm text-gray-400">Madan Belbase</p>
+              <p class="text-xs text-gray-500">Published: Oct 25, 2024</p>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Getting Started with Asynchronous JavaScript</h3>
+          <p class="text-gray-300 mb-4">Learn how JavaScript's async/await simplifies asynchronous programming with practical examples.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">JavaScript</span>
+            <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Async/Await</span>
+          </div>
+          <a href="#" class="text-[var(--primary)] hover:underline">Read More →</a>
+        </div>
+        
+        <!-- Additional related post -->
+        <div class="card p-6 hover:translate-y-[-4px] transition">
+          <img src="https://via.placeholder.com/600x400/1e293b/e2e8f0?text=CSS+Grid" alt="CSS Grid Layout" class="w-full h-48 object-cover rounded-lg mb-4">
+          <div class="flex items-center space-x-4 mb-4">
+            <img src="image/DSCN3396.JPG" alt="Author" class="w-10 h-10 rounded-full">
+            <div>
+              <p class="text-sm text-gray-400">Madan Belbase</p>
+              <p class="text-xs text-gray-500">Published: Jan 5, 2025</p>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Mastering CSS Grid Layout</h3>
+          <p class="text-gray-300 mb-4">A comprehensive guide to creating complex layouts with CSS Grid.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">CSS</span>
+            <span class="px-2 py-1 text-sm bg-gray-800 text-gray-300 rounded-full">Layout</span>
+          </div>
+          <a href="#" class="text-[var(--primary)] hover:underline">Read More →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="bg-gray-900 py-8 mt-16">
+    <div class="container mx-auto px-4 text-center text-gray-400">
+      <p>© 2024 Madan Belbase. All rights reserved.</p>
+      <div class="flex justify-center space-x-6 mt-4">
+        <a href="#" class="hover:text-[var(--primary)]">Twitter</a>
+        <a href="#" class="hover:text-[var(--primary)]">GitHub</a>
+        <a href="#" class="hover:text-[var(--primary)]">LinkedIn</a>
+        <a href="#" class="hover:text-[var(--primary)]">Medium</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -31,46 +31,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     requestAnimationFrame(scrollAnimation);
   });
 });
-
   
+  // Mobile menu functionality
   const menuButton = document.getElementById('menuButton');
   const closeMenu = document.getElementById('closeMenu');
   const mobileMenu = document.getElementById('mobileMenu');
   const overlay = document.getElementById('overlay');
-  const navLinks = document.querySelectorAll('#mobileMenu .nav-link');
+
+  function toggleMobileMenu() {
+      mobileMenu.classList.toggle('translate-x-full');
+      overlay.classList.toggle('opacity-0');
+      overlay.classList.toggle('pointer-events-none');
+      document.body.classList.toggle('overflow-hidden');
+  }
 
   function closeMobileMenu() {
-    mobileMenu.classList.remove('open');
-    overlay.classList.add('hidden');
+      mobileMenu.classList.add('translate-x-full');
+      overlay.classList.add('opacity-0');
+      overlay.classList.add('pointer-events-none');
+      document.body.classList.remove('overflow-hidden');
   }
 
-  menuButton.addEventListener('click', () => {
-    mobileMenu.classList.add('open');
-    overlay.classList.remove('hidden');
-  });
+  menuButton.addEventListener('click', toggleMobileMenu);
+  closeMenu.addEventListener('click', toggleMobileMenu);
+  overlay.addEventListener('click', toggleMobileMenu);
 
-  closeMenu.addEventListener('click', closeMobileMenu);
-
-  overlay.addEventListener('click', closeMobileMenu);
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', closeMobileMenu);
+  // Close menu when clicking on anchor links
+  document.querySelectorAll('#mobileMenu a[href^="#"]').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
   });
   
-  // Typing Effect
-  const typingText = document.getElementById('typing-text');
-  const text = "Full Stack Developer | Tech Enthusiast | Blogger";
-  let index = 0;
-  
-  function type() {
-    if (index < text.length) {
-      typingText.textContent += text.charAt(index);
-      index++;
-      setTimeout(type, 100);
-    }
-  }
-  
-  type();
 
   // Contact Form Submission
 const contactForm = document.getElementById('contactForm');
@@ -111,3 +101,5 @@ window.addEventListener('click', (e) => {
     thankYouModal.classList.add('hidden');
   }
 });
+
+
